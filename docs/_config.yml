@@ -3,9 +3,9 @@ description: A Ruby Programmed Rock Paper Scissors Game
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
-# exclude: [
-#   Gemfile,
-#   jekyll-theme-cayman.gemspec,
-#   thumbnail.png,
-#   LICENSE
-# ]
+exclude: [
+  Gemfile,
+  jekyll-theme-cayman.gemspec,
+  thumbnail.png,
+  LICENSE
+]
