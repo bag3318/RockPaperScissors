@@ -17,6 +17,7 @@ Rock Paper Scissors
     - [Install and Run on Windows](#install-and-run-on-windows)
       - [Running](#running-1)
   - [Links](#links)
+  - [Site Nav](#site-nav)
 
 How to Run and Install
 ----------------------
@@ -54,6 +55,6 @@ How to Run and Install
 
 ## Site Nav
 
-[How to Test](Testing) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+[How to Test](Testing) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
 
 [//]: # (end)

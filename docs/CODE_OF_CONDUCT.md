@@ -81,4 +81,4 @@ available at [http://contributor-covenant.org/version/1/4][version]
 
 ## Site Nav
 
-[Home](./) | [Contributing](CONTRIBUTING) | [How to Test](Testing)
+[Home](./) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [How to Test](Testing)

@@ -3,5 +3,10 @@
 *Gemfile.lock
 *.sublime-project
 *.sublime-workspace
+*.jekyll-metadata
 # _site
 # .sass-cache
+
+# If gitignore is not working:
+# try this:
+# git rm -rf --cached .

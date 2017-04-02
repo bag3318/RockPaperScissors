@@ -21,4 +21,4 @@ What you will need
 
 ## Site Nav
 
-[Home](./) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+[Home](./) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)

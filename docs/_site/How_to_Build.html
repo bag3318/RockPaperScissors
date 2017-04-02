@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Play Rock Paper Scissors Game</title>
+    <title>How to build the Gemspec</title>
     <meta name="description" content="A Ruby Programmed Rock Paper Scissors Game"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
@@ -24,21 +24,23 @@
     </section>
 
     <section class="main-content">
-      <h1 id="how-to-test-this-gem">How to test this Gem</h1>
+      <h1 id="how-to-build-the-gemspec">How to build the Gemspec</h1>
 
-<h2 id="what-you-will-need">What you will need</h2>
-
-<ol>
-  <li>Ruby &amp; Ruby Gems installed</li>
-  <li>Rake installed</li>
-  <li>The RockPaperScissors repo cloned or downloaded</li>
-</ol>
-
-<h2 id="start-testing">Start Testing</h2>
+<h2 id="instructions">Instructions</h2>
 
 <ol>
-  <li>Open <code class="highlighter-rouge">Terminal</code>/<code class="highlighter-rouge">Command Prompt</code> and <code class="highlighter-rouge">cd</code> to the directory of the repo’s folder</li>
-  <li>Type: <code class="highlighter-rouge">rake test</code> and hit <kbd>enter</kbd>/<kbd>return</kbd></li>
+  <li>Open the <code class="highlighter-rouge">rps.gemspec</code> file with your preferred <strong>IDE</strong></li>
+  <li>Delete these lines:
+    <ul>
+      <li><code class="highlighter-rouge">spec.cert_chain  = ["certs/gem-public_cert.pem"]</code></li>
+      <li><code class="highlighter-rouge">spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/</code></li>
+    </ul>
+  </li>
+  <li>Save</li>
+  <li>Open <code class="highlighter-rouge">Terminal</code>/<code class="highlighter-rouge">Command Prompt</code></li>
+  <li><code class="highlighter-rouge">cd</code> to the directory of the <code class="highlighter-rouge">rps.gemspec</code> file (<strong>note: this file must be in the <em>root</em> of the repo folder</strong>)</li>
+  <li>Type: <code class="highlighter-rouge">gem build rps</code></li>
+  <li>Hit <kbd>return</kbd>/<kbd>enter</kbd></li>
 </ol>
 
 <hr />
@@ -49,7 +51,7 @@
   <tbody>
     <tr>
       <td><a href="./">Home</a></td>
-      <td><a href="How_to_Build">How to Build</a></td>
+      <td><a href="Testing">How to Test</a></td>
       <td><a href="CONTRIBUTING">Contributing</a></td>
       <td><a href="CODE_OF_CONDUCT">Code of Conduct</a></td>
     </tr>
