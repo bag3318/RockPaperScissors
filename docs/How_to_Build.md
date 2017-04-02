@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # How to build the Gemspec
 
 ## Instructions
