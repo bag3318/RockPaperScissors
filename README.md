@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [//]: # (start)
 
 Rock Paper Scissors
@@ -32,3 +33,6 @@ How to Run and Install
 
 [//]: # (end)
 
+=======
+# RockPaperScissors
+>>>>>>> 6237826228141e7ac2923f5f18d76d1626469672
