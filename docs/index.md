@@ -1,21 +1,33 @@
-How to Test
-===========
+[//]: # (start)
 
-**Testing this Ruby Gem is very simple.**
+Rock Paper Scissors
+===================
 
-## You must have the following for Mac
+How to Run and Install
+----------------------
 
-1. `RVM` (includes: `Ruby`, and `RubyGems`)
-2. `Rake`
-3. The `PlayRockPaperScissorsGame-#.#.#.gem` file
-4. WiFi (for the initial setup)
+### Install and Run on Mac
 
-## You must have the following for Windows
+1. Run the `rps.bash` file (located in the `exec` folder) with the `Terminal` 
 
-1. `Ruby Installer` (must be installed)
-2. The `PlayRockPaperScissorsGame-#.#.#.gem` file
-3. WiFi (for the initial setup)
+#### Running
 
-## Getting Started on Mac
+1. Open the `Terminal`
+2. Type in: `rps`, or `PlayRockPaperScissorsGame`
+3. Hit <kbd>return</kbd>
 
-1. Run the `rps.bash` file with the `Terminal` to install everything that is needed for testing this Ruby Gem
+#### Uninstalling
+
+1. Run the `uninstaller.sh` file (located in the `exec` folder) with the `Terminal`
+
+### Install and Run on Windows
+
+1. Download and install Ruby for Windows (if not already installed); download [here](https://rubyinstaller.org/downloads/)
+2. Open `cmd` and type in: `gem install PlayRockPaperScissorsGame`; hit <kbd>enter</kbd>
+3. Run the `rps.bat` file (located in the `exec` folder)
+
+#### Running
+
+1. Open the `rps.bat` file (located in the `exec` folder)
+
+[//]: # (end)
