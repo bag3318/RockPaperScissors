@@ -39,6 +39,7 @@ How to Run and Install
 #### Running
 
 1. Open the `rps.bat` file (located in the `exec` folder)
+   * Another option: type in `rps` or `PlayRockPaperScissorsGame` in the `Command Prompt`
 
 ----------
 
