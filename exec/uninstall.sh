@@ -3,10 +3,11 @@
 master() {
 	echo "Would you like to Uninstall the RPS gem, Ruby Gems, Ruby, and xcode command line tools?";
 	process() {
-		`sudo rm -rf /Library/Developer/CommandLineTools`;
-		`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"`;
-		`rvm implode`;
-		`gem uninstall PlayRockPaperScissorsGame`;
+		sudo rm -rf /Library/Developer/CommandLineTools;
+		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)";
+		rvm implode;
+		gem uninstall PlayRockPaperScissorsGame;
+		echo "Finished!";
 	}
 	confirm() {
 		echo "Press Y to uninstall, or press N to cancel";
