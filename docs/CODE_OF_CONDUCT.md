@@ -79,4 +79,6 @@ available at [http://contributor-covenant.org/version/1/4][version]
 
 ------------
 
-[Home](./) | [Contributing](CONTRIBUTING)
+## Site Nav
+
+[Home](./) | [Contributing](CONTRIBUTING) | [How to Test](Testing)

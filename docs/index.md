@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 [//]: # (start)
 
 Rock Paper Scissors
@@ -48,6 +52,8 @@ How to Run and Install
 
 ----------
 
-[Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+## Site Nav
+
+[How to Test](Testing) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
 
 [//]: # (end)

@@ -36,4 +36,8 @@ Here are a few things you can do that will increase the likelihood of your pull 
 [style]: http://ben.balter.com/jekyll-style-guide/
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
-[Home](./) | [Code of Conduct](CODE_OF_CONDUCT)
+------------
+
+## Site Nav
+
+[Home](./) | [Code of Conduct](CODE_OF_CONDUCT) | [How to Test](Testing.md)
