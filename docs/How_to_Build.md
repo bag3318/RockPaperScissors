@@ -6,7 +6,7 @@ layout: default
 
 ## Instructions
 
-1. Upload this repo to your own repo (**note: you _MUST_ change something in this repo!**)
+1. Upload this repo to your own repo on __GitHub__ (**note: you _MUST_ change something in this repo!**)
 2. Open the `rps.gemspec` file with your preferred **IDE**
 3. Delete these lines:
    + `spec.cert_chain  = ["certs/gem-public_cert.pem"]`
