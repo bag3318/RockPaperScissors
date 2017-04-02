@@ -30,5 +30,3 @@ How to Run and Install
 1. Open the `rps.bat` file (located in the `exec` folder)
 
 [//]: # (end)
-
-=======
