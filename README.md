@@ -1,3 +1,4 @@
+[//]: # (start)
 
 Rock Paper Scissors
 ===================
