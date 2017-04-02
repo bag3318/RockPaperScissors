@@ -3,6 +3,16 @@
 Rock Paper Scissors
 ===================
 
+**Table of Contents**
+
+- [Rock Paper Scissors](#rock-paper-scissors)
+  - [How to Run and Install](#how-to-run-and-install)
+    - [Install and Run on Mac](#install-and-run-on-mac)
+      - [Running](#running)
+      - [Uninstalling](#uninstalling)
+    - [Install and Run on Windows](#install-and-run-on-windows)
+      - [Running](#running-1)
+
 How to Run and Install
 ----------------------
 
