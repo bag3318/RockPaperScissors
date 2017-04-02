@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
@@ -72,3 +76,7 @@ available at [http://contributor-covenant.org/version/1/4][version]
 
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
+
+------------
+
+[Home](./)

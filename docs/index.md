@@ -40,4 +40,8 @@ How to Run and Install
 
 1. Open the `rps.bat` file (located in the `exec` folder)
 
+----------
+
+[Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+
 [//]: # (end)

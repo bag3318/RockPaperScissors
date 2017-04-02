@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Contributing
 
 Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential for keeping it great.
@@ -31,3 +35,5 @@ Here are a few things you can do that will increase the likelihood of your pull 
 [pr]: https://github.com/pages-themes/cayman/compare
 [style]: http://ben.balter.com/jekyll-style-guide/
 [code-of-conduct]: CODE_OF_CONDUCT.md
+
+[Home](./)
