@@ -79,4 +79,4 @@ available at [http://contributor-covenant.org/version/1/4][version]
 
 ------------
 
-[Home](./)
+[Home](./) | [Contributing](CONTRIBUTING)
