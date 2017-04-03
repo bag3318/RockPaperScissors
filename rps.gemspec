@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.1.1"
+  spec.version                          = "2.1.2"
   spec.date                             = "2017-04-02"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
@@ -34,4 +34,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "colorize", "~> 0.8.1"
   spec.add_runtime_dependency "rake"    , "~> 12.0.0"
   spec.add_runtime_dependency "rvm"     , "~> 1.11.3.9"
+  spec.add_development_dependency "rdoc", "~> 5.1.0"
 end
