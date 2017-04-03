@@ -1,5 +1,6 @@
 ---
 layout: default
+title: How to Test - Play Rock Paper Scissors Game
 ---
 
 How to test this Gem

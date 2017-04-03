@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Contributing - Play Rock Paper Scissors Game
 ---
 
 ## Contributing

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Code of Conduct - Play Rock Paper Scissors Game
 ---
 
 # Contributor Covenant Code of Conduct
