@@ -4,8 +4,8 @@
 
 	:confirm
 		CHOICE /C YN "Would you like to play Rock Paper Scissors?"
-		if "%ERRORLEVEL%"=="1" CALL:process
-		if "%ERRORLEVEL%"=="2" CALL:exiting
+		IF "%ERRORLEVEL%"=="1" CALL:process
+		IF "%ERRORLEVEL%"=="2" CALL:exiting
 	GOTO:EOF
 	
 	REM start process
