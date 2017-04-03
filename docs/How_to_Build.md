@@ -5,6 +5,10 @@ title: How to Build - Play Rock Paper Scissors Game
 
 # How to build the Gemspec
 
+## Requirments 
+
+* Ruby and Ruby Gems installed
+
 ## Instructions
 
 1. Open the `rps.gemspec` file with your preferred **IDE**

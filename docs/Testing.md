@@ -10,7 +10,7 @@ What you will need
 ------------------
 
 1. Ruby &amp; Ruby Gems installed
-2. Rake installed
+2. The Rake gem installed
 3. The RockPaperScissors repo cloned or downloaded
 
 ## Start Testing
