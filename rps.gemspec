@@ -18,6 +18,9 @@ Gem::Specification.new do |spec|
   spec.license                          = "MIT"
   spec.homepage                         = "https://bag3318.github.io/RockPaperScissors/"
 # spec.extra_rdoc_files                 = "README.md"
+spec.rdoc_options << '--title' << 'Rake -- Ruby Make' <<
+  '--main' << 'README' <<
+  '--line-numbers'
   spec.required_ruby_version            = ">= 2.0.0"
   spec.required_rubygems_version        = ">= 2.6.0"
   spec.cert_chain                       = ["certs/gem-public_cert.pem"]
