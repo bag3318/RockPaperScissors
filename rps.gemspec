@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.homepage                         = "https://bag3318.github.io/RockPaperScissors/"
   spec.required_ruby_version            = ">= 2.0.0"
   spec.required_rubygems_version        = ">= 2.6.0"
-  spec.extra_rdoc_files                 = ["README.md", "rdoc/How_to_Test.rdoc"]
+  spec.extra_rdoc_files                 = ["README.md", "rdocs/How_to_Test.rdoc"]
   spec.cert_chain                       = ["certs/gem-public_cert.pem"]
   spec.signing_key                      = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
   spec.bindir                           = "bin"
