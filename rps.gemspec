@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.1.6"
+  spec.version                          = "2.1.7"
   spec.date                             = "2017-04-03"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.homepage                         = "https://bag3318.github.io/RockPaperScissors/"
   spec.required_ruby_version            = ">= 2.0.0"
   spec.required_rubygems_version        = ">= 2.6.0"
+  spec.extra_rdoc_files                 = "README.md"       
   spec.cert_chain                       = ["certs/gem-public_cert.pem"]
   spec.signing_key                      = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
   spec.bindir                           = "bin"
