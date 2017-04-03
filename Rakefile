@@ -1,5 +1,4 @@
 require 'rdoc/task'
-require 'rake/testtask'
 
 task :default => [:PlayRockPaperScissorsGame, :rps]
 

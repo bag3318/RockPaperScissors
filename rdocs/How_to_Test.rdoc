@@ -1,0 +1,23 @@
+= How to Test
+
+Here is the following code for Rake testing
+
+	% Rakefile
+
+	task :default => [:test, :PlayRockPaperScissorsGame, :rps]
+
+	file_path = "./test/test_rps.rb"
+
+	task :test do 
+		ruby file_path
+	end
+
+	task :PlayRockPaperScissorsGame do
+		ruby file_path
+	end
+
+	task :rps do
+		ruby file_path
+	end
+
+Meaning that you could techincally do `rake test`, `rake PlayRockPaperScissorsGame`, or `rake rps` to test.
