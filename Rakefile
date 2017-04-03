@@ -1,6 +1,6 @@
 require 'rdoc/task'
 
-task :default => [:PlayRockPaperScissorsGame, :rps]
+task :default => [:test, :PlayRockPaperScissorsGame, :rps]
 
 file_path = "./test/test_rps.rb"
 
