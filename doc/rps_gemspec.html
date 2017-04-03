@@ -152,7 +152,7 @@
 <p>Gem::Specification.new do |spec|</p>
 
 <pre class="ruby"><span class="ruby-identifier">spec</span>.<span class="ruby-identifier">name</span>                             = <span class="ruby-string">&quot;PlayRockPaperScissorsGame&quot;</span>
-<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span>                          = <span class="ruby-string">&quot;2.0.7&quot;</span>
+<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span>                          = <span class="ruby-string">&quot;2.0.9&quot;</span>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">date</span>                             = <span class="ruby-string">&quot;2017-04-02&quot;</span>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">summary</span>                          = <span class="ruby-string">&quot;A Rock Paper Scissors Ruby Gem&quot;</span>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">description</span>                      = <span class="ruby-string">&quot;  A Ruby-programmed rock paper scissors game. 
@@ -168,8 +168,11 @@
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">post_install_message</span>             = <span class="ruby-string">&quot;Thanks for installing! I hope you have fun playing rock paper scissors! :)&quot;</span>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">license</span>                          = <span class="ruby-string">&quot;MIT&quot;</span>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">homepage</span>                         = <span class="ruby-string">&quot;https://bag3318.github.io/RockPaperScissors/&quot;</span>
-<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">extra_rdoc_files</span>                 = <span class="ruby-string">&quot;README.md&quot;</span>
-<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">required_ruby_version</span>            = <span class="ruby-string">&quot;&gt;= 2.0.0&quot;</span>
+</pre>
+
+<p># spec.extra_rdoc_files                 = “README.md”</p>
+
+<pre class="ruby"><span class="ruby-identifier">spec</span>.<span class="ruby-identifier">required_ruby_version</span>            = <span class="ruby-string">&quot;&gt;= 2.0.0&quot;</span>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">required_rubygems_version</span>        = <span class="ruby-string">&quot;&gt;= 2.6.0&quot;</span>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">cert_chain</span>                       = [<span class="ruby-string">&quot;certs/gem-public_cert.pem&quot;</span>]
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">signing_key</span>                      = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-string">&quot;~/.ssh/gem-private_key.pem&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">$0</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/gem\z/</span>

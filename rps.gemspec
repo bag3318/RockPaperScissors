@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.0.8"
+  spec.version                          = "2.0.9"
   spec.date                             = "2017-04-02"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.post_install_message             = "Thanks for installing! I hope you have fun playing rock paper scissors! :)"
   spec.license                          = "MIT"
   spec.homepage                         = "https://bag3318.github.io/RockPaperScissors/"
-  spec.extra_rdoc_files                 = "README.md"
+# spec.extra_rdoc_files                 = "README.md"
   spec.required_ruby_version            = ">= 2.0.0"
   spec.required_rubygems_version        = ">= 2.6.0"
   spec.cert_chain                       = ["certs/gem-public_cert.pem"]
