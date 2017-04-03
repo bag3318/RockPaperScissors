@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>normalize.scss - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../_gitignore.html">.gitignore</a>
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../certs/gem-public_cert_pem.html">gem-public_cert.pem</a>
+  
+    <li><a href="../../docs/CODE_OF_CONDUCT_md.html">CODE_OF_CONDUCT</a>
+  
+    <li><a href="../../docs/CONTRIBUTING_md.html">CONTRIBUTING</a>
+  
+    <li><a href="../../docs/Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../docs/How_to_Build_md.html">How_to_Build</a>
+  
+    <li><a href="../../docs/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../docs/Testing_md.html">Testing</a>
+  
+    <li><a href="../../docs/_layouts/default_html.html">default.html</a>
+  
+    <li><a href="../../docs/_sass/jekyll-theme-cayman_scss.html">jekyll-theme-cayman.scss</a>
+  
+    <li><a href="../../docs/_sass/normalize_scss.html">normalize.scss</a>
+  
+    <li><a href="../../docs/_sass/rouge-github_scss.html">rouge-github.scss</a>
+  
+    <li><a href="../../docs/_sass/variables_scss.html">variables.scss</a>
+  
+    <li><a href="../../docs/_site/CODE_OF_CONDUCT_html.html">CODE_OF_CONDUCT.html</a>
+  
+    <li><a href="../../docs/_site/CONTRIBUTING_html.html">CONTRIBUTING.html</a>
+  
+    <li><a href="../../docs/_site/How_to_Build_html.html">How_to_Build.html</a>
+  
+    <li><a href="../../docs/_site/Testing_html.html">Testing.html</a>
+  
+    <li><a href="../../docs/_site/assets/css/style_css.html">style.css</a>
+  
+    <li><a href="../../docs/_site/index_html.html">index.html</a>
+  
+    <li><a href="../../docs/_site/script/bootstrap.html">bootstrap</a>
+  
+    <li><a href="../../docs/_site/script/cibuild.html">cibuild</a>
+  
+    <li><a href="../../docs/_site/script/release.html">release</a>
+  
+    <li><a href="../../docs/_site/script/server.html">server</a>
+  
+    <li><a href="../../docs/assets/css/style_scss.html">style.scss</a>
+  
+    <li><a href="../../docs/index_md.html">index</a>
+  
+    <li><a href="../../docs/jekyll-theme-cayman_gemspec.html">jekyll-theme-cayman.gemspec</a>
+  
+    <li><a href="../../docs/script/bootstrap.html">bootstrap</a>
+  
+    <li><a href="../../docs/script/cibuild.html">cibuild</a>
+  
+    <li><a href="../../docs/script/release.html">release</a>
+  
+    <li><a href="../../docs/script/server.html">server</a>
+  
+    <li><a href="../../exec/rps_bash.html">rps.bash</a>
+  
+    <li><a href="../../exec/run_bat.html">run.bat</a>
+  
+    <li><a href="../../exec/uninstall_sh.html">uninstall.sh</a>
+  
+    <li><a href="../../rps_gemspec.html">rps.gemspec</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page docs/_sass/normalize.scss">
+
+<pre>! normalize.css v3.0.2 | MIT License | git.io/normalize   
+
+ 1. Set default font family to sans-serif.
+ 2. Prevent iOS text size adjust after orientation change, without disabling
+    user zoom.
+/</pre>
+
+<p>html {</p>
+
+<pre>font-family: sans-serif; /* 1   
+-ms-text-size-adjust: 100%; /* 2 */
+-webkit-text-size-adjust: 100%; /* 2 */</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre class="ruby"> <span class="ruby-constant">Remove</span> <span class="ruby-identifier">default</span> <span class="ruby-identifier">margin</span>.
+<span class="ruby-operator">/</span>
+</pre>
+
+<p>body {</p>
+
+<pre>margin: 0;</pre>
+
+<p>}</p>
+
+<p>/* HTML5 display definitions</p>
+
+<pre>========================================================================== */</pre>
+
+<p>/**</p>
+
+<pre> Correct `block` display not defined for any HTML5 element in IE 8/9.
+ Correct `block` display not defined for `details` or `summary` in IE 10/11
+ and Firefox.
+ Correct `block` display not defined for `main` in IE 11.
+/</pre>
+
+<p>article, aside, details, figcaption, figure, footer, header, hgroup, main,
+menu, nav, section, summary {</p>
+
+<pre>display: block;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> 1. Correct `inline-block` display not defined in IE 8/9.
+ 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+/</pre>
+
+<p>audio, canvas, progress, video {</p>
+
+<pre>display: inline-block; /* 1 */
+vertical-align: baseline; /* 2 */</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Prevent modern browsers from displaying `audio` without controls.
+ Remove excess height in iOS 5 devices.
+/</pre>
+
+<p><a href="controls">audio:not(</a>) {</p>
+
+<pre>display: none;
+height: 0;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address `[hidden]` styling not present in IE 8/9/10.
+ Hide the `template` element in IE 8/9/11, Safari, and Firefox &lt; 22.
+/</pre>
+
+<p>[hidden], template {</p>
+
+<pre>display: none;</pre>
+
+<p>}</p>
+
+<p>/* Links</p>
+
+<pre>========================================================================== */</pre>
+
+<p>/**</p>
+
+<pre> Remove the gray background color from active links in IE 10.
+/</pre>
+
+<p>a {</p>
+
+<pre>background-color: transparent;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Improve readability when focused and also mouse hovered in all browsers.
+/</pre>
+
+<p>a:active, a:hover {</p>
+
+<pre>outline: 0;</pre>
+
+<p>}</p>
+
+<p>/* Text-level semantics</p>
+
+<pre>========================================================================== */</pre>
+
+<p>/**</p>
+
+<pre> Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+/</pre>
+
+<p><a href="title">abbr</a> {</p>
+
+<pre>border-bottom: 1px dotted;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+/</pre>
+
+<p>b, strong {</p>
+
+<pre>font-weight: bold;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address styling not present in Safari and Chrome.
+/</pre>
+
+<p>dfn {</p>
+
+<pre>font-style: italic;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address variable `h1` font-size and margin within `section` and `article`
+ contexts in Firefox 4+, Safari, and Chrome.
+/</pre>
+
+<p>h1 {</p>
+
+<pre>font-size: 2em;
+margin: 0.67em 0;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address styling not present in IE 8/9.
+/</pre>
+
+<p>mark {</p>
+
+<pre>background: #ff0;
+color: #000;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address inconsistent and variable font size in all browsers.
+/</pre>
+
+<p>small {</p>
+
+<pre>font-size: 80%;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Prevent `sub` and `sup` affecting `line-height` in all browsers.
+/</pre>
+
+<p>sub, sup {</p>
+
+<pre>font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;</pre>
+
+<p>}</p>
+
+<p>sup {</p>
+
+<pre>top: -0.5em;</pre>
+
+<p>}</p>
+
+<p>sub {</p>
+
+<pre>bottom: -0.25em;</pre>
+
+<p>}</p>
+
+<p>/* Embedded content</p>
+
+<pre>========================================================================== */</pre>
+
+<p>/**</p>
+
+<pre> Remove border when inside `a` element in IE 8/9/10.
+/</pre>
+
+<p>img {</p>
+
+<pre>border: 0;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Correct overflow not hidden in IE 9/10/11.
+/</pre>
+
+<p>svg:not(:root) {</p>
+
+<pre>overflow: hidden;</pre>
+
+<p>}</p>
+
+<p>/* Grouping content</p>
+
+<pre>========================================================================== */</pre>
+
+<p>/**</p>
+
+<pre> Address margin not present in IE 8/9 and Safari.
+/</pre>
+
+<p>figure {</p>
+
+<pre>margin: 1em 40px;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre class="ruby"> <span class="ruby-constant">Address</span> <span class="ruby-identifier">differences</span> <span class="ruby-identifier">between</span> <span class="ruby-constant">Firefox</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">other</span> <span class="ruby-identifier">browsers</span>.
+<span class="ruby-operator">/</span>
+</pre>
+
+<p>hr {</p>
+
+<pre>box-sizing: content-box;
+height: 0;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Contain overflow in all browsers.
+/</pre>
+
+<p>pre {</p>
+
+<pre>overflow: auto;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address odd `em`-unit font size rendering in all browsers.
+/</pre>
+
+<p>code, kbd, pre, samp {</p>
+
+<pre>font-family: monospace, monospace;
+font-size: 1em;</pre>
+
+<p>}</p>
+
+<p>/* Forms</p>
+
+<pre>========================================================================== */</pre>
+
+<p>/**</p>
+
+<pre> Known limitation: by default, Chrome and Safari on OS X allow very limited
+ styling of `select`, unless a `border` property is set.
+/</pre>
+
+<p>/**</p>
+
+<pre> 1. Correct color not being inherited.
+    Known issue: affects color of disabled elements.
+ 2. Correct font properties not being inherited.
+ 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+/</pre>
+
+<p>button, input, optgroup, select, textarea {</p>
+
+<pre>color: inherit; /* 1 */
+font: inherit; /* 2 */
+margin: 0; /* 3 */</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address `overflow` set to `hidden` in IE 8/9/10/11.
+/</pre>
+
+<p>button {</p>
+
+<pre>overflow: visible;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address inconsistent `text-transform` inheritance for `button` and `select`.
+ All other form control elements do not inherit `text-transform` values.
+ Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ Correct `select` style inheritance in Firefox.
+/</pre>
+
+<p>button, select {</p>
+
+<pre>text-transform: none;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+    and `video` controls.
+ 2. Correct inability to style clickable `input` types in iOS.
+ 3. Improve usability and consistency of cursor style between image-type
+    `input` and others.
+/</pre>
+
+<p>button, html <a href="type="button"">input</a>, /* 1 */ <a
+href="type="reset"">input</a>, <a href="type="submit"">input</a> {</p>
+
+<pre>-webkit-appearance: button; /* 2 */
+cursor: pointer; /* 3 */</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Re-set default cursor for disabled elements.
+/</pre>
+
+<p><a href="disabled">button</a>, html <a href="disabled">input</a> {</p>
+
+<pre>cursor: default;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Remove inner padding and border in Firefox 4+.
+/</pre>
+
+<p>button::-moz-focus-inner, input::-moz-focus-inner {</p>
+
+<pre>border: 0;
+padding: 0;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ the UA stylesheet.
+/</pre>
+
+<p>input {</p>
+
+<pre>line-height: normal;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> It&#39;s recommended that you don&#39;t attempt to style these elements.
+ Firefox&#39;s implementation doesn&#39;t respect box-sizing, padding, or width.
+
+ 1. Address box sizing set to `content-box` in IE 8/9/10.
+ 2. Remove excess padding in IE 8/9/10.
+/</pre>
+
+<p><a href="type="checkbox"">input</a>, <a href="type="radio"">input</a> {</p>
+
+<pre>box-sizing: border-box; /* 1 */
+padding: 0; /* 2 */</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Fix the cursor style for Chrome&#39;s increment/decrement buttons. For certain
+ `font-size` values of the `input`, it causes the cursor style of the
+ decrement button to change from `default` to `text`.
+/</pre>
+
+<p><a href="type="number"">input</a>::-webkit-inner-spin-button, <a
+href="type="number"">input</a>::-webkit-outer-spin-button {</p>
+
+<pre>height: auto;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+    (include `-moz` to future-proof).
+/</pre>
+
+<p><a href="type="search"">input</a> {</p>
+
+<pre>-webkit-appearance: textfield; /* 1 */ /* 2 */
+box-sizing: content-box;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ Safari (but not Chrome) clips the cancel button when the search input has
+ padding (and `textfield` appearance).
+/</pre>
+
+<p><a href="type="search"">input</a>::-webkit-search-cancel-button, <a
+href="type="search"">input</a>::-webkit-search-decoration {</p>
+
+<pre>-webkit-appearance: none;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Define consistent border, margin, and padding.
+/</pre>
+
+<p>fieldset {</p>
+
+<pre>border: 1px solid #c0c0c0;
+margin: 0 2px;
+padding: 0.35em 0.625em 0.75em;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> 1. Correct `color` not being inherited in IE 8/9/10/11.
+ 2. Remove padding so people aren&#39;t caught out if they zero out fieldsets.
+/</pre>
+
+<p>legend {</p>
+
+<pre>border: 0; /* 1 */
+padding: 0; /* 2 */</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Remove default vertical scrollbar in IE 8/9/10/11.
+/</pre>
+
+<p>textarea {</p>
+
+<pre>overflow: auto;</pre>
+
+<p>}</p>
+
+<p>/**</p>
+
+<pre> Don&#39;t inherit the `font-weight` (applied by a rule above).
+ NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+/</pre>
+
+<p>optgroup {</p>
+
+<pre>font-weight: bold;</pre>
+
+<p>}</p>
+
+<p>/* Tables</p>
+
+<pre>========================================================================== */</pre>
+
+<p>/**</p>
+
+<pre class="ruby"> <span class="ruby-constant">Remove</span> <span class="ruby-identifier">most</span> <span class="ruby-identifier">spacing</span> <span class="ruby-identifier">between</span> <span class="ruby-identifier">table</span> <span class="ruby-identifier">cells</span>.
+<span class="ruby-operator">/</span>
+</pre>
+
+<p>table {</p>
+
+<pre>border-collapse: collapse;
+border-spacing: 0;</pre>
+
+<p>}</p>
+
+<p>td, th {</p>
+
+<pre>padding: 0;</pre>
+
+<p>}</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
