@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.bindir                           = "bin"
   spec.executables                     << "rps"
   spec.executables                     << "PlayRockPaperScissorsGame"
-  spec.requirements                    << "A Windows or Mac computer."
+  spec.requirements                    << "A Windows or Mac computer"
   spec.metadata                         = { 
     "issue_tracker" => "https://github.com/bag3318/RockPaperScissors/issues", 
     "source_code"   => "https://github.com/bag3318/RockPaperScissors"       , 
