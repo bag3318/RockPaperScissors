@@ -22,7 +22,9 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
       <br/>
-      <a href="#site-nav" class="btn">Site Nav</a>
+      {% if site.github.is_project_page %}
+        <a href="#site-nav" class="btn">Site Nav</a>
+      {% endif %}
     </section>
 
     <section class="main-content">
