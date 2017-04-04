@@ -11,12 +11,13 @@
 
 class PlayRockPaperScissorsGame 
 
+  # intiate the colorize gem
   require "colorized_string"
   ColorizedString.colors   
   ColorizedString.modes  
 
   module Constants 
-    protected
+    protected # make constants protected
     NTRY_TO_SYM = { 'p' => :PAPER,  'r' => :ROCK, 's' => :SCISSORS } 
     VALID_ENTRIES = NTRY_TO_SYM.keys 
     COMPUTER_CHOICES = NTRY_TO_SYM.values
@@ -26,10 +27,10 @@ class PlayRockPaperScissorsGame
   end
 
   class << self
-    def continue(str1, str2, str3)
+    def continue(str1,str2,str3) # pass in 3 parameters
       puts  ColorizedString[str1].colorize(:color => :green) 
       print ColorizedString[str2].colorize(:color => :green)
-      gets 
+      gets # press enter or return to continue
       puts  ColorizedString[str3].colorize(:color => :green)
     end 
   end 
@@ -42,7 +43,7 @@ class PlayRockPaperScissorsGame
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
            ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}"].colorize(:blue) 
       player = PrivateMethods.player_choice 
-      computer = Constants::COMPUTER_CHOICES.sample 
+      computer = Constants::COMPUTER_CHOICES.sample # chooses a random option
       puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}"].colorize(:blue) 
       puts ColorizedString["Computer chooses #{computer.to_s.downcase}"].colorize(:blue)
       case PrivateMethods.player_outcome [player, computer] 
@@ -81,6 +82,13 @@ class PlayRockPaperScissorsGame
           elsif choice != Constants::VALID_ENTRIES
             puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:green) 
           end
+          # # one may also do this:
+          # case
+          # when Constants::NTRY_TO_SYM.key?(choice)
+          #   return Constants::NTRY_TO_SYM[choice]
+          # when choice != Constants::VALID_ENTRIES
+          #   puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:green) 
+          # end
         end 
       end 
       def player_outcome(plays)

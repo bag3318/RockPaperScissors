@@ -77,6 +77,13 @@ class RakeTest # create test
           elsif choice != Constants::VALID_ENTRIES
             puts ColorizedString["That entry is invalid. Please re-enter"].colorize(:green)
           end
+          # # one may also do this:
+          # case
+          # when Constants::NTRY_TO_SYM.key?(choice)
+          #   return Constants::NTRY_TO_SYM[choice]
+          # when choice != Constants::VALID_ENTRIES
+          #   puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:green) 
+          # end
         end 
       end 
       def player_outcome(plays)
