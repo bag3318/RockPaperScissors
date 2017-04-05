@@ -10,7 +10,6 @@ title: Master Code - Play Rock Paper Scissors Game
 **The master code will look like this:**
 
 ```ruby
-
 #!/usr/bin/env ruby
 
 =begin
