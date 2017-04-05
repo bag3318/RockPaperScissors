@@ -2,7 +2,6 @@ require "colorized_string"
 ColorizedString.colors   
 ColorizedString.modes  
 module Constants 
-  protected
   NTRY_TO_SYM = { 
     'p' => :PAPER, 
     'r' => :ROCK, 

@@ -2,27 +2,23 @@
 |====================================|
 | Req Ruby Ver | Req Ruby Gems Ver   |
 |--------------|---------------------|
-| >= v2.0.0    | >= v2.6.10          |
+| >= v2.0.0    | >= v2.6.0           |
 |====================================|
 =end
 
 class RakeTest # create test
 
+  require_relative "./../lib/rps/version.rb"
+
   require "colorized_string"
   ColorizedString.colors
   ColorizedString.modes
 
-  module Constants 
-    protected
-    NTRY_TO_SYM = { 'p' => :PAPER,  'r' => :ROCK, 's' => :SCISSORS } 
-    VALID_ENTRIES = NTRY_TO_SYM.keys 
-    COMPUTER_CHOICES = NTRY_TO_SYM.values
-    WINNERS = [[:SCISSORS, :PAPER], [:PAPER, :ROCK], [:ROCK, :SCISSORS]] # format: player choice, computer choice
-    LOSERS = WINNERS.map { |i,j| [j,i] } # this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player
-    INIT_STRINGS = ["You are about to enter a rock-paper-scissors best of 3 match.", "Press the return/enter key to continue...", ""]
-  end
+  require_relative "./../lib/Constants.rb"
+  protected_methods :Constants 
+
   class << self
-    def continue(str1, str2, str3)
+    def continue(str1,str2,str3)
       puts  ColorizedString[str1].colorize(:color => :green) 
       print ColorizedString[str2].colorize(:color => :green)
       gets 
@@ -65,39 +61,9 @@ class RakeTest # create test
     end 
     gets
   end 
-  module PrivateMethods
-    private
-    class << self
-      def player_choice
-        loop do
-          print ColorizedString["Choose rock (r), paper (p) or scissors (s): "].colorize(:green)
-          choice = gets.chomp.downcase
-          if Constants::NTRY_TO_SYM.key?(choice)
-            return Constants::NTRY_TO_SYM[choice]
-          elsif choice != Constants::VALID_ENTRIES
-            puts ColorizedString["That entry is invalid. Please re-enter"].colorize(:green)
-          end
-          # # one may also do this:
-          # case
-          # when Constants::NTRY_TO_SYM.key?(choice)
-          #   return Constants::NTRY_TO_SYM[choice]
-          # when choice != Constants::VALID_ENTRIES
-          #   puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:green) 
-          # end
-        end 
-      end 
-      def player_outcome(plays)
-        return :WIN  if Constants::WINNERS.include?(plays)
-        return :LOSE if Constants::LOSERS.include?(plays)
-        return :TIE  if !:WIN | !:LOSE
-      end 
-      def final_outcome(pl, co) 
-        return :WIN  if pl > co 
-        return :LOSE if pl < co
-        return :TIE  if pl = co 
-      end 
-    end
-  end
+  require_relative "./../lib/PrivateMethods.rb"
+  private_methods :PrivateMethods
+
 end 
 
 RakeTest.new.testPlay(2) # best of 3
