@@ -29,13 +29,13 @@ __`% rps`__
 class PlayRockPaperScissorsGame # define master class
 
   module RockPaperScissors
-    VERSION = "2.4.1" # define version constant
+    VERSION = "2.4.2" # define version constant
   end
   
   # intiate the colorize gem
   require "colorized_string"
-  ColorizedString.colors # colors; ex: red, green, blue
-  ColorizedString.modes  # modes; ex: bold, italic, underline
+  ColorizedString.colors # import colors; ex: red, green, blue
+  ColorizedString.modes  # import modes; ex: bold, italic, underline
 
   module Constants 
     NTRY_TO_SYM = { # define constants from an entry to a symbol class

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=8ade7247dbbaa777a46e6b2b762a86575087bb4a">
+    <link rel="stylesheet" href="/assets/css/style.css?v=e8f566385199de7226e98472018c5fb0cd180f03">
   </head>
   <body>
     <section class="page-header">
@@ -15,7 +15,7 @@
       <h2 class="project-tagline">A Ruby Programmed Rock Paper Scissors Game</h2>
       
         <a href="http://github.com/bag3318/RockPaperScissors" class="btn">View on GitHub</a>
-        <a href="" class="btn">Report a Bug</a>
+        <a href="http://github.com/bag3318/RockPaperScissors/issues" class="btn">Report a Bug</a>
       
       
         <a href="http://github.com/bag3318/RockPaperScissors/zipball/gh-pages" class="btn">Download .zip</a>
@@ -52,13 +52,13 @@
 <span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span> <span class="c1"># define master class</span>
 
   <span class="k">module</span> <span class="nn">RockPaperScissors</span>
-    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.4.1"</span> <span class="c1"># define version constant</span>
+    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.4.2"</span> <span class="c1"># define version constant</span>
   <span class="k">end</span>
   
   <span class="c1"># intiate the colorize gem</span>
   <span class="nb">require</span> <span class="s2">"colorized_string"</span>
-  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">colors</span> <span class="c1"># colors; ex: red, green, blue</span>
-  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">modes</span>  <span class="c1"># modes; ex: bold, italic, underline</span>
+  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">colors</span> <span class="c1"># import colors; ex: red, green, blue</span>
+  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">modes</span>  <span class="c1"># import modes; ex: bold, italic, underline</span>
 
   <span class="k">module</span> <span class="nn">Constants</span> 
     <span class="no">NTRY_TO_SYM</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># define constants from an entry to a symbol class</span>
