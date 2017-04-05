@@ -41,4 +41,4 @@ Here are a few things you can do that will increase the likelihood of your pull 
 
 ## Site Nav
 
-[Home](./) | [How to Build](How_to_Build) | [Code of Conduct](CODE_OF_CONDUCT) | [How to Test](Testing.md)
+[Home](./) | [How to Build](How_to_Build) | [Master Code](Code) | [Code of Conduct](CODE_OF_CONDUCT) | [How to Test](Testing.md)

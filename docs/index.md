@@ -55,6 +55,6 @@ How to Run and Install
 
 ## Site Nav
 
-[How to Test](Testing) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+[How to Test](Testing) | [How to Build](How_to_Build) | [Master Code](Code) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
 
 [//]: # (end)

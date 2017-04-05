@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Master Code - Play Rock Paper Scissors Game</title>
+    <meta name="description" content="A Ruby Programmed Rock Paper Scissors Game"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/css/style.css?v=fdf5bfb64c72c2294f4da917f2a41ea4c0c76b04">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Play Rock Paper Scissors Game</h1>
+      <h2 class="project-tagline">A Ruby Programmed Rock Paper Scissors Game</h2>
+      
+        <a href="http://github.com/bag3318/RockPaperScissors" class="btn">View on GitHub</a>
+        <a href="http://github.com/bag3318/RockPaperScissors/issues" class="btn">Report a Bug</a>
+      
+      
+        <a href="http://github.com/bag3318/RockPaperScissors/zipball/gh-pages" class="btn">Download .zip</a>
+        <a href="http://github.com/bag3318/RockPaperScissors/tarball/gh-pages" class="btn">Download .tar.gz</a>
+      
+      <br/>
+      
+        <a href="#site-nav" class="btn">Site Nav</a>
+      
+    </section>
+
+    <section class="main-content">
+      
+<h1 id="master-code">Master Code</h1>
+
+<p><strong>The master code will look like this when compiled:</strong></p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1">#!/usr/bin/env ruby</span>
+
+<span class="cm">=begin
+|====================================|
+| Req Ruby Ver | Req Ruby Gems Ver   |
+|--------------|---------------------|
+| &gt;= v2.0.0    | &gt;= v2.6.0           |
+|====================================|
+=end</span>
+
+
+<span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span>
+
+  <span class="k">module</span> <span class="nn">RockPaperScissors</span>
+    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.3.0"</span> <span class="c1"># define version constant</span>
+  <span class="k">end</span>
+  
+  <span class="c1"># intiate the colorize gem</span>
+  <span class="nb">require</span> <span class="s2">"colorized_string"</span>
+  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">colors</span>   
+  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">modes</span>  
+
+  <span class="k">module</span> <span class="nn">Constants</span> 
+    <span class="no">NTRY_TO_SYM</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># define constants from an entry to a symbol class</span>
+      <span class="s1">'p'</span> <span class="o">=&gt;</span> <span class="ss">:PAPER</span><span class="p">,</span> 
+      <span class="s1">'r'</span> <span class="o">=&gt;</span> <span class="ss">:ROCK</span><span class="p">,</span> 
+      <span class="s1">'s'</span> <span class="o">=&gt;</span> <span class="ss">:SCISSORS</span> 
+    <span class="p">}</span> 
+    <span class="no">VALID_ENTRIES</span> <span class="o">=</span> <span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">keys</span> <span class="c1"># create valid entries</span>
+    <span class="no">COMPUTER_CHOICES</span> <span class="o">=</span> <span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">values</span> <span class="c1"># define computer choices</span>
+    <span class="no">WINNERS</span> <span class="o">=</span> <span class="p">[</span> <span class="c1"># define winners</span>
+      <span class="c1"># format: player choice, computer choice</span>
+      <span class="p">[</span><span class="ss">:SCISSORS</span><span class="p">,</span> <span class="ss">:PAPER</span><span class="p">],</span> 
+      <span class="p">[</span><span class="ss">:PAPER</span><span class="p">,</span> <span class="ss">:ROCK</span><span class="p">],</span> 
+      <span class="p">[</span><span class="ss">:ROCK</span><span class="p">,</span> <span class="ss">:SCISSORS</span><span class="p">]</span>
+    <span class="p">]</span> 
+    <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">|</span> <span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="p">}</span> <span class="c1"># this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player</span>
+    <span class="no">INIT_STRINGS</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"You are about to enter a rock-paper-scissors best of 3 match."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">),</span> 
+      <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Press the return/enter key to continue..."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">),</span> 
+      <span class="s2">""</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="nb">protected_methods</span> <span class="ss">:Constants</span> <span class="c1"># make the constants module protected</span>
+
+  <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span> <span class="c1"># define a self calling method in the parent class</span>
+    <span class="k">def</span> <span class="nf">continue</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span><span class="n">str2</span><span class="p">,</span><span class="n">str3</span><span class="p">)</span> <span class="c1"># pass in 3 parameters</span>
+      <span class="nb">puts</span>  <span class="no">ColorizedString</span><span class="p">[</span><span class="n">str1</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:color</span> <span class="o">=&gt;</span> <span class="ss">:green</span><span class="p">)</span> 
+      <span class="nb">print</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="n">str2</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:color</span> <span class="o">=&gt;</span> <span class="ss">:green</span><span class="p">)</span>
+      <span class="nb">gets</span> <span class="c1"># press enter or return to continue</span>
+      <span class="nb">puts</span>  <span class="n">str3</span>
+    <span class="k">end</span> 
+  <span class="k">end</span> 
+
+  <span class="n">continue</span><span class="p">(</span><span class="no">Constants</span><span class="o">::</span><span class="no">INIT_STRINGS</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="no">Constants</span><span class="o">::</span><span class="no">INIT_STRINGS</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="no">Constants</span><span class="o">::</span><span class="no">INIT_STRINGS</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># call continue class</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span> <span class="c1"># initialize variables</span>
+    <span class="vi">@player_score</span> <span class="o">=</span> <span class="vi">@computer_score</span> <span class="o">=</span> <span class="vi">@ties</span> <span class="o">=</span> <span class="mi">0</span> 
+  <span class="k">end</span> 
+  <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="n">winning_score</span><span class="p">)</span> 
+    <span class="k">while</span> <span class="vi">@player_score</span> <span class="o">&lt;</span> <span class="n">winning_score</span> <span class="o">&amp;&amp;</span> <span class="vi">@computer_score</span> <span class="o">&lt;</span> <span class="n">winning_score</span> <span class="c1"># both the computer's score and the player's score have to be less than the value passed in for the winning score at the end</span>
+      <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Player score: </span><span class="si">#{</span><span class="vi">@player_score</span><span class="si">}</span><span class="s2">, "</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> <span class="o">+</span> 
+           <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Computer score: </span><span class="si">#{</span><span class="vi">@computer_score</span><span class="si">}</span><span class="s2">, Ties: </span><span class="si">#{</span><span class="vi">@ties</span><span class="si">}</span><span class="s2">"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> 
+      <span class="n">player</span> <span class="o">=</span> <span class="no">PrivateMethods</span><span class="p">.</span><span class="nf">player_choice</span> 
+      <span class="n">computer</span> <span class="o">=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">COMPUTER_CHOICES</span><span class="p">.</span><span class="nf">sample</span> <span class="c1"># chooses a random option</span>
+      <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Player chooses </span><span class="si">#{</span><span class="n">player</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2">"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> 
+      <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Computer chooses </span><span class="si">#{</span><span class="n">computer</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2">"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span>
+      <span class="k">case</span> <span class="no">PrivateMethods</span><span class="p">.</span><span class="nf">player_outcome</span> <span class="p">[</span><span class="n">player</span><span class="p">,</span> <span class="n">computer</span><span class="p">]</span> <span class="c1"># define a reference call for player and computer for the arrays called in the player_outcome method</span>
+      <span class="k">when</span> <span class="ss">:WIN</span>
+        <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"</span><span class="si">#{</span><span class="n">player</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">capitalize</span><span class="si">}</span><span class="s2"> beats </span><span class="si">#{</span><span class="n">computer</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2">, player wins the round"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> 
+        <span class="vi">@player_score</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># @player_score = @player_score + 1</span>
+      <span class="k">when</span> <span class="ss">:LOSE</span>
+        <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"</span><span class="si">#{</span><span class="n">computer</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">capitalize</span><span class="si">}</span><span class="s2"> beats </span><span class="si">#{</span><span class="n">player</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2">, computer wins the round"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span>
+        <span class="vi">@computer_score</span> <span class="o">+=</span> <span class="mi">1</span> 
+      <span class="k">else</span> <span class="c1"># since there is only 1 option left, there is no need to define when :TIE</span>
+        <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Tie, choose again"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> 
+        <span class="vi">@ties</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1"># since tie is not in the original pass-in argument for the while loop, it will not be affected by the winning score</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Final score: player: </span><span class="si">#{</span><span class="vi">@player_score</span><span class="si">}</span><span class="s2">, "</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> <span class="o">+</span>
+         <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"computer: </span><span class="si">#{</span><span class="vi">@computer_score</span><span class="si">}</span><span class="s2"> (ties: </span><span class="si">#{</span><span class="vi">@ties</span><span class="si">}</span><span class="s2">)"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span>
+	<span class="c1"># define a case for the final outcomes  </span>
+    <span class="k">case</span> <span class="no">PrivateMethods</span><span class="p">.</span><span class="nf">final_outcome</span><span class="p">(</span><span class="vi">@player_score</span><span class="p">,</span> <span class="vi">@computer_score</span><span class="p">)</span>
+    <span class="k">when</span> <span class="ss">:WIN</span> 
+      <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Player wins!"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> 
+    <span class="k">when</span> <span class="ss">:LOSE</span>
+      <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Computer wins!"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span>
+    <span class="k">else</span> 
+      <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"It's a tie!"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> 
+    <span class="k">end</span> 
+    <span class="nb">gets</span>
+  <span class="k">end</span> 
+
+  <span class="k">module</span> <span class="nn">PrivateMethods</span> 
+    <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span> <span class="c1"># make all methods below self calling methods of this class (PlayRockPaperScissorsGame) so that the other methods will not to call their parents of these methods</span>
+      <span class="k">def</span> <span class="nf">player_choice</span>
+        <span class="kp">loop</span> <span class="k">do</span> <span class="c1"># for loop with no arguments passed in</span>
+          <span class="nb">print</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Choose rock (r), paper (p) or scissors (s): "</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">)</span>
+          <span class="n">choice</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> <span class="c1"># read user input and convert all to lower case</span>
+          <span class="c1"># define valid and invalid entries by using an if else-if statement(s)</span>
+          <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">key?</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span> <span class="c1"># if the NTRY_TO_SYM array's key is one of the keys defined in the original array</span>
+            <span class="k">return</span> <span class="no">Constants</span><span class="o">::</span><span class="no">NTRY_TO_SYM</span><span class="p">[</span><span class="n">choice</span><span class="p">]</span> <span class="c1"># return the users choice</span>
+          <span class="k">elsif</span> <span class="n">choice</span> <span class="o">!=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">VALID_ENTRIES</span> <span class="c1"># else if it is not one of the valid entries...</span>
+            <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"That entry is invalid. Please re-enter."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> <span class="c1"># return an error message</span>
+          <span class="k">end</span>
+          <span class="c1"># # one may also do this (albeit more useless):</span>
+          <span class="c1"># case</span>
+          <span class="c1"># when Constants::NTRY_TO_SYM.key?(choice)</span>
+          <span class="c1">#   return Constants::NTRY_TO_SYM[choice]</span>
+          <span class="c1"># when choice != Constants::VALID_ENTRIES</span>
+          <span class="c1">#   puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:green) </span>
+          <span class="c1"># end</span>
+        <span class="k">end</span> 
+      <span class="k">end</span> 
+      <span class="k">def</span> <span class="nf">player_outcome</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># define method for the player's outcome while passing in a parameter of type array</span>
+        <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">WINNERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># return a win if the one of the sub-arrays in the winners array is called</span>
+        <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LOSERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># return a loss if any of the mapped sub-arrays in the losers constant is present</span>
+        <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="o">!</span><span class="ss">:WIN</span> <span class="o">|</span> <span class="o">!</span><span class="ss">:LOSE</span> 
+      <span class="k">end</span> 
+      <span class="k">def</span> <span class="nf">final_outcome</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span><span class="n">co</span><span class="p">)</span> <span class="c1"># define final outcome method</span>
+        <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="n">pl</span> <span class="o">&gt;</span> <span class="n">co</span> 
+        <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="n">pl</span> <span class="o">&lt;</span> <span class="n">co</span>
+        <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="n">pl</span> <span class="o">=</span> <span class="n">co</span> <span class="c1"># this can never happen due to the code in the play method, but it is worth noting</span>
+      <span class="k">end</span> 
+    <span class="k">end</span>
+  <span class="k">end</span>
+  
+  <span class="nb">private_methods</span> <span class="ss">:PrivateMethods</span>
+
+<span class="k">end</span> 
+
+<span class="no">PlayRockPaperScissorsGame</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">play</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># call the play method and pass in 3 for the winning score</span>
+
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="site-nav">Site Nav</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="./">Home</a></td>
+      <td><a href="Testing">How to Test</a></td>
+      <td><a href="How_to_Build">How to Build</a></td>
+      <td><a href="CONTRIBUTING">Contributing</a></td>
+      <td><a href="CODE_OF_CONDUCT">Code of Conduct</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="http://github.com/bag3318/RockPaperScissors">RockPaperScissors</a> is maintained by <a href="http://github.com/bag3318">bag3318</a>.</span>
+        
+      </footer>
+    </section>
+
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'true', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+  </body>
+</html>
