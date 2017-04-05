@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.3.2"
+  spec.version                          = "2.3.3"
   spec.date                             = "2017-04-05"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
@@ -11,14 +11,14 @@ Gem::Specification.new do |spec|
   spec.platform                         = Gem::Platform::RUBY
   spec.require_paths                    = ["lib"]
   spec.files                            = `git ls-files -z`.split("\x0")
-  spec.test_files                       = ["test/test_rps.rb"]
+  spec.test_files                       = ["./test/test_rps.rb"]
   spec.post_install_message             = "Thanks for installing! I hope you have fun playing rock paper scissors! :)"
   spec.license                          = "MIT"
   spec.homepage                         = "https://bag3318.github.io/RockPaperScissors/"
   spec.required_ruby_version            = ">= 2.0.0"
   spec.required_rubygems_version        = ">= 2.6.0"
   spec.extra_rdoc_files                 = "README.md"
-  spec.cert_chain                       = ["certs/gem-public_cert.pem"]
+  spec.cert_chain                       = ["./certs/gem-public_cert.pem"]
   spec.signing_key                      = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
   spec.bindir                           = "bin"
   spec.executables                     << "rps"
