@@ -12,7 +12,7 @@ title: Master Code - Play Rock Paper Scissors Game
 [//]: # (`$ rps`)
 [//]: # (`> rps`)
 
-`% rps`
+__`% rps`__
 
 ```ruby
 #!/usr/bin/env ruby
@@ -48,8 +48,8 @@ class PlayRockPaperScissorsGame # define master class
     WINNERS = [ # define winners
       # format: player choice, computer choice
       [:SCISSORS, :PAPER], 
-      [:PAPER, :ROCK], 
-      [:ROCK, :SCISSORS]
+      [:PAPER   , :ROCK], 
+      [:ROCK    , :SCISSORS]
     ] 
     LOSERS = WINNERS.map { |wp,lp| [lp,wp] } # this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player
     INIT_STRINGS = [
@@ -133,7 +133,7 @@ class PlayRockPaperScissorsGame # define master class
       end 
       def player_outcome(plays) # define method for the player's outcome while passing in a parameter of type array
         return :WIN  if Constants::WINNERS.include?(plays) # return a win if the one of the sub-arrays in the winners array is called
-        return :LOSE if Constants::LOSERS.include?(plxays) # return a loss if any of the mapped sub-arrays in the losers constant is present
+        return :LOSE if Constants::LOSERS.include?(plays) # return a loss if any of the mapped sub-arrays in the losers constant is present
         return :TIE  if !:WIN | !:LOSE # return a tie if not (!x) win or if not loose
       end 
       def final_outcome(pl,co) # define final outcome method

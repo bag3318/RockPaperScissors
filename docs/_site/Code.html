@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=98983dee1d377eee226446efb507056c0123e6fd">
+    <link rel="stylesheet" href="/assets/css/style.css?v=8ade7247dbbaa777a46e6b2b762a86575087bb4a">
   </head>
   <body>
     <section class="page-header">
@@ -15,7 +15,7 @@
       <h2 class="project-tagline">A Ruby Programmed Rock Paper Scissors Game</h2>
       
         <a href="http://github.com/bag3318/RockPaperScissors" class="btn">View on GitHub</a>
-        <a href="http://github.com/bag3318/RockPaperScissors/issues" class="btn">Report a Bug</a>
+        <a href="" class="btn">Report a Bug</a>
       
       
         <a href="http://github.com/bag3318/RockPaperScissors/zipball/gh-pages" class="btn">Download .zip</a>
@@ -36,7 +36,7 @@
 
 <p><strong>The master code will look like this:</strong></p>
 
-<p><code class="highlighter-rouge">% rps</code></p>
+<p><strong><code class="highlighter-rouge">% rps</code></strong></p>
 
 <div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1">#!/usr/bin/env ruby</span>
 
@@ -71,8 +71,8 @@
     <span class="no">WINNERS</span> <span class="o">=</span> <span class="p">[</span> <span class="c1"># define winners</span>
       <span class="c1"># format: player choice, computer choice</span>
       <span class="p">[</span><span class="ss">:SCISSORS</span><span class="p">,</span> <span class="ss">:PAPER</span><span class="p">],</span> 
-      <span class="p">[</span><span class="ss">:PAPER</span><span class="p">,</span> <span class="ss">:ROCK</span><span class="p">],</span> 
-      <span class="p">[</span><span class="ss">:ROCK</span><span class="p">,</span> <span class="ss">:SCISSORS</span><span class="p">]</span>
+      <span class="p">[</span><span class="ss">:PAPER</span>   <span class="p">,</span> <span class="ss">:ROCK</span><span class="p">],</span> 
+      <span class="p">[</span><span class="ss">:ROCK</span>    <span class="p">,</span> <span class="ss">:SCISSORS</span><span class="p">]</span>
     <span class="p">]</span> 
     <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">wp</span><span class="p">,</span><span class="n">lp</span><span class="o">|</span> <span class="p">[</span><span class="n">lp</span><span class="p">,</span><span class="n">wp</span><span class="p">]</span> <span class="p">}</span> <span class="c1"># this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player</span>
     <span class="no">INIT_STRINGS</span> <span class="o">=</span> <span class="p">[</span>
@@ -156,7 +156,7 @@
       <span class="k">end</span> 
       <span class="k">def</span> <span class="nf">player_outcome</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># define method for the player's outcome while passing in a parameter of type array</span>
         <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">WINNERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># return a win if the one of the sub-arrays in the winners array is called</span>
-        <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LOSERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plxays</span><span class="p">)</span> <span class="c1"># return a loss if any of the mapped sub-arrays in the losers constant is present</span>
+        <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LOSERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># return a loss if any of the mapped sub-arrays in the losers constant is present</span>
         <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="o">!</span><span class="ss">:WIN</span> <span class="o">|</span> <span class="o">!</span><span class="ss">:LOSE</span> <span class="c1"># return a tie if not (!x) win or if not loose</span>
       <span class="k">end</span> 
       <span class="k">def</span> <span class="nf">final_outcome</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span><span class="n">co</span><span class="p">)</span> <span class="c1"># define final outcome method</span>
