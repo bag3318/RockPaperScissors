@@ -69,7 +69,7 @@ class PlayRockPaperScissorsGame
     gets
   end 
 
-  require "./../lib/PrivateMethods.rb"
+  require_relative "./../lib/PrivateMethods.rb"
   
   private_methods :PrivateMethods
 
