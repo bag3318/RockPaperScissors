@@ -24,7 +24,7 @@ title: Master Code - Play Rock Paper Scissors Game
 class PlayRockPaperScissorsGame
 
   module RockPaperScissors
-    VERSION = "2.3.6" # define version constant
+    VERSION = "2.3.7" # define version constant
   end
   
   # intiate the colorize gem
