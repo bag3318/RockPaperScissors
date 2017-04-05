@@ -60,7 +60,7 @@ class PlayRockPaperScissorsGame # define master class
 
   protected_methods :Constants # make the constants module protected
 
-  class << self # define a self calling method in the parent class
+  class << self # define a self calling method within the parent class
     def continue(str1,str2,str3) # pass in 3 parameters
       puts  ColorizedString[str1].colorize(:color => :green) 
       print ColorizedString[str2].colorize(:color => :green)
