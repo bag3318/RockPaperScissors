@@ -21,16 +21,16 @@ title: Master Code - Play Rock Paper Scissors Game
 =end
 
 
-class PlayRockPaperScissorsGame
+class PlayRockPaperScissorsGame # define master class
 
   module RockPaperScissors
-    VERSION = "2.3.9" # define version constant
+    VERSION = "2.4.0" # define version constant
   end
   
   # intiate the colorize gem
   require "colorized_string"
-  ColorizedString.colors   
-  ColorizedString.modes  
+  ColorizedString.colors # colors; ex: red, green, blue
+  ColorizedString.modes  # modes; ex: bold, italic, underline
 
   module Constants 
     NTRY_TO_SYM = { # define constants from an entry to a symbol class
@@ -139,7 +139,7 @@ class PlayRockPaperScissorsGame
     end
   end
   
-  private_methods :PrivateMethods
+  private_methods :PrivateMethods # make the PrivateMethods module private
 
 end 
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=b9ae812d1a9e40be1e66eaa23c3b459c2d3396cc">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ff550adff7cc8edaaee4f1802aa528aecc1d2c75">
   </head>
   <body>
     <section class="page-header">
@@ -47,16 +47,16 @@
 =end</span>
 
 
-<span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span>
+<span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span> <span class="c1"># define master class</span>
 
   <span class="k">module</span> <span class="nn">RockPaperScissors</span>
-    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.3.9"</span> <span class="c1"># define version constant</span>
+    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.4.0"</span> <span class="c1"># define version constant</span>
   <span class="k">end</span>
   
   <span class="c1"># intiate the colorize gem</span>
   <span class="nb">require</span> <span class="s2">"colorized_string"</span>
-  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">colors</span>   
-  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">modes</span>  
+  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">colors</span> <span class="c1"># colors; ex: red, green, blue</span>
+  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">modes</span>  <span class="c1"># modes; ex: bold, italic, underline</span>
 
   <span class="k">module</span> <span class="nn">Constants</span> 
     <span class="no">NTRY_TO_SYM</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># define constants from an entry to a symbol class</span>
@@ -165,7 +165,7 @@
     <span class="k">end</span>
   <span class="k">end</span>
   
-  <span class="nb">private_methods</span> <span class="ss">:PrivateMethods</span>
+  <span class="nb">private_methods</span> <span class="ss">:PrivateMethods</span> <span class="c1"># make the PrivateMethods module private</span>
 
 <span class="k">end</span> 
 
