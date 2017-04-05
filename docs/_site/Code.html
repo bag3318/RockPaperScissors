@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=a1b637c402f0330409cf753b8bc6225105fe706e">
+    <link rel="stylesheet" href="/assets/css/style.css?v=848a91c4d49bfe3671dda883d6a152aa019e9987">
   </head>
   <body>
     <section class="page-header">
@@ -35,6 +35,8 @@
 <h1 id="master-code">Master Code</h1>
 
 <p><strong>The master code will look like this:</strong></p>
+
+<p><code class="highlighter-rouge">% rps</code></p>
 
 <div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1">#!/usr/bin/env ruby</span>
 
@@ -154,8 +156,8 @@
       <span class="k">end</span> 
       <span class="k">def</span> <span class="nf">player_outcome</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># define method for the player's outcome while passing in a parameter of type array</span>
         <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">WINNERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># return a win if the one of the sub-arrays in the winners array is called</span>
-        <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LOSERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># return a loss if any of the mapped sub-arrays in the losers constant is present</span>
-        <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="o">!</span><span class="ss">:WIN</span> <span class="o">|</span> <span class="o">!</span><span class="ss">:LOSE</span> <span class="c1"># return a tie if not (!) win or if not loose</span>
+        <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LOSERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plxays</span><span class="p">)</span> <span class="c1"># return a loss if any of the mapped sub-arrays in the losers constant is present</span>
+        <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="o">!</span><span class="ss">:WIN</span> <span class="o">|</span> <span class="o">!</span><span class="ss">:LOSE</span> <span class="c1"># return a tie if not (!x) win or if not loose</span>
       <span class="k">end</span> 
       <span class="k">def</span> <span class="nf">final_outcome</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span><span class="n">co</span><span class="p">)</span> <span class="c1"># define final outcome method</span>
         <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="n">pl</span> <span class="o">&gt;</span> <span class="n">co</span> 
