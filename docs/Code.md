@@ -144,7 +144,7 @@ class PlayRockPaperScissorsGame # define master class
 
 end 
 
-PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 for the winning score
+PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 (0, 1, 2) for the winning score
 
 ```
 
