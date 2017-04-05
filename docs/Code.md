@@ -24,7 +24,7 @@ title: Master Code - Play Rock Paper Scissors Game
 class PlayRockPaperScissorsGame # define master class
 
   module RockPaperScissors
-    VERSION = "2.4.0" # define version constant
+    VERSION = "2.4.1" # define version constant
   end
   
   # intiate the colorize gem
@@ -129,7 +129,7 @@ class PlayRockPaperScissorsGame # define master class
       def player_outcome(plays) # define method for the player's outcome while passing in a parameter of type array
         return :WIN  if Constants::WINNERS.include?(plays) # return a win if the one of the sub-arrays in the winners array is called
         return :LOSE if Constants::LOSERS.include?(plays) # return a loss if any of the mapped sub-arrays in the losers constant is present
-        return :TIE  if !:WIN | !:LOSE 
+        return :TIE  if !:WIN | !:LOSE # return a tie if not (!) win or if not loose
       end 
       def final_outcome(pl,co) # define final outcome method
         return :WIN  if pl > co 
