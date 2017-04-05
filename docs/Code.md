@@ -7,7 +7,7 @@ title: Master Code - Play Rock Paper Scissors Game
 
 # Master Code
 
-**The master code will look like this when compiled:**
+**The master code will look like this:**
 
 ```ruby
 #!/usr/bin/env ruby
@@ -24,7 +24,7 @@ title: Master Code - Play Rock Paper Scissors Game
 class PlayRockPaperScissorsGame
 
   module RockPaperScissors
-    VERSION = "2.3.7" # define version constant
+    VERSION = "2.3.8" # define version constant
   end
   
   # intiate the colorize gem
