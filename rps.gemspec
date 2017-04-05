@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.2.7"
+  spec.version                          = "2.2.8"
   spec.date                             = "2017-04-04"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
     A Ruby-programmed rock paper scissors game. 
-    Now you cam play rock paper scissors whenever you'd like! :)
+    Now you cam play rock paper scissors on your computer whenever you'd like! :)
   EOF
   spec.author                           = "bag3318"
   spec.platform                         = Gem::Platform::RUBY
