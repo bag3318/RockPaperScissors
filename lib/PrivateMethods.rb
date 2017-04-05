@@ -10,7 +10,7 @@ module PrivateMethods
         if Constants::NTRY_TO_SYM.key?(choice)
           return Constants::NTRY_TO_SYM[choice]
         elsif choice != Constants::VALID_ENTRIES
-          puts ColorizedString["That entry is invalid. Please re-enter"].colorize(:green) 
+          puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) 
         end
         # # one may also do this:
         # case

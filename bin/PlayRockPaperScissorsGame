@@ -21,29 +21,29 @@ class PlayRockPaperScissorsGame
 
   protected_methods :Constants
 
-  class << self
+  class << self # make continue a self calling method
     def continue(str1,str2,str3) # pass in 3 parameters
-      puts  ColorizedString[str1].colorize(:color => :green) 
+      puts  ColorizedString[str1].colorize(:color => :green) # make string output green text
       print ColorizedString[str2].colorize(:color => :green)
       gets # press enter or return to continue
       puts  ColorizedString[str3].colorize(:color => :green)
     end 
   end 
 
-  continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2])
+  continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2]) # define passed in parameters
 
   def initialize
-    @player_score = @computer_score = @ties = 0 
+    @player_score = @computer_score = @ties = 0 # intialize variables
   end 
   def play(winning_score) 
-    while @player_score < winning_score && @computer_score < winning_score 
+    while @player_score < winning_score && @computer_score < winning_score # both the player's and the computer's score have to be less than 3
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
            ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}"].colorize(:blue) 
       player = PrivateMethods.player_choice 
-      computer = Constants::COMPUTER_CHOICES.sample # chooses a random option
+      computer = Constants::COMPUTER_CHOICES.sample # chooses a random option for the computer
       puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}"].colorize(:blue) 
       puts ColorizedString["Computer chooses #{computer.to_s.downcase}"].colorize(:blue)
-      case PrivateMethods.player_outcome [player, computer] 
+      case PrivateMethods.player_outcome [player, computer] # pass in player and computer for the contants arrays
       when :WIN
         puts ColorizedString["#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round"].colorize(:red) 
         @player_score += 1
