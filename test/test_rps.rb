@@ -61,7 +61,7 @@ class RakeTest # create test
     end 
     gets
   end 
-  load "./../lib/PrivateMethods.rb"
+  require_relative "./../lib/PrivateMethods.rb"
   private_methods :PrivateMethods
 
 end 
