@@ -12,10 +12,10 @@ module Constants
   WINNERS = [
     # format: player choice, computer choice
     [:SCISSORS, :PAPER], 
-    [:PAPER, :ROCK], 
-    [:ROCK, :SCISSORS]
+    [:PAPER   , :ROCK], 
+    [:ROCK    , :SCISSORS]
   ] 
-  LOSERS = WINNERS.map { |i,j| [j,i] } # this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player
+  LOSERS = WINNERS.map { |wp,lp| [lp,wp] } # this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player
   INIT_STRINGS = [
     ColorizedString["You are about to enter a rock-paper-scissors best of 3 match."].colorize(:green), 
     ColorizedString["Press the return/enter key to continue..."].colorize(:green), 
