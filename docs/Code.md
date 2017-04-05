@@ -9,8 +9,8 @@ title: Master Code - Play Rock Paper Scissors Game
 
 **The master code will look like this:**
 
-`% rps`
-
+[//]: # (`% rps`)
+ 
 ```ruby
 #!/usr/bin/env ruby
 
