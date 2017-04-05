@@ -22,7 +22,7 @@ class RakeTest # create test
       puts  ColorizedString[str1].colorize(:color => :green) 
       print ColorizedString[str2].colorize(:color => :green)
       gets 
-      puts  ColorizedString[str3].colorize(:color => :green)
+      puts  str3
     end 
   end 
   continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2])

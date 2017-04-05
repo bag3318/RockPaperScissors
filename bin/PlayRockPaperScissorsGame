@@ -26,7 +26,7 @@ class PlayRockPaperScissorsGame
       puts  ColorizedString[str1].colorize(:color => :green) # make string output green text
       print ColorizedString[str2].colorize(:color => :green)
       gets # press enter or return to continue
-      puts  ColorizedString[str3].colorize(:color => :green)
+      puts  str3
     end 
   end 
 
