@@ -12,7 +12,6 @@
 class PlayRockPaperScissorsGame
 
   require_relative "./../lib/rps/version.rb"
-
   # intiate the colorize gem
   require "colorized_string"
   ColorizedString.colors   
