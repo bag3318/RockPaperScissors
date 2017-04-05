@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.3.1"
+  spec.version                          = "2.3.2"
   spec.date                             = "2017-04-05"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   EOF
   spec.author                           = "bag3318"
   spec.platform                         = Gem::Platform::RUBY
-  spec.require_paths                    = ["lib", "test", "exec", "bin", "docs", "certs"]
+  spec.require_paths                    = ["lib"]
   spec.files                            = `git ls-files -z`.split("\x0")
   spec.test_files                       = ["test/test_rps.rb"]
   spec.post_install_message             = "Thanks for installing! I hope you have fun playing rock paper scissors! :)"
