@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Play Rock Paper Scissors Game
+title: Play Rock Paper Scissors Game - Home
 ---
 
 [//]: # (start)
