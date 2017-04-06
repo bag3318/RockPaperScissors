@@ -80,7 +80,7 @@ class PlayRockPaperScissorsGame # define master class
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
            ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}"].colorize(:blue) 
       player = PrivateMethods.player_choice 
-      computer = Constants::COMPUTER_CHOICES.sample # chooses a random option
+      computer = Constants::COMPUTER_CHOICES.sample # chooses a "random" option
       puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}"].colorize(:blue) 
       puts ColorizedString["Computer chooses #{computer.to_s.downcase}"].colorize(:blue)
       case PrivateMethods.player_outcome [player, computer] # define a reference call for player and computer for the arrays called in the player_outcome method
