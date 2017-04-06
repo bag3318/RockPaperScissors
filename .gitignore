@@ -5,6 +5,7 @@
 *.sublime-workspace
 *.jekyll-metadata
 *master
+*beginner.rb
 # _site
 # .sass-cache
 
