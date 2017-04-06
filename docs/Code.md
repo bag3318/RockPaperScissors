@@ -25,11 +25,10 @@ __`% rps`__
 |====================================|
 =end
 
-
 class PlayRockPaperScissorsGame # define master class
 
   module RockPaperScissors
-    VERSION = "2.4.3" # define version constant
+    VERSION = "2.4.4" # define version constant
   end
   
   # intiate the colorize gem
@@ -70,7 +69,7 @@ class PlayRockPaperScissorsGame # define master class
     end 
   end 
 
-  continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2]) # call continue class
+  continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2]) # call continue method
 
   def initialize # initialize variables
     @player_score = @computer_score = @ties = 0 
