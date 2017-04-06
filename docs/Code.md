@@ -97,7 +97,7 @@ class PlayRockPaperScissorsGame # define master class
     end
     puts ColorizedString["\nFinal score: player: #{@player_score}, "].colorize(:blue) +
          ColorizedString["computer: #{@computer_score} (ties: #{@ties})"].colorize(:blue)
-	# define a case for the final outcomes  
+	  # define a case for the final outcomes  
     case PrivateMethods.final_outcome(@player_score, @computer_score)
     when :WIN 
       puts ColorizedString["Player wins!"].colorize(:red) 

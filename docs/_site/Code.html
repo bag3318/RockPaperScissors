@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=124aa595fb0160e974fbab834272a92f2a846c07">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ccf3a1d999d62f52db87c676af985a6fc9988c50">
   </head>
   <body>
     <section class="page-header">
@@ -120,7 +120,7 @@
     <span class="k">end</span>
     <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Final score: player: </span><span class="si">#{</span><span class="vi">@player_score</span><span class="si">}</span><span class="s2">, "</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> <span class="o">+</span>
          <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"computer: </span><span class="si">#{</span><span class="vi">@computer_score</span><span class="si">}</span><span class="s2"> (ties: </span><span class="si">#{</span><span class="vi">@ties</span><span class="si">}</span><span class="s2">)"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span>
-	<span class="c1"># define a case for the final outcomes  </span>
+	  <span class="c1"># define a case for the final outcomes  </span>
     <span class="k">case</span> <span class="no">PrivateMethods</span><span class="p">.</span><span class="nf">final_outcome</span><span class="p">(</span><span class="vi">@player_score</span><span class="p">,</span> <span class="vi">@computer_score</span><span class="p">)</span>
     <span class="k">when</span> <span class="ss">:WIN</span> 
       <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Player wins!"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> 
