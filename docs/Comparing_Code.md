@@ -2,6 +2,7 @@
 # start YAML
 layout: default
 title: Comparing Code - Play Rock Paper Scissors Game
+permalink: /Comparing_Code.html
 # end YAML
 ---
 
@@ -25,11 +26,13 @@ title: Comparing Code - Play Rock Paper Scissors Game
 ## Beginner's Code
 
 ### Beginner's Code Pros
+
 + Simple
 - Easy to understand
 * Short
 
 ### Beginner's Code Cons
+
 + Unorganized
 - Lacks modularization
 * Many `if`s and `else`s
