@@ -22,12 +22,12 @@ title: Comparing Code - Play Rock Paper Scissors Game
 
 ## Beginner's Code
 
-### Beginner's code Pros
+### Beginner's Code Pros
 + Simple
 - Easy to understand
 * Short
 
-### Beginner's code Cons
+### Beginner's Code Cons
 + Unorganized
 - Lacks modularization
 * Many `if`s and `else`s
