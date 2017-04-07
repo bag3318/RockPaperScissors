@@ -22,4 +22,4 @@ What you will need
 
 ## Site Nav
 
-[Home](./) | [How to Build](How_to_Build) | [Master Code](Code) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+[Home](./) | [Comparing Code](Comparing_Code) | [How to Build](How_to_Build) | [Master Code](Code) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)

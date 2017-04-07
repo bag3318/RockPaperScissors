@@ -82,4 +82,4 @@ available at [http://contributor-covenant.org/version/1/4][version]
 
 ## Site Nav
 
-[Home](./) | [How to Build](How_to_Build) | [Master Code](Code) | [Contributing](CONTRIBUTING) | [How to Test](Testing)
+[Home](./) | [Comparing Code](Comparing_Code) | [How to Build](How_to_Build) | [Master Code](Code) | [Contributing](CONTRIBUTING) | [How to Test](Testing)

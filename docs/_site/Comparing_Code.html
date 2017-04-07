@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Master Code - Play Rock Paper Scissors Game</title>
+    <title>Comparing Code - Play Rock Paper Scissors Game</title>
     <meta name="description" content="A Ruby Programmed Rock Paper Scissors Game"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
@@ -31,28 +31,105 @@
     </section>
 
     <section class="main-content">
-      
-<h1 id="master-code">Master Code</h1>
+      <h1 id="comparing-beginners-rps-code-to-advanced-rps-code">Comparing Beginner’s RPS Code to Advanced RPS Code</h1>
 
-<p><strong>The master code will look like this:</strong></p>
+<p><strong>Table of Contents</strong></p>
+<ul>
+  <li><a href="#comparing-beginners-rps-code-to-advanced-rps-code">Comparing Beginner’s RPS Code to Advanced RPS Code</a>
+    <ul>
+      <li><a href="#beginners-code">Beginner’s Code</a>
+        <ul>
+          <li><a href="#beginners-code-pros">Beginner’s code Pros</a></li>
+          <li><a href="#beginners-code-cons">Beginner’s code Cons</a></li>
+          <li><a href="#what-beginners-code-looks-ike">What Beginner’s Code Looks :ike</a></li>
+        </ul>
+      </li>
+      <li><a href="#advanced-code">Advanced Code</a>
+        <ul>
+          <li><a href="#advanced-code-pros">Advanced Code Pros</a></li>
+          <li><a href="#advanced-code-cons">Advanced Code Cons</a></li>
+          <li><a href="#what-advanced-code-looks-like">What Advanced Code Looks Like</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<p><strong><code class="highlighter-rouge">% rps</code></strong></p>
+<h2 id="beginners-code">Beginner’s Code</h2>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1">#!/usr/bin/env ruby</span>
+<h3 id="beginners-code-pros">Beginner’s code Pros</h3>
+<ul>
+  <li>Simple</li>
+  <li>Easy to understand</li>
+  <li>Short</li>
+</ul>
 
-<span class="cm">=begin
-|====================================|
-| Req Ruby Ver | Req Ruby Gems Ver   |
-|--------------|---------------------|
-| &gt;= v2.0.0    | &gt;= v2.6.0           |
-|====================================|
-=end</span>
+<h3 id="beginners-code-cons">Beginner’s code Cons</h3>
+<ul>
+  <li>Unorganized</li>
+  <li>Lacks modularization</li>
+  <li>Many <code class="highlighter-rouge">if</code>s and <code class="highlighter-rouge">else</code>s</li>
+</ul>
 
-<span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span> <span class="c1"># define master class</span>
+<h3 id="what-beginners-code-looks-ike">What Beginner’s Code Looks :ike</h3>
 
-  <span class="k">module</span> <span class="nn">RockPaperScissors</span>
-    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.4.4"</span> <span class="c1"># define version constant</span>
+<p><strong><code class="highlighter-rouge">% ruby beginner.rb</code></strong></p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"rock"</span><span class="p">,</span> <span class="s2">"paper"</span><span class="p">,</span> <span class="s2">"scissors"</span><span class="p">]</span>
+<span class="n">computer_choice</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="nb">rand</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="nf">length</span><span class="p">)]</span> 
+ <span class="c1"># the above line chooses a random pick in the options array, and the `options.length` means to choose from however many options there are in the `options` array</span>
+<span class="nb">puts</span> <span class="s2">"What's your choice?"</span>
+<span class="nb">puts</span> <span class="s2">"rock, paper, or scissors"</span>
+<span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> <span class="c1"># `gets.chomp` reads user input, .downcase is like `.toLowerCase()` in javascript</span>
+<span class="kp">loop</span> <span class="k">do</span> 
+  <span class="k">if</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"rock"</span> <span class="o">||</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s2">"paper"</span> <span class="o">||</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s2">"scissors"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="n">computer_choice</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="s2">"We got the same, let's keep playing!"</span>
+    <span class="k">elsif</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"rock"</span> <span class="o">&amp;&amp;</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">"scissors"</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="s2">"computer choice is: "</span> <span class="o">+</span> <span class="n">computer_choice</span> <span class="o">+</span> <span class="s2">" , you win! :)"</span>
+    <span class="k">elsif</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"rock"</span> <span class="o">&amp;&amp;</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">"paper"</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="s2">"computer choice is: "</span> <span class="o">+</span> <span class="n">computer_choice</span> <span class="o">+</span> <span class="s2">" ,computer wins :("</span>
+    <span class="k">elsif</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"paper"</span> <span class="o">&amp;&amp;</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">"scissors"</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="s2">"computer choice is: "</span> <span class="o">+</span> <span class="n">computer_choice</span> <span class="o">+</span> <span class="s2">" ,computer wins :("</span>
+    <span class="k">elsif</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"paper"</span> <span class="o">&amp;&amp;</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">"rock"</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="s2">"computer choice is: "</span> <span class="o">+</span> <span class="n">computer_choice</span> <span class="o">+</span> <span class="s2">" , you win! :)"</span>
+    <span class="k">elsif</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"scissors"</span> <span class="o">&amp;&amp;</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">"rock"</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="s2">"computer choice is: "</span> <span class="o">+</span> <span class="n">computer_choice</span> <span class="o">+</span> <span class="s2">" ,computer wins :("</span>
+    <span class="k">elsif</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"scissors"</span> <span class="o">&amp;&amp;</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">"paper"</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="s2">"computer choice is: "</span> <span class="o">+</span> <span class="n">computer_choice</span> <span class="o">+</span> <span class="s2">" , you win! :)"</span>
+    <span class="k">end</span>
+    <span class="k">else</span> 
+    <span class="nb">puts</span> <span class="s2">"Invalid choice, enter Rock, Paper, or Scissors"</span>
+    <span class="nb">puts</span> <span class="s2">"What's your choice?"</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> <span class="c1"># have the user choose again</span>
   <span class="k">end</span>
+  <span class="k">break</span> <span class="c1"># break the loop after all the above has been completed</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h2 id="advanced-code">Advanced Code</h2>
+
+<h3 id="advanced-code-pros">Advanced Code Pros</h3>
+
+<ul>
+  <li>Organized</li>
+  <li>Modularized</li>
+  <li>Structured</li>
+</ul>
+
+<h3 id="advanced-code-cons">Advanced Code Cons</h3>
+
+<ul>
+  <li>Long</li>
+  <li>Hard to understand</li>
+</ul>
+
+<h3 id="what-advanced-code-looks-like">What Advanced Code Looks Like</h3>
+
+<p><strong><code class="highlighter-rouge">% ruby advanced.rb</code></strong></p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span> <span class="c1"># define master class</span>
   
   <span class="c1"># intiate the colorize gem</span>
   <span class="nb">require</span> <span class="s2">"colorized_string"</span>
@@ -173,9 +250,6 @@
 <span class="no">PlayRockPaperScissorsGame</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">play</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># call the play method and pass in 3 (0, 1, 2) for the winning score</span>
 </code></pre>
 </div>
-
-<hr />
-
 <h2 id="site-nav">Site Nav</h2>
 
 <table>
@@ -183,6 +257,7 @@
     <tr>
       <td><a href="./">Home</a></td>
       <td><a href="Comparing_Code">Comparing Code</a></td>
+      <td><a href="Code">Master Code</a></td>
       <td><a href="Testing">How to Test</a></td>
       <td><a href="How_to_Build">How to Build</a></td>
       <td><a href="CONTRIBUTING">Contributing</a></td>
@@ -190,7 +265,6 @@
     </tr>
   </tbody>
 </table>
-
 
 
       <footer class="site-footer">

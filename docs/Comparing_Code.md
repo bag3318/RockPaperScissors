@@ -1,35 +1,89 @@
 ---
 layout: default
-title: Master Code - Play Rock Paper Scissors Game
+title: Comparing Code - Play Rock Paper Scissors Game
 ---
 
-[//]: # (begin markdown)
+# Comparing Beginner's RPS Code to Advanced RPS Code
 
-# Master Code
+**Table of Contents**
+- [Comparing Beginner's RPS Code to Advanced RPS Code](#comparing-beginners-rps-code-to-advanced-rps-code)
+  - [Beginner's Code](#beginners-code)
+    - [Beginner's code Pros](#beginners-code-pros)
+    - [Beginner's code Cons](#beginners-code-cons)
+    - [What Beginner's Code Looks :ike](#what-beginners-code-looks-ike)
+  - [Advanced Code](#advanced-code)
+    - [Advanced Code Pros](#advanced-code-pros)
+    - [Advanced Code Cons](#advanced-code-cons)
+    - [What Advanced Code Looks Like](#what-advanced-code-looks-like)
 
-**The master code will look like this:**
+## Beginner's Code
 
-[//]: # (`$ rps`)
-[//]: # (`> rps`)
+### Beginner's code Pros
++ Simple
+- Easy to understand
+* Short
 
-__`% rps`__
+### Beginner's code Cons
++ Unorganized
+- Lacks modularization
+* Many `if`s and `else`s
+
+### What Beginner's Code Looks :ike
+
+__`% ruby beginner.rb`__
 
 ```ruby
-#!/usr/bin/env ruby
-
-=begin
-|====================================|
-| Req Ruby Ver | Req Ruby Gems Ver   |
-|--------------|---------------------|
-| >= v2.0.0    | >= v2.6.0           |
-|====================================|
-=end
-
-class PlayRockPaperScissorsGame # define master class
-
-  module RockPaperScissors
-    VERSION = "2.4.4" # define version constant
+options = ["rock", "paper", "scissors"]
+computer_choice = options[rand(options.length)] 
+ # the above line chooses a random pick in the options array, and the `options.length` means to choose from however many options there are in the `options` array
+puts "What's your choice?"
+puts "rock, paper, or scissors"
+user_input = gets.chomp.downcase # `gets.chomp` reads user input, .downcase is like `.toLowerCase()` in javascript
+loop do 
+  if (user_input == "rock" || user_input == "paper" || user_input == "scissors")
+    if (user_input == computer_choice)
+      puts "We got the same, let's keep playing!"
+    elsif (user_input == "rock" && computer_choice == "scissors")
+      puts "computer choice is: " + computer_choice + " , you win! :)"
+    elsif (user_input == "rock" && computer_choice == "paper")
+      puts "computer choice is: " + computer_choice + " ,computer wins :("
+    elsif (user_input == "paper" && computer_choice == "scissors")
+      puts "computer choice is: " + computer_choice + " ,computer wins :("
+    elsif (user_input == "paper" && computer_choice == "rock")
+      puts "computer choice is: " + computer_choice + " , you win! :)"
+    elsif (user_input == "scissors" && computer_choice == "rock")
+      puts "computer choice is: " + computer_choice + " ,computer wins :("
+    elsif (user_input == "scissors" && computer_choice == "paper")
+      puts "computer choice is: " + computer_choice + " , you win! :)"
+    end
+    else 
+    puts "Invalid choice, enter Rock, Paper, or Scissors"
+    puts "What's your choice?"
+    user_input = gets.chomp.downcase # have the user choose again
   end
+  break # break the loop after all the above has been completed
+end
+```
+
+## Advanced Code
+
+### Advanced Code Pros
+
++ Organized
+- Modularized
+* Structured
+
+### Advanced Code Cons
+
++ Long
+- Hard to understand
+
+### What Advanced Code Looks Like
+
+__`% ruby advanced.rb`__
+
+```ruby
+class PlayRockPaperScissorsGame # define master class
   
   # intiate the colorize gem
   require "colorized_string"
@@ -149,11 +203,6 @@ end
 
 PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 (0, 1, 2) for the winning score
 ```
-
----------
-
 ## Site Nav
 
-[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
-
-[//]: # (end markdown)
+[Home](./) | [Comparing Code](Comparing_Code) | [Master Code](Code) | [How to Test](Testing) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
