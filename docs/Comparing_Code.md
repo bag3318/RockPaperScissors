@@ -11,8 +11,8 @@ title: Comparing Code - Play Rock Paper Scissors Game
 
 - [Comparing Beginner's RPS Code to Advanced RPS Code](#comparing-beginners-rps-code-to-advanced-rps-code)
   - [Beginner's Code](#beginners-code)
-    - [Beginner's code Pros](#beginners-code-pros)
-    - [Beginner's code Cons](#beginners-code-cons)
+    - [Beginner's Code Pros](#beginners-code-pros)
+    - [Beginner's Code Cons](#beginners-code-cons)
     - [What Beginner's Code Looks :ike](#what-beginners-code-looks-ike)
   - [Advanced Code](#advanced-code)
     - [Advanced Code Pros](#advanced-code-pros)
