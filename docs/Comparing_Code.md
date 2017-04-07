@@ -37,7 +37,9 @@ title: Comparing Code - Play Rock Paper Scissors Game
 __`% ruby beginner.rb`__
 
 [//]: # (end markdown)
+
 [//]: # (start ruby)
+
 ```ruby
 options = ["rock", "paper", "scissors"]
 computer_choice = options[rand(options.length)] 
@@ -90,6 +92,7 @@ end
 __`% ruby advanced.rb`__
 
 [//]: # (end markdown)
+
 [//]: # (start ruby)
 ```ruby
 class PlayRockPaperScissorsGame # define master class
@@ -213,7 +216,9 @@ end
 PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 (0, 1, 2) for the winning score
 ```
 [//]: # (end ruby)
+
 [//]: # (start markdown)
+
 ------------
 
 ## Site Nav
