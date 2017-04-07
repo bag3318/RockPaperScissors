@@ -102,10 +102,9 @@ __`% ruby advanced-rps.rb`__
 ```ruby
 class PlayRockPaperScissorsGame
   
-  # intiate the colorize gem
   require "colorized_string"
-  ColorizedString.colors # import colors; ex: red, green, blue
-  ColorizedString.modes  # import modes; ex: bold, italic, underline
+  ColorizedString.colors 
+  ColorizedString.modes  
 
   module Constants 
     NTRY_TO_SYM = { 
@@ -116,12 +115,11 @@ class PlayRockPaperScissorsGame
     VALID_ENTRIES = NTRY_TO_SYM.keys 
     COMPUTER_CHOICES = NTRY_TO_SYM.values 
     WINNERS = [ 
-      # format: player choice, computer choice
       [:SCISSORS, :PAPER], 
       [:PAPER   , :ROCK], 
       [:ROCK    , :SCISSORS]
     ] 
-    LOSERS = WINNERS.map { |pc,cc| [cc,pc] } # this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player
+    LOSERS = WINNERS.map { |pc,cc| [cc,pc] } 
     INIT_STRINGS = [
       ColorizedString["You are about to enter a rock-paper-scissors best of 3 match."].colorize(:green), 
       ColorizedString["Press the return/enter key to continue..."].colorize(:green), 
@@ -129,7 +127,7 @@ class PlayRockPaperScissorsGame
     ]
   end
 
-  protected_methods :Constants # make the constants module protected
+  protected_methods :Constants
 
   class << self 
     def continue(str1,str2,str3)
@@ -156,7 +154,7 @@ class PlayRockPaperScissorsGame
       case PrivateMethods.player_outcome [player, computer]
       when :WIN
         puts ColorizedString["#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round"].colorize(:red) 
-        @player_score += 1 # @player_score = @player_score + 1
+        @player_score += 1
       when :LOSE
         puts ColorizedString["#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round"].colorize(:red)
         @computer_score += 1 
@@ -199,16 +197,16 @@ class PlayRockPaperScissorsGame
       def final_outcome(pl,co)
         return :WIN  if pl > co 
         return :LOSE if pl < co
-        return :TIE  if pl = co # this can never happen due to the code in the play method, but it is worth noting
+        return :TIE  if pl = co 
       end 
     end
   end
   
-  private_methods :PrivateMethods # make the PrivateMethods module private
+  private_methods :PrivateMethods 
 
 end 
 
-PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 (0, 1, 2) for the winning score
+PlayRockPaperScissorsGame.new.play(2) 
 ```
 [//]: # (end ruby)
 
