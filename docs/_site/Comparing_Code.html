@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=ae19179a7e658ec8d7856c871455d01db5871cc9">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1659b9ea1e27d66535a312d5604796aa3f5a4d4a">
     <link rel="stylesheet" href="assets/css/pace.css" />
     <script src="assets/js/pace.min.js"></script>
   </head>
@@ -137,9 +137,10 @@
 
 <div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span>
   
+  <span class="c1"># import colorize gem</span>
   <span class="nb">require</span> <span class="s2">"colorized_string"</span>
-  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">colors</span> 
-  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">modes</span>  
+  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">colors</span> <span class="c1"># import colors</span>
+  <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">modes</span>  <span class="c1"># import modes (bold, etc...)</span>
 
   <span class="k">module</span> <span class="nn">Constants</span> 
     <span class="no">NTRY_TO_SYM</span> <span class="o">=</span> <span class="p">{</span> 
@@ -154,7 +155,7 @@
       <span class="p">[</span><span class="ss">:PAPER</span>   <span class="p">,</span> <span class="ss">:ROCK</span><span class="p">],</span> 
       <span class="p">[</span><span class="ss">:ROCK</span>    <span class="p">,</span> <span class="ss">:SCISSORS</span><span class="p">]</span>
     <span class="p">]</span> 
-    <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">pc</span><span class="p">,</span><span class="n">cc</span><span class="o">|</span> <span class="p">[</span><span class="n">cc</span><span class="p">,</span><span class="n">pc</span><span class="p">]</span> <span class="p">}</span> 
+    <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">pc</span><span class="p">,</span><span class="n">cc</span><span class="o">|</span> <span class="p">[</span><span class="n">cc</span><span class="p">,</span><span class="n">pc</span><span class="p">]</span> <span class="p">}</span> <span class="c1"># flip the values in the WINNERS array</span>
     <span class="no">INIT_STRINGS</span> <span class="o">=</span> <span class="p">[</span>
       <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"You are about to enter a rock-paper-scissors best of 3 match."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">),</span> 
       <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Press the return/enter key to continue..."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">),</span> 
@@ -162,7 +163,7 @@
     <span class="p">]</span>
   <span class="k">end</span>
 
-  <span class="nb">protected_methods</span> <span class="ss">:Constants</span>
+  <span class="nb">protected_methods</span> <span class="ss">:Constants</span> <span class="c1"># make constants module protected</span>
 
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span> 
     <span class="k">def</span> <span class="nf">continue</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span><span class="n">str2</span><span class="p">,</span><span class="n">str3</span><span class="p">)</span>

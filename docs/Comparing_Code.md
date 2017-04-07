@@ -102,9 +102,10 @@ __`% ruby advanced-rps.rb`__
 ```ruby
 class PlayRockPaperScissorsGame
   
+  # import colorize gem
   require "colorized_string"
-  ColorizedString.colors 
-  ColorizedString.modes  
+  ColorizedString.colors # import colors
+  ColorizedString.modes  # import modes (bold, etc...)
 
   module Constants 
     NTRY_TO_SYM = { 
@@ -119,7 +120,7 @@ class PlayRockPaperScissorsGame
       [:PAPER   , :ROCK], 
       [:ROCK    , :SCISSORS]
     ] 
-    LOSERS = WINNERS.map { |pc,cc| [cc,pc] } 
+    LOSERS = WINNERS.map { |pc,cc| [cc,pc] } # flip the values in the WINNERS array
     INIT_STRINGS = [
       ColorizedString["You are about to enter a rock-paper-scissors best of 3 match."].colorize(:green), 
       ColorizedString["Press the return/enter key to continue..."].colorize(:green), 
@@ -127,7 +128,7 @@ class PlayRockPaperScissorsGame
     ]
   end
 
-  protected_methods :Constants
+  protected_methods :Constants # make constants module protected
 
   class << self 
     def continue(str1,str2,str3)
