@@ -192,13 +192,6 @@ class PlayRockPaperScissorsGame # define master class
           elsif choice != Constants::VALID_ENTRIES # else if it is not one of the valid entries...
             puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) # return an error message
           end
-          # # one may also do this (albeit more useless):
-          # case
-          # when Constants::NTRY_TO_SYM.key?(choice)
-          #   return Constants::NTRY_TO_SYM[choice]
-          # when choice != Constants::VALID_ENTRIES
-          #   puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:green) 
-          # end
         end 
       end 
       def player_outcome(plays) # define method for the player's outcome while passing in a parameter of type array
