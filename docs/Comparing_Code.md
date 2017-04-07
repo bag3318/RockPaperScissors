@@ -39,7 +39,7 @@ permalink: /Comparing_Code.html
 
 ### What Beginner's Code Looks Like
 
-__`% ruby beginner.rb`__
+__`% ruby beginner-rps.rb`__
 
 [//]: # (end markdown)
 
@@ -94,7 +94,7 @@ end
 
 ### What Advanced Code Looks Like
 
-__`% ruby advanced.rb`__
+__`% ruby advanced-rps.rb`__
 
 [//]: # (end markdown)
 
