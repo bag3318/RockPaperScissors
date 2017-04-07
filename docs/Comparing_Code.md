@@ -79,6 +79,7 @@ end
 [//]: # (end ruby)
 
 [//]: # (start markdown)
+
 ## Advanced Code
 
 ### Advanced Code Pros
