@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=f7cc82b204557f648b08da986164e1670cc9d4e3">
+    <link rel="stylesheet" href="/assets/css/style.css?v=4227455b04260f7048406721fa961b866ed90091">
     <link rel="stylesheet" href="assets/css/pace.css" />
     <script src="assets/js/pace.min.js"></script>
   </head>
@@ -84,10 +84,9 @@
 
 <div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"rock"</span><span class="p">,</span> <span class="s2">"paper"</span><span class="p">,</span> <span class="s2">"scissors"</span><span class="p">]</span>
 <span class="n">computer_choice</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="nb">rand</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="nf">length</span><span class="p">)]</span> 
- <span class="c1"># the above line chooses a random pick in the options array, and the `options.length` means to choose from however many options there are in the `options` array</span>
 <span class="nb">puts</span> <span class="s2">"What's your choice?"</span>
 <span class="nb">puts</span> <span class="s2">"rock, paper, or scissors"</span>
-<span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> <span class="c1"># `gets.chomp` reads user input, .downcase is like `.toLowerCase()` in javascript</span>
+<span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> 
 <span class="kp">loop</span> <span class="k">do</span> 
   <span class="k">if</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"rock"</span> <span class="o">||</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s2">"paper"</span> <span class="o">||</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s2">"scissors"</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="n">computer_choice</span><span class="p">)</span>
@@ -108,9 +107,9 @@
     <span class="k">else</span> 
     <span class="nb">puts</span> <span class="s2">"Invalid choice, enter Rock, Paper, or Scissors"</span>
     <span class="nb">puts</span> <span class="s2">"What's your choice?"</span>
-    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> <span class="c1"># have the user choose again</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span>
   <span class="k">end</span>
-  <span class="k">break</span> <span class="c1"># break the loop after all the above has been completed</span>
+  <span class="k">break</span>
 <span class="k">end</span>
 </code></pre>
 </div>

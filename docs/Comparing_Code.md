@@ -47,10 +47,9 @@ __`% ruby beginner-rps.rb`__
 ```ruby
 options = ["rock", "paper", "scissors"]
 computer_choice = options[rand(options.length)] 
- # the above line chooses a random pick in the options array, and the `options.length` means to choose from however many options there are in the `options` array
 puts "What's your choice?"
 puts "rock, paper, or scissors"
-user_input = gets.chomp.downcase # `gets.chomp` reads user input, .downcase is like `.toLowerCase()` in javascript
+user_input = gets.chomp.downcase 
 loop do 
   if (user_input == "rock" || user_input == "paper" || user_input == "scissors")
     if (user_input == computer_choice)
@@ -71,9 +70,9 @@ loop do
     else 
     puts "Invalid choice, enter Rock, Paper, or Scissors"
     puts "What's your choice?"
-    user_input = gets.chomp.downcase # have the user choose again
+    user_input = gets.chomp.downcase
   end
-  break # break the loop after all the above has been completed
+  break
 end
 ```
 [//]: # (end ruby)
