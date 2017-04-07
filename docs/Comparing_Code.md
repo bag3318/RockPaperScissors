@@ -1,6 +1,8 @@
 ---
+# start YAML
 layout: default
 title: Comparing Code - Play Rock Paper Scissors Game
+# end YAML
 ---
 
 [//]: # (start markdown)
