@@ -25,4 +25,4 @@ title: How to Build - Play Rock Paper Scissors Game
 
 ## Site Nav 
 
-[Home](./) | [Master Code](Code) | [How to Test](Testing) | [Master Code](Code) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [Master Code](Code) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
