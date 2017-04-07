@@ -39,7 +39,6 @@ __`% ruby beginner.rb`__
 [//]: # (end markdown)
 
 [//]: # (start ruby)
-
 ```ruby
 options = ["rock", "paper", "scissors"]
 computer_choice = options[rand(options.length)] 
