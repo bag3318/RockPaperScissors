@@ -72,6 +72,7 @@ loop do
 end
 ```
 [//]: # (end ruby)
+
 [//]: # (start markdown)
 ## Advanced Code
 
