@@ -3,9 +3,12 @@ layout: default
 title: Comparing Code - Play Rock Paper Scissors Game
 ---
 
+[//]: # (start markdown)
+
 # Comparing Beginner's RPS Code to Advanced RPS Code
 
 **Table of Contents**
+
 - [Comparing Beginner's RPS Code to Advanced RPS Code](#comparing-beginners-rps-code-to-advanced-rps-code)
   - [Beginner's Code](#beginners-code)
     - [Beginner's code Pros](#beginners-code-pros)
@@ -33,6 +36,8 @@ title: Comparing Code - Play Rock Paper Scissors Game
 
 __`% ruby beginner.rb`__
 
+[//]: # (end markdown)
+[//]: # (start ruby)
 ```ruby
 options = ["rock", "paper", "scissors"]
 computer_choice = options[rand(options.length)] 
@@ -65,7 +70,8 @@ loop do
   break # break the loop after all the above has been completed
 end
 ```
-
+[//]: # (end ruby)
+[//]: # (start markdown)
 ## Advanced Code
 
 ### Advanced Code Pros
@@ -83,6 +89,8 @@ end
 
 __`% ruby advanced.rb`__
 
+[//]: # (end markdown)
+[//]: # (start ruby)
 ```ruby
 class PlayRockPaperScissorsGame # define master class
   
@@ -204,9 +212,12 @@ end
 
 PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 (0, 1, 2) for the winning score
 ```
-
+[//]: # (end ruby)
+[//]: # (start markdown)
 ------------
 
 ## Site Nav
 
 [Home](./) | [Master Code](Code) | [How to Test](Testing) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+
+[//]: # (end markdown)
