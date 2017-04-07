@@ -34,7 +34,7 @@ title: Comparing Code - Play Rock Paper Scissors Game
 - Lacks modularization
 * Many `if`s and `else`s
 
-### What Beginner's Code Looks :ike
+### What Beginner's Code Looks Like
 
 __`% ruby beginner.rb`__
 
