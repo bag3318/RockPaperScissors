@@ -15,6 +15,7 @@ title: Comparing Code - Play Rock Paper Scissors Game
     - [Advanced Code Pros](#advanced-code-pros)
     - [Advanced Code Cons](#advanced-code-cons)
     - [What Advanced Code Looks Like](#what-advanced-code-looks-like)
+  - [Site Nav](#site-nav)
 
 ## Beginner's Code
 
