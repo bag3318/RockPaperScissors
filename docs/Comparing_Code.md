@@ -66,11 +66,11 @@ loop do
       puts "computer choice is: " + computer_choice + " ,computer wins :("
     elsif (user_input == "scissors" && computer_choice == "paper")
       puts "computer choice is: " + computer_choice + " , you win! :)"
+    else
+      puts "Invalid choice, enter Rock, Paper, or Scissors"
+      puts "What's your choice?"
+      user_input = gets.chomp.downcase
     end
-    else 
-    puts "Invalid choice, enter Rock, Paper, or Scissors"
-    puts "What's your choice?"
-    user_input = gets.chomp.downcase
   end
   break
 end
@@ -132,8 +132,8 @@ class PlayRockPaperScissorsGame
 
   class << self 
     def continue(str1,str2,str3)
-      puts  ColorizedString[str1].colorize(:color => :green) 
-      print ColorizedString[str2].colorize(:color => :green)
+      puts  str1
+      print str2
       gets
       puts  str3
     end 

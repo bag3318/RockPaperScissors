@@ -23,8 +23,8 @@ class PlayRockPaperScissorsGame
 
   class << self # make continue a self calling method
     def continue(str1,str2,str3) # pass in 3 parameters
-      puts  ColorizedString[str1].colorize(:color => :green) # make string output green text
-      print ColorizedString[str2].colorize(:color => :green)
+      puts  str1 # make string output green text
+      print str2
       gets # press enter or return to continue
       puts  str3
     end 

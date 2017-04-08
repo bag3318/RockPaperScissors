@@ -23,10 +23,10 @@ class PlayRockPaperScissorsGame
   protected_methods :Constants
 
   class << self
-    def continue(str1,str2,str3) # pass in 3 parameters
-      puts  ColorizedString[str1].colorize(:color => :green) 
-      print ColorizedString[str2].colorize(:color => :green)
-      gets # press enter or return to continue
+    def continue(str1,str2,str3)
+      puts  str1 
+      print str2
+      gets 
       puts  str3
     end 
   end 

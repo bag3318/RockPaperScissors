@@ -19,8 +19,8 @@ class RakeTest # create test
 
   class << self
     def continue(str1,str2,str3)
-      puts  ColorizedString[str1].colorize(:color => :green) 
-      print ColorizedString[str2].colorize(:color => :green)
+      puts  str1 
+      print str2
       gets 
       puts  str3
     end 
