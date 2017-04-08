@@ -120,7 +120,7 @@ class PlayRockPaperScissorsGame
       [:PAPER   , :ROCK], 
       [:ROCK    , :SCISSORS]
     ] 
-    LOSERS = WINNERS.map { |pc,cc| [cc,pc] } # flip the values in the WINNERS array
+    LOSERS = WINNERS.map { |players_choice,computer_choice| [computer_choice,player_choice] } # flip the values in the WINNERS array
     INIT_STRINGS = [
       ColorizedString["You are about to enter a rock-paper-scissors best of 3 match."].colorize(:green), 
       ColorizedString["Press the return/enter key to continue..."].colorize(:green), 
