@@ -50,7 +50,7 @@ class PlayRockPaperScissorsGame # define master class
       [:PAPER   , :ROCK], 
       [:ROCK    , :SCISSORS]
     ] 
-    LOSERS = WINNERS.map { |pc,cc| [cc,pc] } # this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player
+    LOSERS = WINNERS.map { |players_choice,computer_choice| [computer_choice,player_choice] } # this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player
     INIT_STRINGS = [
       ColorizedString["You are about to enter a rock-paper-scissors best of 3 match."].colorize(:green), 
       ColorizedString["Press the return/enter key to continue..."].colorize(:green), 
