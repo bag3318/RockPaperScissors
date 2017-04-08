@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=0b431b7bd53bc98c518e140399a7d9ee8a3ae804">
+    <link rel="stylesheet" href="/assets/css/style.css?v=5fd40f76199d8604ed3eb0ef13b8384a74488737">
     <link rel="stylesheet" href="/assets/css/pace.css" />
     <script src="/assets/js/pace.min.js"></script>
   </head>
@@ -155,7 +155,7 @@
       <span class="p">[</span><span class="ss">:PAPER</span>   <span class="p">,</span> <span class="ss">:ROCK</span><span class="p">],</span> 
       <span class="p">[</span><span class="ss">:ROCK</span>    <span class="p">,</span> <span class="ss">:SCISSORS</span><span class="p">]</span>
     <span class="p">]</span> 
-    <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">players_choice</span><span class="p">,</span><span class="n">computer_choice</span><span class="o">|</span> <span class="p">[</span><span class="n">computer_choice</span><span class="p">,</span><span class="n">player_choice</span><span class="p">]</span> <span class="p">}</span> <span class="c1"># flip the values in the WINNERS array</span>
+    <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">player_choice</span><span class="p">,</span><span class="n">computer_choice</span><span class="o">|</span> <span class="p">[</span><span class="n">computer_choice</span><span class="p">,</span><span class="n">player_choice</span><span class="p">]</span> <span class="p">}</span> <span class="c1"># flip the values in the WINNERS array</span>
     <span class="no">INIT_STRINGS</span> <span class="o">=</span> <span class="p">[</span>
       <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"You are about to enter a rock-paper-scissors best of 3 match."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">),</span> 
       <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Press the return/enter key to continue..."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">),</span> 
