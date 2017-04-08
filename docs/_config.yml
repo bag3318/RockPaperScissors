@@ -12,3 +12,5 @@ exclude: [
 ]
 include:
   - index.md
+  - Code.md
+  - Comparing_Code.md

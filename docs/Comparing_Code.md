@@ -16,7 +16,7 @@ permalink: /Comparing_Code.html
   - [Beginner's Code](#beginners-code)
     - [Beginner's Code Pros](#beginners-code-pros)
     - [Beginner's Code Cons](#beginners-code-cons)
-    - [What Beginner's Code Looks :ike](#what-beginners-code-looks-ike)
+    - [What Beginner's Code Looks Like](#what-beginners-code-looks-like)
   - [Advanced Code](#advanced-code)
     - [Advanced Code Pros](#advanced-code-pros)
     - [Advanced Code Cons](#advanced-code-cons)
