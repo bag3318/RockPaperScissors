@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=b4a2ec6c0ba57edcdb9930b781228c6692cfb50a">
+    <link rel="stylesheet" href="/assets/css/style.css?v=99c2474daddcc3fe94a27f2ff49dce9dcbf04628">
     <link rel="stylesheet" href="/assets/css/pace.css" />
     <script src="/assets/js/pace.min.js"></script>
   </head>
@@ -17,7 +17,7 @@
       <h2 class="project-tagline">A Ruby Programmed Rock Paper Scissors Game</h2>
       
         <a href="http://github.com/bag3318/RockPaperScissors" class="btn">View on GitHub</a>
-        <a href="http://github.com/bag3318/RockPaperScissors/issues" class="btn">Report a Bug</a>
+        <a href="" class="btn">Report a Bug</a>
       
       
         <a href="http://github.com/bag3318/RockPaperScissors/zipball/gh-pages" class="btn">Download .zip</a>
@@ -53,7 +53,7 @@
 <span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span> <span class="c1"># define master class</span>
 
   <span class="k">module</span> <span class="nn">RockPaperScissors</span>
-    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.4.7"</span> <span class="c1"># define version constant</span>
+    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.4.8"</span> <span class="c1"># define version constant</span>
   <span class="k">end</span>
   
   <span class="c1"># intiate the colorize gem</span>
@@ -163,7 +163,6 @@
       <span class="k">def</span> <span class="nf">final_outcome</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span><span class="n">co</span><span class="p">)</span> <span class="c1"># define final outcome method</span>
         <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="n">pl</span> <span class="o">&gt;</span> <span class="n">co</span> 
         <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="n">pl</span> <span class="o">&lt;</span> <span class="n">co</span>
-        <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="n">pl</span> <span class="o">=</span> <span class="n">co</span> <span class="c1"># this can never happen due to the code in the play method, but it is worth noting</span>
       <span class="k">end</span> 
     <span class="k">end</span>
   <span class="k">end</span>

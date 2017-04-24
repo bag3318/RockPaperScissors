@@ -28,7 +28,7 @@ __`% rps`__
 class PlayRockPaperScissorsGame # define master class
 
   module RockPaperScissors
-    VERSION = "2.4.7" # define version constant
+    VERSION = "2.4.8" # define version constant
   end
   
   # intiate the colorize gem
@@ -138,7 +138,6 @@ class PlayRockPaperScissorsGame # define master class
       def final_outcome(pl,co) # define final outcome method
         return :WIN  if pl > co 
         return :LOSE if pl < co
-        return :TIE  if pl = co # this can never happen due to the code in the play method, but it is worth noting
       end 
     end
   end
