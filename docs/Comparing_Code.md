@@ -198,6 +198,7 @@ class PlayRockPaperScissorsGame
       def final_outcome(pl,co)
         return :WIN  if pl > co 
         return :LOSE if pl < co
+        # there will never be a tie because of the play() method
       end 
     end
   end
