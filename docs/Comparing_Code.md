@@ -105,7 +105,7 @@ class PlayRockPaperScissorsGame
   module RockPaperScissors
     VERSION = "2.4.8"
   end
-  
+
   # import colorize gem
   require "colorized_string"
   ColorizedString.colors # import colors
@@ -124,7 +124,7 @@ class PlayRockPaperScissorsGame
       [:PAPER   , :ROCK], 
       [:ROCK    , :SCISSORS]
     ] 
-    LOSERS = WINNERS.map { |player_choice,computer_choice| [computer_choice,player_choice] } # flip the values in the WINNERS array
+    LOSERS = WINNERS.map { |player_choice,computer_choice| [computer_choice,player_choice] } # flip the values in the WINNERS array, returning a loss
     INIT_STRINGS = [
       ColorizedString["You are about to enter a rock-paper-scissors best of 3 match."].colorize(:green), 
       ColorizedString["Press the return/enter key to continue..."].colorize(:green), 
@@ -186,15 +186,16 @@ class PlayRockPaperScissorsGame
       def player_choice
         loop do 
           print ColorizedString["Choose rock (r), paper (p) or scissors (s): "].colorize(:green)
-          choice = gets.chomp.downcase 
-          if Constants::NTRY_TO_SYM.key?(choice)
-            return Constants::NTRY_TO_SYM[choice] 
-          elsif choice != Constants::VALID_ENTRIES
-            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red)
+          choice = gets.chomp.downcase # read user input and convert to downcase
+          if Constants::NTRY_TO_SYM.key?(choice) # if the choice is one of the keys in NTRY_TO_SYM
+            return Constants::NTRY_TO_SYM[choice] # return their choice to be outputed in the play() method
+          elsif choice != Constants::VALID_ENTRIES # else if the the choice is not one of the valid entries
+            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) # output to invalid entry message
           end
         end 
       end 
       def player_outcome(plays)
+        # plays = [player_choice, computer_choice]
         return :WIN  if Constants::WINNERS.include?(plays) 
         return :LOSE if Constants::LOSERS.include?(plays)
         return :TIE  if !:WIN | !:LOSE

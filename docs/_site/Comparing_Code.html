@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=3fc1ce7d91b871b6516de7f60aa0a4486fff8f07">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1a098ec34f40bdbde8a753daa8c4c632c93348d4">
     <link rel="stylesheet" href="/assets/css/pace.css" />
     <script src="/assets/js/pace.min.js"></script>
   </head>
@@ -140,7 +140,7 @@
   <span class="k">module</span> <span class="nn">RockPaperScissors</span>
     <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.4.8"</span>
   <span class="k">end</span>
-  
+
   <span class="c1"># import colorize gem</span>
   <span class="nb">require</span> <span class="s2">"colorized_string"</span>
   <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">colors</span> <span class="c1"># import colors</span>
@@ -159,7 +159,7 @@
       <span class="p">[</span><span class="ss">:PAPER</span>   <span class="p">,</span> <span class="ss">:ROCK</span><span class="p">],</span> 
       <span class="p">[</span><span class="ss">:ROCK</span>    <span class="p">,</span> <span class="ss">:SCISSORS</span><span class="p">]</span>
     <span class="p">]</span> 
-    <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">player_choice</span><span class="p">,</span><span class="n">computer_choice</span><span class="o">|</span> <span class="p">[</span><span class="n">computer_choice</span><span class="p">,</span><span class="n">player_choice</span><span class="p">]</span> <span class="p">}</span> <span class="c1"># flip the values in the WINNERS array</span>
+    <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">player_choice</span><span class="p">,</span><span class="n">computer_choice</span><span class="o">|</span> <span class="p">[</span><span class="n">computer_choice</span><span class="p">,</span><span class="n">player_choice</span><span class="p">]</span> <span class="p">}</span> <span class="c1"># flip the values in the WINNERS array, returning a loss</span>
     <span class="no">INIT_STRINGS</span> <span class="o">=</span> <span class="p">[</span>
       <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"You are about to enter a rock-paper-scissors best of 3 match."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">),</span> 
       <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Press the return/enter key to continue..."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">),</span> 
@@ -221,15 +221,16 @@
       <span class="k">def</span> <span class="nf">player_choice</span>
         <span class="kp">loop</span> <span class="k">do</span> 
           <span class="nb">print</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Choose rock (r), paper (p) or scissors (s): "</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">)</span>
-          <span class="n">choice</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> 
-          <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">key?</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
-            <span class="k">return</span> <span class="no">Constants</span><span class="o">::</span><span class="no">NTRY_TO_SYM</span><span class="p">[</span><span class="n">choice</span><span class="p">]</span> 
-          <span class="k">elsif</span> <span class="n">choice</span> <span class="o">!=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">VALID_ENTRIES</span>
-            <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"That entry is invalid. Please re-enter."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span>
+          <span class="n">choice</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> <span class="c1"># read user input and convert to downcase</span>
+          <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">key?</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span> <span class="c1"># if the choice is one of the keys in NTRY_TO_SYM</span>
+            <span class="k">return</span> <span class="no">Constants</span><span class="o">::</span><span class="no">NTRY_TO_SYM</span><span class="p">[</span><span class="n">choice</span><span class="p">]</span> <span class="c1"># return their choice to be outputed in the play() method</span>
+          <span class="k">elsif</span> <span class="n">choice</span> <span class="o">!=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">VALID_ENTRIES</span> <span class="c1"># else if the the choice is not one of the valid entries</span>
+            <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"That entry is invalid. Please re-enter."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> <span class="c1"># output to invalid entry message</span>
           <span class="k">end</span>
         <span class="k">end</span> 
       <span class="k">end</span> 
       <span class="k">def</span> <span class="nf">player_outcome</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span>
+        <span class="c1"># plays = [player_choice, computer_choice]</span>
         <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">WINNERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> 
         <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LOSERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span>
         <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="o">!</span><span class="ss">:WIN</span> <span class="o">|</span> <span class="o">!</span><span class="ss">:LOSE</span>
