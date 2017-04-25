@@ -74,6 +74,7 @@ class PlayRockPaperScissorsGame # define master class
   def initialize # initialize variables
     @player_score = @computer_score = @ties = 0 
   end 
+  
   def play(winning_score) 
     while @player_score < winning_score && @computer_score < winning_score # both the computer's score and the player's score have to be less than the value passed in for the winning score at the end
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
