@@ -74,7 +74,7 @@ class PlayRockPaperScissorsGame # define master class
   def initialize # initialize variables
     @player_score = @computer_score = @ties = 0 
   end 
-  
+
   def play(winning_score) 
     while @player_score < winning_score && @computer_score < winning_score # both the computer's score and the player's score have to be less than the value passed in for the winning score at the end
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
@@ -131,11 +131,13 @@ class PlayRockPaperScissorsGame # define master class
           # end
         end 
       end 
+
       def player_outcome(plays) # define method for the player's outcome while passing in a parameter of type array
         return :WIN  if Constants::WINNERS.include?(plays) # return a win if the one of the sub-arrays in the winners array is called
         return :LOSE if Constants::LOSERS.include?(plays) # return a loss if any of the mapped sub-arrays in the losers constant is present
         return :TIE  if !:WIN | !:LOSE # return a tie if not (!) win or if not lose
-      end 
+      end
+       
       def final_outcome(pl,co) # define final outcome method
         return :WIN  if pl > co 
         return :LOSE if pl < co

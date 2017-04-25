@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=6894b4f88e50b479ed0cc0301a143a1ead6bb842">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a0898ab362542af06808cf5b07499ac77b28f34d">
     <link rel="stylesheet" href="assets/css/pace.css" />
     <script src="assets/js/pace.min.js"></script>
   </head>
@@ -99,7 +99,7 @@
   <span class="k">def</span> <span class="nf">initialize</span> <span class="c1"># initialize variables</span>
     <span class="vi">@player_score</span> <span class="o">=</span> <span class="vi">@computer_score</span> <span class="o">=</span> <span class="vi">@ties</span> <span class="o">=</span> <span class="mi">0</span> 
   <span class="k">end</span> 
-  
+
   <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="n">winning_score</span><span class="p">)</span> 
     <span class="k">while</span> <span class="vi">@player_score</span> <span class="o">&lt;</span> <span class="n">winning_score</span> <span class="o">&amp;&amp;</span> <span class="vi">@computer_score</span> <span class="o">&lt;</span> <span class="n">winning_score</span> <span class="c1"># both the computer's score and the player's score have to be less than the value passed in for the winning score at the end</span>
       <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Player score: </span><span class="si">#{</span><span class="vi">@player_score</span><span class="si">}</span><span class="s2">, "</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> <span class="o">+</span> 
@@ -156,11 +156,13 @@
           <span class="c1"># end</span>
         <span class="k">end</span> 
       <span class="k">end</span> 
+
       <span class="k">def</span> <span class="nf">player_outcome</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># define method for the player's outcome while passing in a parameter of type array</span>
         <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">WINNERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># return a win if the one of the sub-arrays in the winners array is called</span>
         <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LOSERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> <span class="c1"># return a loss if any of the mapped sub-arrays in the losers constant is present</span>
         <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="o">!</span><span class="ss">:WIN</span> <span class="o">|</span> <span class="o">!</span><span class="ss">:LOSE</span> <span class="c1"># return a tie if not (!) win or if not lose</span>
-      <span class="k">end</span> 
+      <span class="k">end</span>
+       
       <span class="k">def</span> <span class="nf">final_outcome</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span><span class="n">co</span><span class="p">)</span> <span class="c1"># define final outcome method</span>
         <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="n">pl</span> <span class="o">&gt;</span> <span class="n">co</span> 
         <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="n">pl</span> <span class="o">&lt;</span> <span class="n">co</span>
