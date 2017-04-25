@@ -153,7 +153,7 @@ class PlayRockPaperScissorsGame
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
            ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}"].colorize(:blue) 
       player = PrivateMethods.player_choice 
-      computer = Constants::COMPUTER_CHOICES.sample 
+      computer = Constants::COMPUTER_CHOICES.sample # .sample = pick a random choice
       puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}"].colorize(:blue) 
       puts ColorizedString["Computer chooses #{computer.to_s.downcase}"].colorize(:blue)
       case PrivateMethods.player_outcome [player, computer]

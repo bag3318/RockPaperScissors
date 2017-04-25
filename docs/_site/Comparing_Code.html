@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=1a098ec34f40bdbde8a753daa8c4c632c93348d4">
+    <link rel="stylesheet" href="/assets/css/style.css?v=bc13b78c1b3222e51078113736faf0ff973d799f">
     <link rel="stylesheet" href="/assets/css/pace.css" />
     <script src="/assets/js/pace.min.js"></script>
   </head>
@@ -188,7 +188,7 @@
       <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Player score: </span><span class="si">#{</span><span class="vi">@player_score</span><span class="si">}</span><span class="s2">, "</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> <span class="o">+</span> 
            <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Computer score: </span><span class="si">#{</span><span class="vi">@computer_score</span><span class="si">}</span><span class="s2">, Ties: </span><span class="si">#{</span><span class="vi">@ties</span><span class="si">}</span><span class="s2">"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> 
       <span class="n">player</span> <span class="o">=</span> <span class="no">PrivateMethods</span><span class="p">.</span><span class="nf">player_choice</span> 
-      <span class="n">computer</span> <span class="o">=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">COMPUTER_CHOICES</span><span class="p">.</span><span class="nf">sample</span> 
+      <span class="n">computer</span> <span class="o">=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">COMPUTER_CHOICES</span><span class="p">.</span><span class="nf">sample</span> <span class="c1"># .sample = pick a random choice</span>
       <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Player chooses </span><span class="si">#{</span><span class="n">player</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2">"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span> 
       <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Computer chooses </span><span class="si">#{</span><span class="n">computer</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2">"</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:blue</span><span class="p">)</span>
       <span class="k">case</span> <span class="no">PrivateMethods</span><span class="p">.</span><span class="nf">player_outcome</span> <span class="p">[</span><span class="n">player</span><span class="p">,</span> <span class="n">computer</span><span class="p">]</span>
