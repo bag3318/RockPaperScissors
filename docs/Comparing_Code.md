@@ -147,7 +147,8 @@ class PlayRockPaperScissorsGame
 
   def initialize
     @player_score = @computer_score = @ties = 0 
-  end 
+  end
+   
   def play(winning_score) 
     while @player_score < winning_score && @computer_score < winning_score 
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
