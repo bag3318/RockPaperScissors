@@ -49,7 +49,7 @@ options = ["rock", "paper", "scissors"]
 computer_choice = options[rand(options.length)] 
 puts "What's your choice?"
 puts "rock, paper, or scissors"
-user_input = gets.chomp.downcase 
+user_input = gets.chomp.downcase # read user input and convert to lower case
 loop do 
   if (user_input == "rock" || user_input == "paper" || user_input == "scissors")
     if (user_input == computer_choice)
@@ -101,6 +101,10 @@ __`% ruby advanced-rps.rb`__
 [//]: # (start ruby)
 ```ruby
 class PlayRockPaperScissorsGame
+  
+  module RockPaperScissors
+    VERSION = "2.4.8"
+  end
   
   # import colorize gem
   require "colorized_string"

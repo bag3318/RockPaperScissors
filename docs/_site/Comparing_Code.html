@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=f424878a90bdc8c59969360ff7c17cb702256b72">
+    <link rel="stylesheet" href="/assets/css/style.css?v=3fc1ce7d91b871b6516de7f60aa0a4486fff8f07">
     <link rel="stylesheet" href="/assets/css/pace.css" />
     <script src="/assets/js/pace.min.js"></script>
   </head>
@@ -86,7 +86,7 @@
 <span class="n">computer_choice</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="nb">rand</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="nf">length</span><span class="p">)]</span> 
 <span class="nb">puts</span> <span class="s2">"What's your choice?"</span>
 <span class="nb">puts</span> <span class="s2">"rock, paper, or scissors"</span>
-<span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> 
+<span class="n">user_input</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span> <span class="c1"># read user input and convert to lower case</span>
 <span class="kp">loop</span> <span class="k">do</span> 
   <span class="k">if</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="s2">"rock"</span> <span class="o">||</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s2">"paper"</span> <span class="o">||</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s2">"scissors"</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">user_input</span> <span class="o">==</span> <span class="n">computer_choice</span><span class="p">)</span>
@@ -136,6 +136,10 @@
 <p><strong><code class="highlighter-rouge">% ruby advanced-rps.rb</code></strong></p>
 
 <div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span>
+  
+  <span class="k">module</span> <span class="nn">RockPaperScissors</span>
+    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.4.8"</span>
+  <span class="k">end</span>
   
   <span class="c1"># import colorize gem</span>
   <span class="nb">require</span> <span class="s2">"colorized_string"</span>
