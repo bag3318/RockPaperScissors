@@ -9,6 +9,8 @@ title: Master Code - Play Rock Paper Scissors Game
 
 **The master code will look like this:**
 
+> Note, the code is an executable and from a RubyGem
+
 [//]: # (`$ rps`)
 [//]: # (`> rps`)
 
@@ -137,7 +139,7 @@ class PlayRockPaperScissorsGame # define master class
         return :LOSE if Constants::LOSERS.include?(plays) # return a loss if any of the mapped sub-arrays in the losers constant is present
         return :TIE  if !:WIN | !:LOSE # return a tie if not (!) win or if not lose
       end
-       
+
       def final_outcome(pl,co) # define final outcome method
         return :WIN  if pl > co 
         return :LOSE if pl < co
