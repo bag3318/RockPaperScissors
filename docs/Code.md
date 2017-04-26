@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Master Code - Play Rock Paper Scissors Game
+permalink: /Code.html
 ---
 
 [//]: # (begin markdown)
