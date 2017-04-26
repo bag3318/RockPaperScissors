@@ -30,7 +30,7 @@ __`% rps`__
 class PlayRockPaperScissorsGame # define master class
 
   module RockPaperScissors
-    VERSION = "2.4.8" # define version constant
+    VERSION = "2.4.9" # define version constant
   end
   
   # intiate the colorize gem

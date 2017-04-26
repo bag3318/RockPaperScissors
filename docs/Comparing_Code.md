@@ -103,7 +103,7 @@ __`% ruby advanced-rps.rb`__
 class PlayRockPaperScissorsGame
   
   module RockPaperScissors
-    VERSION = "2.4.8"
+    VERSION = "2.4.9"
   end
 
   # import colorize gem
@@ -148,7 +148,7 @@ class PlayRockPaperScissorsGame
   def initialize
     @player_score = @computer_score = @ties = 0 
   end
-   
+
   def play(winning_score) 
     while @player_score < winning_score && @computer_score < winning_score 
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
