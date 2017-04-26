@@ -9,7 +9,7 @@ title: Master Code - Play Rock Paper Scissors Game
 
 **The master code will look like this:**
 
-> Note, the code is an executable and from a RubyGem
+> Note: the code is an executable and from a RubyGem
 
 [//]: # (`$ rps`)
 [//]: # (`> rps`)
