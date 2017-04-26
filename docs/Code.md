@@ -10,7 +10,7 @@ permalink: /Code.html
 
 **The master code will look like this:**
 
-> Note: the code is an executable and from my RubyGem
+> Note: the code is an executable and from my [RubyGem](https://rubygems.org/gems/PlayRockPaperScissorsGame)
 
 [//]: # (`$ rps`)
 [//]: # (`> rps`)
