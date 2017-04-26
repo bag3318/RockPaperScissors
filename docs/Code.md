@@ -144,6 +144,7 @@ class PlayRockPaperScissorsGame # define master class
       def final_outcome(pl,co) # define final outcome method
         return :WIN  if pl > co 
         return :LOSE if pl < co
+        # there will never be a tie due to the code in the play() method
       end 
     end
   end
