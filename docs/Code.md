@@ -40,7 +40,7 @@ class PlayRockPaperScissorsGame # define master class
   ColorizedString.modes  # import modes; ex: bold, italic, underline
 
   module Constants 
-    NTRY_TO_SYM = { # define constants from an entry to a symbol class
+    NTRY_TO_SYM = { # define entry to symbol (key to value)
       'p' => :PAPER, 
       'r' => :ROCK, 
       's' => :SCISSORS 
