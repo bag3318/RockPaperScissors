@@ -103,7 +103,7 @@ __`% ruby advanced-rps.rb`__
 class PlayRockPaperScissorsGame
   
   module RockPaperScissors
-    VERSION = "2.5.0"
+    VERSION = "2.5.1"
   end
 
   # import colorize gem
