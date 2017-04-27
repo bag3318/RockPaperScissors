@@ -160,6 +160,6 @@ PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 (0, 1
 
 ## Site Nav
 
-[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [How to Build](How_to_Build)
 
 [//]: # (end markdown)

@@ -223,6 +223,6 @@ PlayRockPaperScissorsGame.new.play(2)
 
 ## Site Nav
 
-[Home](./) | [Master Code](Code) | [How to Test](Testing) | [How to Build](How_to_Build) | [Contributing](CONTRIBUTING) | [Code of Conduct](CODE_OF_CONDUCT)
+[Home](./) | [Master Code](Code) | [How to Test](Testing) | [How to Build](How_to_Build)
 
 [//]: # (end markdown)
