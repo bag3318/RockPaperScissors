@@ -109,7 +109,7 @@ class PlayRockPaperScissorsGame
   # import colorize gem
   require "colorized_string"
   ColorizedString.colors # import colors
-  ColorizedString.modes  # import modes (bold, etc...)
+  ColorizedString.modes  # import modes (bold, italic, etc...)
 
   module Constants 
     NTRY_TO_SYM = { 
