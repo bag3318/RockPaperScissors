@@ -4,7 +4,8 @@ title: Master Code - Play Rock Paper Scissors Game
 permalink: /Code.html
 ---
 
-# Master Code
+Master Code
+===========
 
 **The master code will look like this:**
 
