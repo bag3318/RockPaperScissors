@@ -219,7 +219,7 @@ PlayRockPaperScissorsGame.new.play(2)
 
 [//]: # (start markdown)
 
-------------
+______________
 
 ## Site Nav
 

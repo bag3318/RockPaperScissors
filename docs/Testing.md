@@ -18,7 +18,7 @@ What you will need
 1. Open `Terminal`/`Command Prompt` and `cd` to the directory of the repo's folder
 2. Type: `rake test` and hit <kbd>enter</kbd>/<kbd>return</kbd>
 
------------
+______________
 
 ## Site Nav
 

@@ -52,7 +52,7 @@ How to Run and Install
 
 * [Ruby Gems Page](https://rubygems.org/gems/PlayRockPaperScissorsGame)
 
-----------
+______________
 
 ## Site Nav
 

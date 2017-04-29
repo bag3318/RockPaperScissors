@@ -21,7 +21,7 @@ title: How to Build - Play Rock Paper Scissors Game
 6. Type: `gem build rps`
 7. Hit <kbd>return</kbd>/<kbd>enter</kbd>
 
------------
+______________
 
 ## Site Nav 
 
