@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.require_paths                    = ["lib"]
   spec.files                            = `git ls-files -z`.split("\x0")
   spec.test_files                       = ["./test/test_rps.rb"]
-  spec.post_install_message             = "Thanks for installing! I hope you have fun playing rock paper scissors! :)"
+  spec.post_install_message             = "Thanks for installing! I hope you will have fun playing rock paper scissors! :)"
   spec.license                          = "MIT"
   spec.homepage                         = "https://bag3318.github.io/RockPaperScissors/"
   spec.required_ruby_version            = ">= 2.0.0"
