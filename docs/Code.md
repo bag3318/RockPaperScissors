@@ -113,7 +113,7 @@ class PlayRockPaperScissorsGame # define master class
   end 
 
   module PrivateMethods 
-    class << self # make all methods below self calling methods of this class (PlayRockPaperScissorsGame) so that the other methods will not to call their parents of these methods
+    class << self 
       def player_choice
         loop do # for loop with no arguments passed in
           print ColorizedString["Choose rock (r), paper (p) or scissors (s): "].colorize(:green)
@@ -124,13 +124,6 @@ class PlayRockPaperScissorsGame # define master class
           elsif choice != Constants::VALID_ENTRIES # else if it is not one of the valid entries...
             puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) # return an error message
           end
-          # # one may also do this (albeit more useless):
-          # case
-          # when Constants::NTRY_TO_SYM.key?(choice)
-          #   return Constants::NTRY_TO_SYM[choice]
-          # when choice != Constants::VALID_ENTRIES
-          #   puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:green) 
-          # end
         end 
       end 
 

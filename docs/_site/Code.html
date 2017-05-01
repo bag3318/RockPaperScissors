@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=64cdecf33c32b5aec450057967fcaee79a72b39c">
+    <link rel="stylesheet" href="/assets/css/style.css?v=9eaae64e0a13c70f737f1d066d54cf05f1d23697">
     <link rel="stylesheet" href="assets/css/pace.css" />
     <script src="assets/js/pace.min.js"></script>
   </head>
@@ -141,7 +141,7 @@
   <span class="k">end</span> 
 
   <span class="k">module</span> <span class="nn">PrivateMethods</span> 
-    <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span> <span class="c1"># make all methods below self calling methods of this class (PlayRockPaperScissorsGame) so that the other methods will not to call their parents of these methods</span>
+    <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span> 
       <span class="k">def</span> <span class="nf">player_choice</span>
         <span class="kp">loop</span> <span class="k">do</span> <span class="c1"># for loop with no arguments passed in</span>
           <span class="nb">print</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"Choose rock (r), paper (p) or scissors (s): "</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:green</span><span class="p">)</span>
@@ -152,13 +152,6 @@
           <span class="k">elsif</span> <span class="n">choice</span> <span class="o">!=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">VALID_ENTRIES</span> <span class="c1"># else if it is not one of the valid entries...</span>
             <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"That entry is invalid. Please re-enter."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> <span class="c1"># return an error message</span>
           <span class="k">end</span>
-          <span class="c1"># # one may also do this (albeit more useless):</span>
-          <span class="c1"># case</span>
-          <span class="c1"># when Constants::NTRY_TO_SYM.key?(choice)</span>
-          <span class="c1">#   return Constants::NTRY_TO_SYM[choice]</span>
-          <span class="c1"># when choice != Constants::VALID_ENTRIES</span>
-          <span class="c1">#   puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:green) </span>
-          <span class="c1"># end</span>
         <span class="k">end</span> 
       <span class="k">end</span> 
 
