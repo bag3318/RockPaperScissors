@@ -1,12 +1,8 @@
 ---
-# start YAML
 layout: default
 title: Comparing Code - Play Rock Paper Scissors Game
 permalink: /Comparing_Code.html
-# end YAML
 ---
-
-[//]: # (start markdown)
 
 # Comparing Beginner's RPS Code to Advanced RPS Code
 
@@ -224,5 +220,3 @@ ______________
 ## Site Nav
 
 [Home](./) | [Master Code](Code) | [How to Test](Testing) | [How to Build](How_to_Build)
-
-[//]: # (end markdown)
