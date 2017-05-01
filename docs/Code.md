@@ -66,7 +66,7 @@ class PlayRockPaperScissorsGame # define master class
     def continue(str1,str2,str3) # pass in 3 parameters
       puts  str1 
       print str2
-      gets # press enter or return to continue
+      gets  # press enter or return to continue
       puts  str3
     end 
   end 
