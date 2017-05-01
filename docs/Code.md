@@ -27,16 +27,16 @@ __`% rps`__
 |====================================|
 =end
 
-class PlayRockPaperScissorsGame # define master class
+class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.5.3" # define version constant
+    VERSION = "2.5.3"
   end
   
-  # intiate the colorize gem
+  # call the colorize gem
   require "colorized_string"
-  ColorizedString.colors # import colors; ex: red, green, blue
-  ColorizedString.modes  # import modes; ex: bold, italic, underline
+  ColorizedString.colors # import colors; ex: red, green, blue from colorize gem
+  ColorizedString.modes  # import modes; ex: bold, italic, underline from colorize gem
 
   module Constants 
     NTRY_TO_SYM = { # define entry to symbol (key to value)
@@ -44,9 +44,9 @@ class PlayRockPaperScissorsGame # define master class
       'r' => :ROCK, 
       's' => :SCISSORS 
     } 
-    VALID_ENTRIES = NTRY_TO_SYM.keys # create valid entries
-    COMPUTER_CHOICES = NTRY_TO_SYM.values # define computer choices
-    WINNERS = [ # define winners
+    VALID_ENTRIES = NTRY_TO_SYM.keys 
+    COMPUTER_CHOICES = NTRY_TO_SYM.values
+    WINNERS = [ 
       # format: player choice, computer choice
       [:SCISSORS, :PAPER], 
       [:PAPER   , :ROCK], 
@@ -60,10 +60,10 @@ class PlayRockPaperScissorsGame # define master class
     ]
   end
 
-  protected_methods :Constants # make the constants module protected
+  protected_methods :Constants 
 
   class << self # define a self calling method within the parent class
-    def continue(str1,str2,str3) # pass in 3 parameters
+    def continue(str1,str2,str3)
       puts  str1 
       print str2
       gets  # press enter or return to continue
@@ -71,36 +71,34 @@ class PlayRockPaperScissorsGame # define master class
     end 
   end 
 
-  continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2]) # call continue method
+  continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2]) 
 
   def initialize # initialize variables
     @player_score = @computer_score = @ties = 0 
   end 
 
   def play(winning_score) 
-    while @player_score < winning_score && @computer_score < winning_score # both the computer's score and the player's score have to be less than the value passed in for the winning score at the end
+    while @player_score < winning_score && @computer_score < winning_score
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
            ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}"].colorize(:blue) 
       player = PrivateMethods.player_choice 
       computer = Constants::COMPUTER_CHOICES.sample # chooses a "random" option
       puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}"].colorize(:blue) 
       puts ColorizedString["Computer chooses #{computer.to_s.downcase}"].colorize(:blue)
-      case PrivateMethods.player_outcome [player, computer] # define a reference call for player and computer for the arrays called in the player_outcome method
+      case PrivateMethods.player_outcome [player, computer] 
       when :WIN
         puts ColorizedString["#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round"].colorize(:red) 
         @player_score += 1 # @player_score = @player_score + 1
       when :LOSE
         puts ColorizedString["#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round"].colorize(:red)
         @computer_score += 1 
-      else # since there is only 1 option left, there is no need to define when :TIE
+      else 
         puts ColorizedString["Tie, choose again"].colorize(:red) 
         @ties += 1
-        # since tie is not in the original pass-in argument for the while loop, it will not be affected by the winning score
       end
     end
     puts ColorizedString["\nFinal score: player: #{@player_score}, "].colorize(:blue) +
          ColorizedString["computer: #{@computer_score} (ties: #{@ties})"].colorize(:blue)
-    # define a case for the final outcomes  
     case PrivateMethods.final_outcome(@player_score, @computer_score)
     when :WIN 
       puts ColorizedString["Player wins!"].colorize(:red) 
@@ -115,22 +113,21 @@ class PlayRockPaperScissorsGame # define master class
   module PrivateMethods 
     class << self 
       def player_choice
-        loop do # for loop with no arguments passed in
+        loop do 
           print ColorizedString["Choose rock (r), paper (p) or scissors (s): "].colorize(:green)
-          choice = gets.chomp.downcase # read user input and convert all to lower case
-          # define valid and invalid entries by using an if else-if statement(s)
-          if Constants::NTRY_TO_SYM.key?(choice) # if the NTRY_TO_SYM array's key is one of the keys defined in the original array
-            return Constants::NTRY_TO_SYM[choice] # return the users choice
-          elsif choice != Constants::VALID_ENTRIES # else if it is not one of the valid entries...
-            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) # return an error message
+          choice = gets.chomp.downcase 
+          if Constants::NTRY_TO_SYM.key?(choice)
+            return Constants::NTRY_TO_SYM[choice] 
+          elsif choice != Constants::VALID_ENTRIES
+            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) 
           end
         end 
       end 
 
-      def player_outcome(plays) # define method for the player's outcome while passing in a parameter of type array
-        return :WIN  if Constants::WINNERS.include?(plays) # return a win if the one of the sub-arrays in the winners array is called
-        return :LOSE if Constants::LOSERS.include?(plays) # return a loss if any of the mapped sub-arrays in the losers constant is present
-        return :TIE  if !:WIN | !:LOSE # return a tie if not (!) win or if not lose
+      def player_outcome(plays)
+        return :WIN  if Constants::WINNERS.include?(plays) 
+        return :LOSE if Constants::LOSERS.include?(plays)
+        return :TIE  if !:WIN | !:LOSE 
       end
 
       def final_outcome(pl,co) # define final outcome method
@@ -141,7 +138,7 @@ class PlayRockPaperScissorsGame # define master class
     end
   end
   
-  private_methods :PrivateMethods # make the PrivateMethods module private
+  private_methods :PrivateMethods 
 
 end 
 
