@@ -37,9 +37,6 @@ permalink: /Comparing_Code.html
 
 __`% ruby beginner-rps.rb`__
 
-[//]: # (end markdown)
-
-[//]: # (start ruby)
 ```ruby
 options = ["rock", "paper", "scissors"]
 computer_choice = options[rand(options.length)] 
@@ -71,9 +68,6 @@ loop do
   break
 end
 ```
-[//]: # (end ruby)
-
-[//]: # (start markdown)
 
 ## Advanced Code
 
@@ -92,14 +86,11 @@ end
 
 __`% ruby advanced-rps.rb`__
 
-[//]: # (end markdown)
-
-[//]: # (start ruby)
 ```ruby
 class PlayRockPaperScissorsGame
   
   module RockPaperScissors
-    VERSION = "2.5.5"
+    VERSION = "2.5.6"
   end
 
   # import colorize gem
@@ -211,9 +202,6 @@ end
 
 PlayRockPaperScissorsGame.new.play(2) 
 ```
-[//]: # (end ruby)
-
-[//]: # (start markdown)
 
 ______________
 
