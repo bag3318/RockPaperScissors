@@ -50,7 +50,8 @@ How to Run and Install
 
 ## Links
 
-* [Ruby Gems Page](https://rubygems.org/gems/PlayRockPaperScissorsGame)
++ [Ruby Gems Page](https://rubygems.org/gems/PlayRockPaperScissorsGame)
+- [Source Code](https://github.com/bag3318/RockPaperScissors)
 
 ______________
 
