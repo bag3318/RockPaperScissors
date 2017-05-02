@@ -30,7 +30,7 @@ __`% rps`__
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.5.4"
+    VERSION = "2.5.5"
   end
   
   # call the colorize gem
