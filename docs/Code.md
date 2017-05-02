@@ -14,7 +14,7 @@ Master Code
 [//]: # (`$ rps`)
 [//]: # (`> rps`)
 
-__`% rps`__
+`% rps`
 
 ```ruby
 #!/usr/bin/env ruby
