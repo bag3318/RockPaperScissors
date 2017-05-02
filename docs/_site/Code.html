@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=765941fc4390a531c9d30f4167439ee2ccc197e1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=30abbe8e8aa1fb1a2d8fb0e5e59e129c3594c952">
     <link rel="stylesheet" href="assets/css/pace.css" />
     <script src="assets/js/pace.min.js"></script>
   </head>
@@ -157,7 +157,6 @@
         <span class="k">return</span> <span class="ss">:WIN</span>  <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">WINNERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span> 
         <span class="k">return</span> <span class="ss">:LOSE</span> <span class="k">if</span> <span class="no">Constants</span><span class="o">::</span><span class="no">LOSERS</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">plays</span><span class="p">)</span>
         <span class="k">return</span> <span class="ss">:TIE</span>  <span class="k">if</span> <span class="o">!</span><span class="ss">:WIN</span> <span class="o">|</span> <span class="o">!</span><span class="ss">:LOSE</span> 
-
       <span class="k">end</span>
 
       <span class="k">def</span> <span class="nf">final_outcome</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span><span class="n">co</span><span class="p">)</span>

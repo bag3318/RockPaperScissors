@@ -129,7 +129,6 @@ class PlayRockPaperScissorsGame
         return :WIN  if Constants::WINNERS.include?(plays) 
         return :LOSE if Constants::LOSERS.include?(plays)
         return :TIE  if !:WIN | !:LOSE 
-
       end
 
       def final_outcome(pl,co)
