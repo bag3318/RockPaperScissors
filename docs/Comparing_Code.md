@@ -35,7 +35,7 @@ permalink: /Comparing_Code.html
 
 ### What Beginner's Code Looks Like
 
-__`% ruby beginner-rps.rb`__
+`% ruby beginner-rps.rb`
 
 ```ruby
 options = ["rock", "paper", "scissors"]
@@ -84,7 +84,7 @@ end
 
 ### What Advanced Code Looks Like
 
-__`% ruby advanced-rps.rb`__
+`% ruby advanced-rps.rb`
 
 ```ruby
 class PlayRockPaperScissorsGame
