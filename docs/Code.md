@@ -125,7 +125,7 @@ class PlayRockPaperScissorsGame
       end 
 
       def player_outcome(plays)
-        # plays = [playerchoice, computerchoice]
+        # plays = [player_choice, computer_choice]
         return :WIN  if Constants::WINNERS.include?(plays) 
         return :LOSE if Constants::LOSERS.include?(plays)
         return :TIE  if !:WIN | !:LOSE 
