@@ -9,7 +9,7 @@ Master Code
 
 **The master code will look like this:**
 
-> Note: the code is an executable and from my [RubyGem](https://rubygems.org/gems/PlayRockPaperScissorsGame)
+> Note: the code is a Ruby executable and from my [RubyGem](https://rubygems.org/gems/PlayRockPaperScissorsGame)
 
 [//]: # (`$ rps`)
 [//]: # (`> rps`)
