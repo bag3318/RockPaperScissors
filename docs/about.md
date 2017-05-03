@@ -11,7 +11,7 @@ I have decided to code a Ruby-programmed RPS game that uses full CLI<sup>2</sup>
 
 ## Why use Ruby?
 
-Ruby is a programming language that has been around for a little over 2 decades. The gem-attributed language was primarily developed by *Yukihiro "Matz" Matsumoto* in Japan. Ruby stood out to me because of it's unique code structure design. Ruby also became attrictive to me once I started learning it b
+Ruby is a programming language that has been around for a little over 2 decades. The gem-attributed language was primarily developed by *Yukihiro "Matz" Matsumoto* in Japan. Ruby stood out to me because of it's unique code structure design. I decided to use Ruby becuase I wanted to learn an **object oriented programming language**.
 
 > **1.** RPS = rock-paper-scissors
 > 
