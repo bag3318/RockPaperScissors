@@ -13,6 +13,8 @@ I have decided to code a Ruby-programmed RPS game that uses full CLI<sup>2</sup>
 
 Ruby is a programming language that has been around for a little over 2 decades. The gem-attributed language was primarily developed by *Yukihiro "Matz" Matsumoto* in Japan. Ruby stood out to me because of it's unique code structure design. I decided to use Ruby becuase I wanted to learn an **object oriented programming language**.
 
+________
+
 > **1.** RPS = rock-paper-scissors
 > 
 > **2.** CLI means that it is executed in a command line app, such as CMD (command prompt) for Windows, or Terminal for Mac.
