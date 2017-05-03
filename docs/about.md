@@ -13,7 +13,7 @@ I have decided to code a Ruby-programmed RPS game that uses full CLI<sup>2</sup>
 
 Ruby is a programming language that has been around for a little over 2 decades. The gem-attributed language was primarily developed by *Yukihiro "Matz" Matsumoto* in Japan. Ruby stood out to me because of it's unique code structure design. I decided to use Ruby becuase I wanted to learn an **object oriented programming language**. Ruby appealed to me by its unique code structure. 
 
-## How the Code works
+## The Code
 
 I didn't want to make code that just yielded a bunch of `if`, `elsif`, and `else` statements. Instead, I strived toward a more professionally structured and modularized code. See the [comparing code](Comparing_Code) page for more information about this subject matter.
 
