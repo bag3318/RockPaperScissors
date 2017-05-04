@@ -16,6 +16,12 @@ Master Code
 
 `% rps`
 
+<!-- 
+```
+% rps
+``` 
+-->
+
 ```ruby
 #!/usr/bin/env ruby
 
