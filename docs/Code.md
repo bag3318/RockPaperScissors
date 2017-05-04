@@ -12,7 +12,7 @@ Master Code
 > Note: the code is a __Ruby executable__ and from my [RubyGem](https://rubygems.org/gems/PlayRockPaperScissorsGame)
 
 [//]: # (`$ rps`)
-[//]: # (`> rps`)
+[//]: # "`> rps`"
 
 `% rps`
 
