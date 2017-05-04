@@ -4,6 +4,7 @@
 *.sublime-project
 *.sublime-workspace
 *.jekyll-metadata
+*.ste
 # _site
 # .sass-cache
 
