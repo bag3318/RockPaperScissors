@@ -4,7 +4,7 @@ title: Master Code - Play Rock Paper Scissors Game
 permalink: /Code.html
 ---
 
-Master Code-
+Master Code
 ===========
 
 **The master code will look like this:**
@@ -30,7 +30,7 @@ Master Code-
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.5.9"
+    VERSION = "2.6.0"
   end
   
   # import the colorize gem
