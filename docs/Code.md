@@ -30,10 +30,10 @@ Master Code
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.5.8"
+    VERSION = "2.5.9"
   end
   
-  # call the colorize gem
+  # import the colorize gem
   require "colorized_string"
   ColorizedString.colors # import colors; ex: red, green, blue from colorize gem
   ColorizedString.modes  # import modes; ex: bold, italic, underline from colorize gem

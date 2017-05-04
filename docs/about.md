@@ -15,7 +15,7 @@ Ruby is a programming language that has been around for a little over 2 decades.
 
 ## The Code
 
-I didn't want to make code that just yielded a bunch of `if`, `elsif`, and `else` statements. Instead, I strived toward a more professionally structured and modularized code. See the [comparing code](Comparing_Code) page for more information about this subject matter.
+I didn't want to make code that just yielded a bunch of `if`, `elsif`, and `else` statements. Instead, I strived toward a more professionally structured and modularized code. See the [comparing code](Comparing_Code) page for more detailed information about this subject matter.
 
 ________
 
