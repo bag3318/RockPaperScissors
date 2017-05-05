@@ -99,16 +99,17 @@ class PlayRockPaperScissorsGame
   ColorizedString.modes  # import modes (bold, italic, etc...)
 
   module Constants 
-    NTRY_TO_SYM = { 
-      'p' => :PAPER, 
-      'r' => :ROCK, 
+    NTRY_TO_SYM = { # define entry to symbol (key to value)
+      'p' => :PAPER   , 
+      'r' => :ROCK    , 
       's' => :SCISSORS 
     } 
-    VALID_ENTRIES = NTRY_TO_SYM.keys 
-    COMPUTER_CHOICES = NTRY_TO_SYM.values 
+    VALID_ENTRIES    = NTRY_TO_SYM.keys 
+    COMPUTER_CHOICES = NTRY_TO_SYM.values
     WINNERS = [ 
-      [:SCISSORS, :PAPER], 
-      [:PAPER   , :ROCK], 
+      # format: player choice, computer choice
+      [:SCISSORS, :PAPER   ], 
+      [:PAPER   , :ROCK    ], 
       [:ROCK    , :SCISSORS]
     ] 
     LOSERS = WINNERS.map { |player_choice,computer_choice| [computer_choice,player_choice] } # flip the values in the WINNERS array, returning a loss

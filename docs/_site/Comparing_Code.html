@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=b7a8c58fc488ddef547298dfc7328018788c6396">
+    <link rel="stylesheet" href="/assets/css/style.css?v=e4cab00386852211c3d956caf4aa96694d555b21">
     <link rel="stylesheet" href="assets/css/pace.css" />
     <script src="assets/js/pace.min.js"></script>
   </head>
@@ -148,16 +148,17 @@
   <span class="no">ColorizedString</span><span class="p">.</span><span class="nf">modes</span>  <span class="c1"># import modes (bold, italic, etc...)</span>
 
   <span class="k">module</span> <span class="nn">Constants</span> 
-    <span class="no">NTRY_TO_SYM</span> <span class="o">=</span> <span class="p">{</span> 
-      <span class="s1">'p'</span> <span class="o">=&gt;</span> <span class="ss">:PAPER</span><span class="p">,</span> 
-      <span class="s1">'r'</span> <span class="o">=&gt;</span> <span class="ss">:ROCK</span><span class="p">,</span> 
+    <span class="no">NTRY_TO_SYM</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># define entry to symbol (key to value)</span>
+      <span class="s1">'p'</span> <span class="o">=&gt;</span> <span class="ss">:PAPER</span>   <span class="p">,</span> 
+      <span class="s1">'r'</span> <span class="o">=&gt;</span> <span class="ss">:ROCK</span>    <span class="p">,</span> 
       <span class="s1">'s'</span> <span class="o">=&gt;</span> <span class="ss">:SCISSORS</span> 
     <span class="p">}</span> 
-    <span class="no">VALID_ENTRIES</span> <span class="o">=</span> <span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">keys</span> 
-    <span class="no">COMPUTER_CHOICES</span> <span class="o">=</span> <span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">values</span> 
+    <span class="no">VALID_ENTRIES</span>    <span class="o">=</span> <span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">keys</span> 
+    <span class="no">COMPUTER_CHOICES</span> <span class="o">=</span> <span class="no">NTRY_TO_SYM</span><span class="p">.</span><span class="nf">values</span>
     <span class="no">WINNERS</span> <span class="o">=</span> <span class="p">[</span> 
-      <span class="p">[</span><span class="ss">:SCISSORS</span><span class="p">,</span> <span class="ss">:PAPER</span><span class="p">],</span> 
-      <span class="p">[</span><span class="ss">:PAPER</span>   <span class="p">,</span> <span class="ss">:ROCK</span><span class="p">],</span> 
+      <span class="c1"># format: player choice, computer choice</span>
+      <span class="p">[</span><span class="ss">:SCISSORS</span><span class="p">,</span> <span class="ss">:PAPER</span>   <span class="p">],</span> 
+      <span class="p">[</span><span class="ss">:PAPER</span>   <span class="p">,</span> <span class="ss">:ROCK</span>    <span class="p">],</span> 
       <span class="p">[</span><span class="ss">:ROCK</span>    <span class="p">,</span> <span class="ss">:SCISSORS</span><span class="p">]</span>
     <span class="p">]</span> 
     <span class="no">LOSERS</span> <span class="o">=</span> <span class="no">WINNERS</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">player_choice</span><span class="p">,</span><span class="n">computer_choice</span><span class="o">|</span> <span class="p">[</span><span class="n">computer_choice</span><span class="p">,</span><span class="n">player_choice</span><span class="p">]</span> <span class="p">}</span> <span class="c1"># flip the values in the WINNERS array, returning a loss</span>
