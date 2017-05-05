@@ -16,10 +16,10 @@ Master Code
 
 `% rps`
 
-<!-- 
+<!--
 ```
 % rps
-``` 
+```
 -->
 
 [//]: # "start ruby"
