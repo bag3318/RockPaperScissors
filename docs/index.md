@@ -18,7 +18,6 @@ Rock Paper Scissors
     - [Install and Run on Windows](#install-and-run-on-windows)
       - [Running](#running-1)
   - [Links](#links)
-  - [Site Nav](#site-nav)
 
 How to Run and Install
 ----------------------
@@ -52,11 +51,5 @@ How to Run and Install
 
 + [Ruby Gems Page](https://rubygems.org/gems/PlayRockPaperScissorsGame)
 - [Source Code](https://github.com/bag3318/RockPaperScissors)
-
-______________
-
-## Site Nav
-
-[How to Test](Testing) | [Comparing Code](Comparing_Code) | [How to Build](How_to_Build) | [Master Code](Code)
 
 [//]: # (end)

@@ -17,7 +17,6 @@ permalink: /Comparing_Code.html
     - [Advanced Code Pros](#advanced-code-pros)
     - [Advanced Code Cons](#advanced-code-cons)
     - [What Advanced Code Looks Like](#what-advanced-code-looks-like)
-  - [Site Nav](#site-nav)
 
 ## Beginner's Code
 
@@ -204,8 +203,3 @@ end
 PlayRockPaperScissorsGame.new.play(2) 
 ```
 
-______________
-
-## Site Nav
-
-[Home](./) | [Master Code](Code) | [How to Test](Testing) | [How to Build](How_to_Build) | [About](about)

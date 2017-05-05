@@ -20,9 +20,3 @@ title: How to Build - Play Rock Paper Scissors Game
 5. `cd` to the directory of the `rps.gemspec` file (**note: this file must be in the _root_ of the repo folder**)
 6. Type: `gem build rps`
 7. Hit <kbd>return</kbd>/<kbd>enter</kbd>
-
-______________
-
-## Site Nav 
-
-[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [Master Code](Code) | [About](about)

@@ -26,8 +26,3 @@ ________
 > **3.** Object Oriented languages like Ruby, C#, etc..., follow a similar syntax format. 
 
 ________
-
-## Site Nav
-
-[Home](./) | [How to Test](Testing) | [Comparing Code](Comparing_Code) | [How to Build](How_to_Build) | [Master Code](Code)
-
