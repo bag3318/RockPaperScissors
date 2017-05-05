@@ -159,4 +159,4 @@ ______________
 Site Nav
 --------
 
-[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [How to Build](How_to_Build)
+[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [How to Build](How_to_Build) | [About](about)

@@ -208,4 +208,4 @@ ______________
 
 ## Site Nav
 
-[Home](./) | [Master Code](Code) | [How to Test](Testing) | [How to Build](How_to_Build)
+[Home](./) | [Master Code](Code) | [How to Test](Testing) | [How to Build](How_to_Build) | [About](about)

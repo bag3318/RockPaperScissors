@@ -25,4 +25,4 @@ ______________
 
 ## Site Nav 
 
-[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [Master Code](Code)
+[Home](./) | [Comparing Code](Comparing_Code) | [How to Test](Testing) | [Master Code](Code) | [About](about)

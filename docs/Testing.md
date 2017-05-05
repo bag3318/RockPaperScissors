@@ -22,4 +22,4 @@ ______________
 
 ## Site Nav
 
-[Home](./) | [Comparing Code](Comparing_Code) | [How to Build](How_to_Build) | [Master Code](Code)
+[Home](./) | [Comparing Code](Comparing_Code) | [How to Build](How_to_Build) | [Master Code](Code) | [About](about)
