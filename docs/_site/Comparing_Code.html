@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#157878"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/assets/css/style.css?v=13ce343f3721fc075204f26576d4788f91d928e7"/>
+    <link rel="stylesheet" href="/assets/css/style.css?v=0c5f9e2e2f347f285c1572a6110c7f00bb27d6e0"/>
     <link rel="stylesheet" href="assets/css/pace.css" />
     <script src="assets/js/pace.min.js"></script>
   </head>
@@ -228,6 +228,8 @@
             <span class="k">return</span> <span class="no">Constants</span><span class="o">::</span><span class="no">NTRY_TO_SYM</span><span class="p">[</span><span class="n">choice</span><span class="p">]</span> <span class="c1"># return their choice to be outputed in the play() method</span>
           <span class="k">elsif</span> <span class="n">choice</span> <span class="o">!=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">VALID_ENTRIES</span> <span class="c1"># else if the the choice is not one of the valid entries</span>
             <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"That entry is invalid. Please re-enter."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> <span class="c1"># output to invalid entry message</span>
+          <span class="k">else</span>
+            <span class="c1"># do nothing</span>
           <span class="k">end</span>
         <span class="k">end</span> 
       <span class="k">end</span> 

@@ -127,6 +127,8 @@ class PlayRockPaperScissorsGame
             return Constants::NTRY_TO_SYM[choice] 
           elsif choice != Constants::VALID_ENTRIES
             puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) 
+          else
+            # do nothing
           end
         end 
       end 
