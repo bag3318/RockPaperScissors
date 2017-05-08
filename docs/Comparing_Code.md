@@ -89,7 +89,7 @@ end
 class PlayRockPaperScissorsGame
   
   module RockPaperScissors
-    VERSION = "2.6.4"
+    VERSION = "2.6.5"
   end
 
   # import colorize gem

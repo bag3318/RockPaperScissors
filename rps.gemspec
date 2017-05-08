@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.6.4"
+  spec.version                          = "2.6.5"
   spec.date                             = "2017-05-08"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
@@ -12,7 +12,9 @@ Gem::Specification.new do |spec|
   spec.require_paths                    = ["lib"]
   spec.files                            = `git ls-files -z`.split("\x0")
   spec.test_files                       = ["./test/test_rps.rb"]
-  spec.post_install_message             = "Thanks for installing! I hope you will have fun playing rock paper scissors! :)"
+  spec.post_install_message             = <<-EOF
+    Thanks for installing! I hope you will have fun playing rock paper scissors! :)
+  EOF
   spec.license                          = "MIT"
   spec.homepage                         = "https://bag3318.github.io/RockPaperScissors/"
   spec.required_ruby_version            = ">= 2.0.0"
@@ -21,14 +23,14 @@ Gem::Specification.new do |spec|
   spec.cert_chain                       = ["./certs/gem-public_cert.pem"]
   spec.signing_key                      = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
   spec.bindir                           = "bin"
-  spec.executables                     << "rps"
-  spec.executables                     << "PlayRockPaperScissorsGame"
-  spec.requirements                    << "A Windows or Mac computer"
   spec.metadata                         = { 
     "issue_tracker" => "https://github.com/bag3318/RockPaperScissors/issues", 
     "source_code"   => "https://github.com/bag3318/RockPaperScissors"       , 
     "releases"      => "https://github.com/bag3318/RockPaperScissors/releases" 
   }
+  spec.executables                     << "rps"
+  spec.executables                     << "PlayRockPaperScissorsGame"
+  spec.requirements                    << "A Windows or Mac computer"
   spec.add_runtime_dependency "bundler" , "~> 1.14.6"
   spec.add_runtime_dependency "colorize", "~> 0.8.1"
   spec.add_runtime_dependency "rake"    , "~> 12.0.0"
