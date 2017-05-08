@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>About - Play Rock Paper Scissors Game</title>
+    <title>Copying - Play Rock Paper Scissors Game</title>
     <meta name="description" content="A Ruby Programmed Rock Paper Scissors Game"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#157878"/>
@@ -42,30 +42,46 @@
 
     <section class="main-content">
       
-      <h1 id="about-playrockpaperscissorsgame-rps">About PlayRockPaperScissorsGame (RPS)</h1>
+      <h1 id="rules-for-copying">Rules for Copying</h1>
 
-<p>The RPS<sup>1</sup> game has been around for many years. In fact, it originally was from Asia. 
-I have decided to code a Ruby-programmed RPS game that uses full CLI<sup>2</sup> (command line interface).</p>
+<p>Since this project has an <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a>, one will be allowed to copy the code.
+However, one must follow this main rule:</p>
 
-<h2 id="why-use-ruby">Why use Ruby?</h2>
+<ul>
+  <li><strong>Change the code in some way</strong></li>
+</ul>
 
-<p>Ruby is a programming language that has been around for a little over 2 decades. The gem-attributed language was primarily developed by <em>Yukihiro “Matz” Matsumoto</em> in Japan. Ruby stood out to me because of it’s unique code structure design. I decided to use Ruby becuase I wanted to learn an <strong>object oriented programming language<sup>3</sup></strong>. Ruby appealed to me by its unique code structure.</p>
+<p>The above rule means that you must change any part of the code by physically adding or removing something from it.
+<strong>This does not include adding a <kbd>space</kbd> or a <kbd>carriage return (enter/return)</kbd></strong></p>
 
-<h2 id="the-code">The Code</h2>
+<p><strong>The best way to follow the above rule is to add or remove a comment from the code</strong>.</p>
 
-<p>I didn’t want to make code that just yielded a bunch of <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">elsif</code>, and <code class="highlighter-rouge">else</code> statements. Instead, I strived toward a more professionally structured and modularized code. See the <a href="Comparing_Code">comparing code</a> page for more detailed information about this subject matter.</p>
+<p>Ex.</p>
 
-<hr />
+<h2 id="before">Before</h2>
 
-<blockquote>
-  <p><strong>1.</strong> RPS = rock-paper-scissors</p>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Constants</span> 
+  <span class="no">NTRY_TO_SYM</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># define entry to symbol (key to value)</span>
+    <span class="s1">'p'</span> <span class="o">=&gt;</span> <span class="ss">:PAPER</span>   <span class="p">,</span> 
+    <span class="s1">'r'</span> <span class="o">=&gt;</span> <span class="ss">:ROCK</span>    <span class="p">,</span> 
+    <span class="s1">'s'</span> <span class="o">=&gt;</span> <span class="ss">:SCISSORS</span> 
+  <span class="p">}</span> 
+  <span class="c1"># ..... </span>
+</code></pre>
+</div>
 
-  <p><strong>2.</strong> CLI means that it is executed in a command line app, such as CMD (command prompt) for Windows, or Terminal for Mac.</p>
+<h2 id="after">After</h2>
 
-  <p><strong>3.</strong> Object Oriented languages like Ruby, C#, etc…, follow a similar syntax format.</p>
-</blockquote>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Constants</span> 
+  <span class="no">NTRY_TO_SYM</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'p'</span> <span class="o">=&gt;</span> <span class="ss">:PAPER</span>   <span class="p">,</span> 
+    <span class="s1">'r'</span> <span class="o">=&gt;</span> <span class="ss">:ROCK</span>    <span class="p">,</span> 
+    <span class="s1">'s'</span> <span class="o">=&gt;</span> <span class="ss">:SCISSORS</span> 
+  <span class="p">}</span> 
+  <span class="c1"># .....</span>
 
-<hr />
+</code></pre>
+</div>
 
       
       <footer class="site-footer">
