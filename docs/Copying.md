@@ -12,6 +12,7 @@ However, one must follow this main rule:
 * **Change the code in some way**
 
 The above rule means that you must change any part of the code by physically adding or removing something from it.
+
 **This does not include adding a <kbd>space</kbd> or a <kbd>carriage return (enter/return)</kbd>**
 
 **The best way to follow the above rule is to add or remove a comment from the code**.
