@@ -1,3 +1,3 @@
 module RockPaperScissors
-	VERSION = "2.6.8"
+	VERSION = "2.6.9"
 end
