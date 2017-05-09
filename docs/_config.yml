@@ -2,7 +2,7 @@ title: Play Rock Paper Scissors Game
 description: A Ruby Programmed Rock Paper Scissors Game
 show_downloads: true
 google_analytics: false
-theme: jekyll-theme-cayman
+theme: jekyll-theme-cayman # important
 exclude: [
   Gemfile,
   Gemfile.lock,
