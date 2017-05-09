@@ -37,7 +37,7 @@ Master Code
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.6.7"
+    VERSION = "2.6.8"
   end
   
   # import the colorize gem
