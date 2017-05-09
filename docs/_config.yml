@@ -17,3 +17,5 @@ exclude:
   - thumbnail.png
   - LICENSE
   - Copying.md
+gems: 
+  - github-pages
