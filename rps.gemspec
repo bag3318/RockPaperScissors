@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.7.0"
+  spec.version                          = "2.7.1"
   spec.date                             = "2017-05-09"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
     "issue_tracker" => "https://github.com/bag3318/RockPaperScissors/issues"  , 
     "source_code"   => "https://github.com/bag3318/RockPaperScissors"         , 
     "releases"      => "https://github.com/bag3318/RockPaperScissors/releases",
-    "website"       => "bag3318.github.io/RockPaperScissors/"
+    "website"       => "https://bag3318.github.io/RockPaperScissors/"
   }
   spec.executables                     << "rps"
   spec.executables                     << "PlayRockPaperScissorsGame"
