@@ -3,13 +3,6 @@ description: A Ruby Programmed Rock Paper Scissors Game
 show_downloads: true
 google_analytics: false
 theme: jekyll-theme-cayman # important
-exclude: [
-  Gemfile,
-  Gemfile.lock,
-  jekyll-theme-cayman.gemspec,
-  thumbnail.png,
-  LICENSE
-]
 include:
   - index.md
   - Code.md
@@ -17,3 +10,10 @@ include:
   - Testing.md
   - How_to_Build.md
   - about.md
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-cayman.gemspec
+  - thumbnail.png
+  - LICENSE
+  - Copying.md
