@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec| 
   spec.name                             = "PlayRockPaperScissorsGame"
-  spec.version                          = "2.6.9"
+  spec.version                          = "2.7.0"
   spec.date                             = "2017-05-09"
   spec.summary                          = "A Rock Paper Scissors Ruby Gem"
   spec.description                      = <<-EOF 
@@ -24,9 +24,10 @@ Gem::Specification.new do |spec|
   spec.signing_key                      = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
   spec.bindir                           = "bin"
   spec.metadata                         = { 
-    "issue_tracker" => "https://github.com/bag3318/RockPaperScissors/issues", 
-    "source_code"   => "https://github.com/bag3318/RockPaperScissors"       , 
-    "releases"      => "https://github.com/bag3318/RockPaperScissors/releases" 
+    "issue_tracker" => "https://github.com/bag3318/RockPaperScissors/issues"  , 
+    "source_code"   => "https://github.com/bag3318/RockPaperScissors"         , 
+    "releases"      => "https://github.com/bag3318/RockPaperScissors/releases",
+    "website"       => "bag3318.github.io/RockPaperScissors/"
   }
   spec.executables                     << "rps"
   spec.executables                     << "PlayRockPaperScissorsGame"
