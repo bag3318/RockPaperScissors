@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#157878"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/assets/css/style.css?v=afb6b4842fa10397603f646a81e8d5a3a5e613d8"/>
+    <link rel="stylesheet" href="/assets/css/style.css?v=b80b8706023c943b65047344d0e7d355d41936f8"/>
     <link rel="stylesheet" href="assets/css/pace.css" />
     <script src="assets/js/pace.min.js"></script>
     
@@ -72,7 +72,7 @@
 <span class="k">class</span> <span class="nc">PlayRockPaperScissorsGame</span> 
 
   <span class="k">module</span> <span class="nn">RockPaperScissors</span>
-    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.7.1"</span>
+    <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">"2.7.2"</span>
   <span class="k">end</span>
   
   <span class="c1"># import the colorize gem</span>
@@ -163,7 +163,7 @@
           <span class="k">elsif</span> <span class="n">choice</span> <span class="o">!=</span> <span class="no">Constants</span><span class="o">::</span><span class="no">VALID_ENTRIES</span>
             <span class="nb">puts</span> <span class="no">ColorizedString</span><span class="p">[</span><span class="s2">"That entry is invalid. Please re-enter."</span><span class="p">].</span><span class="nf">colorize</span><span class="p">(</span><span class="ss">:red</span><span class="p">)</span> 
           <span class="k">else</span>
-            <span class="c1"># do nothing</span>
+            <span class="k">return</span> <span class="kp">nil</span>
           <span class="k">end</span>
         <span class="k">end</span> 
       <span class="k">end</span> 

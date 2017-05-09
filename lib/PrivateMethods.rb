@@ -12,7 +12,7 @@ module PrivateMethods
         elsif choice != Constants::VALID_ENTRIES
           puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) 
         else
-          # do nothing
+          return nil
         end
         # # one may also do this:
         # case

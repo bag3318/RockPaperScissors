@@ -37,7 +37,7 @@ Master Code
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.7.1"
+    VERSION = "2.7.2"
   end
   
   # import the colorize gem
@@ -128,7 +128,7 @@ class PlayRockPaperScissorsGame
           elsif choice != Constants::VALID_ENTRIES
             puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) 
           else
-            # do nothing
+            return nil
           end
         end 
       end 
