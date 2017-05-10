@@ -115,7 +115,7 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 class PlayRockPaperScissorsGame
   
   module RockPaperScissors
-    VERSION = "2.7.3"
+    VERSION = "2.7.4"
   end
 
   # import colorize gem
