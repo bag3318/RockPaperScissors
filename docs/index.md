@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Play Rock Paper Scissors Game - Home
-permalink: /index.html
 ---
 
 # Play Rock Paper Scissors Game
