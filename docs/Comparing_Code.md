@@ -204,7 +204,7 @@ class PlayRockPaperScissorsGame
           if Constants::NTRY_TO_SYM.key?(choice) # if the choice is one of the keys in NTRY_TO_SYM
             return Constants::NTRY_TO_SYM[choice] # return their choice to be outputed in the play() method
           elsif choice != Constants::VALID_ENTRIES # else if the the choice is not one of the valid entries
-            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) # output to invalid entry message
+            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) # output invalid entry message
           else
             return nil
           end
