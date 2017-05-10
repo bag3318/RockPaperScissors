@@ -7,4 +7,4 @@ title: Play Rock Paper Scissors Game - Home
 
 My `Play Rock Paper Scissors Game` game is programmed in the Ruby programming language.
 
-I hope you will enjoy it! :\]
+**I hope you will enjoy it! :\]**
