@@ -52,7 +52,7 @@ In this particular case, the advanced code is longer and more confusing, though 
 
 [//]: # "`% ruby beginner-rps.rb`"
  
-```
+```bash
 % ruby beginner-rps.rb
 ```
 
@@ -116,7 +116,7 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 
 [//]: # (`% ruby advanced-rps.rb`)
 
-```
+```shell
 % ruby advanced-rps.rb
 ```
 
