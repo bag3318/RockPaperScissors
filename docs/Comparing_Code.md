@@ -52,6 +52,12 @@ In this particular case, the advanced code is longer and more confusing, though 
 
 `% ruby beginner-rps.rb`
 
+<!-- 
+```
+% ruby beginner-rps.rb
+```
+-->
+
 ```ruby
 options = ["rock", "paper", "scissors"]
 computer_choice = options[rand(options.length)] 
@@ -110,6 +116,12 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 ### What Advanced Code Looks Like
 
 `% ruby advanced-rps.rb`
+
+<!--
+```
+% ruby advanced-rps.rb
+```
+-->
 
 ```ruby
 class PlayRockPaperScissorsGame
