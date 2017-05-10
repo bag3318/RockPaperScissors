@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Comparing Code - Play Rock Paper Scissors Game
-permalink: /Comparing_Code.html
+permalink: /comparing_code.html
 ---
 
 # Comparing Beginner's RPS Code to Advanced RPS Code
@@ -50,13 +50,12 @@ In this particular case, the advanced code is longer and more confusing, though 
 
 ### What Beginner's Code Looks Like
 
-`% ruby beginner-rps.rb`
-
-<!-- 
+[//]: # "`% ruby beginner-rps.rb`"
+ 
 ```
 % ruby beginner-rps.rb
 ```
--->
+
 
 ```ruby
 options = ["rock", "paper", "scissors"]
@@ -115,13 +114,11 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 
 ### What Advanced Code Looks Like
 
-`% ruby advanced-rps.rb`
+[//]: # (`% ruby advanced-rps.rb`)
 
-<!--
 ```
 % ruby advanced-rps.rb
 ```
--->
 
 ```ruby
 class PlayRockPaperScissorsGame

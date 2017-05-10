@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Master Code - Play Rock Paper Scissors Game
-permalink: /Code.html
+permalink: /code.html
 ---
 
 Master Code
@@ -14,13 +14,11 @@ Master Code
 [//]: # (`$ rps`)
 [//]: # (`> rps`)
 
-`% rps`
+<!-- `% rps` -->
 
-<!--
 ```
 % rps
 ```
--->
 
 [//]: # "start ruby"
 ```ruby
