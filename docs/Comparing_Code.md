@@ -56,7 +56,6 @@ In this particular case, the advanced code is longer and more confusing, though 
 % ruby beginner-rps.rb
 ```
 
-
 ```ruby
 options = ["rock", "paper", "scissors"]
 computer_choice = options[rand(options.length)] 
