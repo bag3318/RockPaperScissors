@@ -17,7 +17,6 @@ exclude:
   - jekyll-theme-cayman.gemspec
   - thumbnail.png
   - LICENSE
-  - Copying.md
 gems: 
   - github-pages
 # Sass/SCSS
