@@ -5,6 +5,7 @@ google_analytics: false
 theme: jekyll-theme-cayman # important
 include:
   - index.md
+  - how_to_run.md
   - Code.md
   - Comparing_Code.md
   - Testing.md
