@@ -12,10 +12,12 @@ permalink: /Comparing_Code.html
   - [Beginner's Code](#beginners-code)
     - [Beginner's Code Pros](#beginners-code-pros)
     - [Beginner's Code Cons](#beginners-code-cons)
+    - [Beginner's Analysis](#beginners-analysis)
     - [What Beginner's Code Looks Like](#what-beginners-code-looks-like)
   - [Advanced Code](#advanced-code)
     - [Advanced Code Pros](#advanced-code-pros)
     - [Advanced Code Cons](#advanced-code-cons)
+    - [Advanced Analysis](#advanced-analysis)
     - [What Advanced Code Looks Like](#what-advanced-code-looks-like)
 
 ## Beginner's Code
@@ -31,6 +33,20 @@ permalink: /Comparing_Code.html
 + Unorganized
 - Lacks modularization
 * Many `if`s and `else`s
+
+### Beginner's Analysis
+
+It is common for beginners to use many repetitive statements when coding a simple Ruby app. 
+
+In this case, using many `if`/`elsif`/`else` statements is typical beginner code formatting when programming a rock-paper-scissors game.
+
+The beginner's code might also show redundancy by programming more than what needs to be coded (this situation is different for advanced Ruby programmers).
+
+Most beginners' code lacks modularization and a solid code structure; thus making it very unorganized. 
+
+While beginners' code might look simple and easy to understand, it is not always the most efficient. 
+
+In this particular case, the advanced code is longer and more confusing, though it has more modularization and professionalism attached to it (in some cases, it will actually run faster than the beginner's code).
 
 ### What Beginner's Code Looks Like
 
@@ -80,6 +96,16 @@ end
 
 + Long
 - Hard to understand
+
+### Advanced Analysis
+
+An advanced coder's code could be longer or shorter than a beginner's code. 
+
+Advanced code usually has seldom repetition and more subtle programming. 
+
+Advanced coders tend to shy away from many `if`, `elsif`, &amp; `else` statements. This is primarily due to the way an advanced coder thinks. One might replace multiple `elsif`s with a `case` statement --adding more structure and organization to the code.--
+
+Subtlety is usually painted all over advanced ruby code. While this does make the code harder to understand, it certainly adds more structure professionalism to the code. 
 
 ### What Advanced Code Looks Like
 
