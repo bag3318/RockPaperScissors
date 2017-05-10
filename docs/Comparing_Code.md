@@ -230,4 +230,3 @@ end
 
 PlayRockPaperScissorsGame.new.play(2) 
 ```
-

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: How to Build - Play Rock Paper Scissors Game
+permalink: /How_to_Build.html
 ---
 
 # How to build the Gemspec
