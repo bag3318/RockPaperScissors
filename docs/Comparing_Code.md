@@ -32,7 +32,7 @@ permalink: /Comparing_Code.html
 
 + Unorganized
 - Lacks modularization
-* Many `if`s and `else`s
+* Many `if`/`elsif`/`else` statements
 
 ### Beginner's Analysis
 
