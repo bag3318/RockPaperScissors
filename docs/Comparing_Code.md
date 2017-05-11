@@ -107,7 +107,7 @@ An advanced coder's code could be longer or shorter than a beginner's code.
 
 Advanced code usually has seldom repetition and more subtle programming. 
 
-Advanced coders tend to shy away from many `if`, `elsif`, &amp; `else` statements. This is primarily due to the way an advanced coder thinks. One might replace multiple `elsif`s with a `case` statement --adding more structure and organization to the code.--
+Advanced coders tend to shy away from many `if`, `elsif`, &amp; `else` statements. This is primarily due to the way an advanced coder thinks. One might replace multiple `elsif`s with a `case` statement --adding more structure and organization to the code--.
 
 Subtlety is usually painted all over advanced ruby code. While this does make the code harder to understand, it certainly adds more structure professionalism to the code. 
 
