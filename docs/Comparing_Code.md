@@ -127,7 +127,7 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 class PlayRockPaperScissorsGame
   
   module RockPaperScissors
-    VERSION = "2.8.0"
+    VERSION = "2.8.1"
   end
 
   # import colorize gem
@@ -222,7 +222,7 @@ class PlayRockPaperScissorsGame
           end
         end 
       end 
-      def player_outcome(plays)6/7
+      def player_outcome(plays)
         # plays = [player_choice, computer_choice]
         return :WIN  if Constants::WINNERS.include?(plays) 
         return :LOSE if Constants::LOSERS.include?(plays)
