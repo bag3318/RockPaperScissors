@@ -12,4 +12,4 @@ Rock paper scissors is a classic game that was created many years ago. I incorpo
 
 I programmed this Ruby app to be as efficient as possible using advanced coding techniques in Ruby.
 
-**I hope you will enjoy it! :\]**
+> **I hope you will enjoy it! :\]**
