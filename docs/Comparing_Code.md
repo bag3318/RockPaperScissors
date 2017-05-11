@@ -122,11 +122,9 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 ```ruby
 class PlayRockPaperScissorsGame
   
-=begin
   module RockPaperScissors
     VERSION = "2.7.9"
   end
-=end
 
   # import colorize gem
   require "colorized_string"
