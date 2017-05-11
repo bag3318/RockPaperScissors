@@ -5,6 +5,8 @@
 *.sublime-workspace
 *.jekyll-metadata
 *.ste
+*rps.py
+*rps.pl
 # _site
 # .sass-cache
 
