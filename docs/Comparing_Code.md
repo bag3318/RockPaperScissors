@@ -123,7 +123,7 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 class PlayRockPaperScissorsGame
   
   module RockPaperScissors
-    VERSION = "2.7.8"
+    VERSION = "2.7.9"
   end
 
   # import colorize gem
