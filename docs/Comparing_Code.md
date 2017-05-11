@@ -20,6 +20,10 @@ permalink: /comparing_code.html
     - [Advanced Analysis](#advanced-analysis)
     - [What Advanced Code Looks Like](#what-advanced-code-looks-like)
 
+<!-- 
+`rps`
+ -->
+
 ## Beginner's Code
 
 ### Beginner's Code Pros
