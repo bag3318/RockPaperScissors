@@ -218,7 +218,7 @@ class PlayRockPaperScissorsGame
           end
         end 
       end 
-      def player_outcome(plays)
+      def player_outcome(plays)6/7
         # plays = [player_choice, computer_choice]
         return :WIN  if Constants::WINNERS.include?(plays) 
         return :LOSE if Constants::LOSERS.include?(plays)
