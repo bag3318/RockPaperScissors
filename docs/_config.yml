@@ -17,6 +17,7 @@ exclude:
   - jekyll-theme-cayman.gemspec
   - thumbnail.png
   - LICENSE
+  - script
 gems: 
   - github-pages
 # Sass/SCSS
