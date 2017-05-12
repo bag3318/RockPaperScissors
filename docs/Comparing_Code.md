@@ -212,11 +212,11 @@ class PlayRockPaperScissorsGame
       def player_choice
         loop do 
           print ColorizedString["Choose rock (r), paper (p) or scissors (s): "].colorize(:green)
-          choice = gets.chomp.downcase # read user input and convert to downcase
-          if Constants::NTRY_TO_SYM.key?(choice) # if the choice is one of the keys in NTRY_TO_SYM
-            return Constants::NTRY_TO_SYM[choice] # return their choice to be outputed in the play() method
-          elsif choice != Constants::VALID_ENTRIES # else if the the choice is not one of the valid entries
-            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) # output invalid entry message
+          choice = gets.chomp.downcase 
+          if Constants::NTRY_TO_SYM.key?(choice) 
+            return Constants::NTRY_TO_SYM[choice] 
+          elsif choice != Constants::VALID_ENTRIES 
+            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) entry message
           else
             return nil
           end
