@@ -18,6 +18,7 @@ exclude:
   - thumbnail.png
   - LICENSE
   - script
+  - other_langs.md
 gems: 
   - github-pages
 # Sass/SCSS
