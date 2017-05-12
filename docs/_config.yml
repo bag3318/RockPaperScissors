@@ -24,3 +24,13 @@ gems:
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+liquid:
+  error_mode: warn
+keep_files:
+  - ".git" 
+  - ".svn"
+include:              
+  - ".htaccess"
+destination:  ./_site
+layouts_dir:  _layouts
+includes_dir: _includes

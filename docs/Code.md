@@ -35,7 +35,7 @@ Master Code
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.8.2"
+    VERSION = "2.8.3"
   end
   
   # import the colorize gem
@@ -141,7 +141,7 @@ class PlayRockPaperScissorsGame
       def final_outcome(pl,co)
         return :WIN  if pl > co 
         return :LOSE if pl < co
-        # there will never be a tie due to the code in the play() method
+        # there will never be a tie fore the final outcome due to the code in the play() method
       end 
     end
   end
