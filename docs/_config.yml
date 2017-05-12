@@ -39,3 +39,4 @@ defaults:
   -
     values:
       layout: "default"
+      author: "bag3318"
