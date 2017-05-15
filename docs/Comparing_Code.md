@@ -21,7 +21,7 @@ permalink: /comparing_code.html
     - [What Advanced Code Looks Like](#what-advanced-code-looks-like)
 
 <!-- 
-`rps`
+`% rps`
  -->
 
 ## Beginner's Code
