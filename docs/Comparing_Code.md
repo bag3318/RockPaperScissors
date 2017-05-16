@@ -154,7 +154,7 @@ class PlayRockPaperScissorsGame
     def continue(str1,str2,str3)
       puts  str1
       print str2
-      gets
+      gets  # press enter/return to continue
       puts  str3
     end 
   end 
