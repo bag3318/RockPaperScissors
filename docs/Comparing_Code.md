@@ -22,7 +22,7 @@ permalink: /comparing_code.html
 
 <!-- 
 `% rps`
- -->
+-->
 
 ## Beginner's Code
 
