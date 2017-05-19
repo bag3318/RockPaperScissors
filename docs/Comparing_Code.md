@@ -55,7 +55,7 @@ In this particular case, the advanced code is longer and more confusing, though 
 ### What Beginner's Code Looks Like
 
 [//]: # "`% ruby beginner-rps.rb`"
- 
+
 ```bash
 % ruby beginner-rps.rb
 ```
