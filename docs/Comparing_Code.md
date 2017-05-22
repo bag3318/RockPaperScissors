@@ -143,7 +143,7 @@ class PlayRockPaperScissorsGame
     LOSERS = WINNERS.map { |player_choice,computer_choice| [computer_choice,player_choice] } # flip the values in the WINNERS array, returning a loss
     INIT_STRINGS = [
       "You are about to enter a rock-paper-scissors best of 3 match.", 
-      "Press the return/enter key to continue...", 
+      "Press the return/enter key to continue..."                    , 
       ""
     ]
   end
