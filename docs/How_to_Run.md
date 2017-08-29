@@ -16,8 +16,11 @@ Rock Paper Scissors
     - [Install and Run on Mac](#install-and-run-on-mac)
       - [Running](#running)
       - [Uninstalling](#uninstalling)
+      - [Updating](#updating)
     - [Install and Run on Windows](#install-and-run-on-windows)
       - [Running](#running-1)
+      - [Uninstalling](#uninstalling-1)
+      - [Updating](#updating-1)
   - [Links](#links)
 
 How to Run and Install
