@@ -1,27 +1,3 @@
----
-layout: default
-title: Master Code - Play Rock Paper Scissors Game
-permalink: /code.html
----
-
-Master Code
-===========
-
-**The master code will look like this:**
-
-> Note: the code is a __`Ruby executable`__ and from my [RubyGem](https://rubygems.org/gems/PlayRockPaperScissorsGame)
-
-[//]: # (`$ rps`)
-[//]: # (`> rps`)
-
-<!-- `% rps` -->
-
-```
-% rps
-```
-
-[//]: # "start ruby"
-```ruby
 #!/usr/bin/env ruby
 
 =begin
@@ -35,7 +11,7 @@ Master Code
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.8.6" 
+    VERSION = "2.8.5" 
   end
   
   # import the colorize gem
@@ -151,6 +127,3 @@ class PlayRockPaperScissorsGame
 end 
 
 PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 (0, 1, 2) for the winning score
-```
-
-[//]: # "end ruby"
