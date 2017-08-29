@@ -6,6 +6,7 @@
 *.jekyll-metadata
 *.ste
 *other langs
+*RPS.rb
 # _site
 # .sass-cache
 
