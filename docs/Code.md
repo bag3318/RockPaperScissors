@@ -35,7 +35,7 @@ Master Code
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.8.7" 
+    VERSION = "2.8.8" 
   end
   
   # import the colorize gem
@@ -45,9 +45,9 @@ class PlayRockPaperScissorsGame
 
   module Constants 
     NTRY_TO_SYM = { # define entry to symbol (key to value)
-      'p' => :PAPER   , 
-      'r' => :ROCK    , 
-      's' => :SCISSORS 
+      'p' => :PAPER   , 'paper'    => :PAPER   ,
+      'r' => :ROCK    , 'rock'     => :ROCK    ,
+      's' => :SCISSORS, 'scissors' => :SCISSORS
     } 
     VALID_ENTRIES    = NTRY_TO_SYM.keys 
     COMPUTER_CHOICES = NTRY_TO_SYM.values
@@ -85,17 +85,17 @@ class PlayRockPaperScissorsGame
   def play(winning_score) 
     while @player_score < winning_score && @computer_score < winning_score
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
-           ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}"].colorize(:blue) 
+           ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}."].colorize(:blue) 
       player = PrivateMethods.player_choice 
       computer = Constants::COMPUTER_CHOICES.sample # chooses a "random" option
-      puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}"].colorize(:blue) 
-      puts ColorizedString["Computer chooses #{computer.to_s.downcase}"].colorize(:blue)
+      puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}."].colorize(:blue) 
+      puts ColorizedString["Computer chooses #{computer.to_s.downcase}."].colorize(:blue)
       case PrivateMethods.player_outcome [player, computer] 
       when :WIN
-        puts ColorizedString["#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round"].colorize(:red) 
+        puts ColorizedString["#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round."].colorize(:red) 
         @player_score += 1 # @player_score = @player_score + 1
       when :LOSE
-        puts ColorizedString["#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round"].colorize(:red)
+        puts ColorizedString["#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round."].colorize(:red)
         @computer_score += 1 
       else 
         puts ColorizedString["Tie, choose again"].colorize(:red) 
@@ -103,7 +103,7 @@ class PlayRockPaperScissorsGame
       end
     end
     puts ColorizedString["\nFinal score: player: #{@player_score}, "].colorize(:blue) +
-         ColorizedString["computer: #{@computer_score} (ties: #{@ties})"].colorize(:blue)
+         ColorizedString["computer: #{@computer_score} (ties: #{@ties})."].colorize(:blue)
     case PrivateMethods.final_outcome(@player_score, @computer_score)
     when :WIN 
       puts ColorizedString["Player wins!"].colorize(:red) 
@@ -119,7 +119,7 @@ class PlayRockPaperScissorsGame
     class << self 
       def player_choice
         loop do 
-          print ColorizedString["Choose rock (r), paper (p) or scissors (s): "].colorize(:green)
+          print ColorizedString["Choose: Rock (r), Paper (p), or Scissors (s): "].colorize(:green)
           choice = gets.chomp.downcase 
           if Constants::NTRY_TO_SYM.key?(choice)
             return Constants::NTRY_TO_SYM[choice] 

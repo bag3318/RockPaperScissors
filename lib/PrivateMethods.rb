@@ -5,7 +5,7 @@ module PrivateMethods
   class << self
     def player_choice
       loop do
-        print ColorizedString["Choose rock (r), paper (p) or scissors (s): "].colorize(:green)
+        print ColorizedString["Choose: Rock (r), Paper (p), or Scissors (s): "].colorize(:green)
         choice = gets.chomp.downcase
         if Constants::NTRY_TO_SYM.key?(choice)
           return Constants::NTRY_TO_SYM[choice]

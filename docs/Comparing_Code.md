@@ -124,13 +124,32 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 ```
 
 ```ruby
-class PlayRockPaperScissorsGame
+#!/usr/bin/env ruby
+
+=begin
+|====================================|
+| Req Ruby Ver | Req Ruby Gems Ver   |
+|--------------|---------------------|
+| >= v2.0.0    | >= v2.6.0           |
+|====================================|
+=end
+
+class PlayRockPaperScissorsGame 
+
+  module RockPaperScissors
+    VERSION = "2.8.8" 
+  end
+  
+  # import the colorize gem
+  require "colorized_string"
+  ColorizedString.colors # import colors; ex: red, green, blue from colorize gem
+  ColorizedString.modes  # import modes; ex: bold, italic, underline from colorize gem
 
   module Constants 
     NTRY_TO_SYM = { # define entry to symbol (key to value)
-      'p' => :PAPER   , 
-      'r' => :ROCK    , 
-      's' => :SCISSORS 
+      'p' => :PAPER   , 'paper'    => :PAPER   ,
+      'r' => :ROCK    , 'rock'     => :ROCK    ,
+      's' => :SCISSORS, 'scissors' => :SCISSORS
     } 
     VALID_ENTRIES    = NTRY_TO_SYM.keys 
     COMPUTER_CHOICES = NTRY_TO_SYM.values
@@ -140,60 +159,60 @@ class PlayRockPaperScissorsGame
       [:PAPER   , :ROCK    ], 
       [:ROCK    , :SCISSORS]
     ] 
-    LOSERS = WINNERS.map { |player_choice,computer_choice| [computer_choice,player_choice] } # flip the values in the WINNERS array, returning a loss
+    LOSERS = WINNERS.map { |player_choice,computer_choice| [computer_choice,player_choice] } # this will take the original WINNERS array and flip the symbols, thus returning a loss for the user/player
     INIT_STRINGS = [
-      "You are about to enter a rock-paper-scissors best of 3 match.", 
-      "Press the return/enter key to continue..."                    , 
+      ColorizedString["You are about to enter a rock-paper-scissors best of 3 match."].colorize(:green), 
+      ColorizedString["Press the return/enter key to continue..."].colorize(:green)                    , 
       ""
     ]
   end
 
-  protected_methods :Constants # make constants module protected
+  protected_methods :Constants 
 
-  class << self 
+  class << self # define a self calling method within the parent class
     def continue(str1,str2,str3)
-      puts  str1
+      puts  str1 
       print str2
-      gets  # press enter/return to continue
+      gets  # press enter or return to continue
       puts  str3
     end 
   end 
 
-  continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2])
+  continue(Constants::INIT_STRINGS[0], Constants::INIT_STRINGS[1], Constants::INIT_STRINGS[2]) 
 
-  def initialize
+  def initialize # initialize variables
     @player_score = @computer_score = @ties = 0 
-  end
+  end 
 
   def play(winning_score) 
-    while @player_score < winning_score && @computer_score < winning_score 
-      puts "Player score: #{@player_score}, " + 
-           "Computer score: #{@computer_score}, Ties: #{@ties}" 
+    while @player_score < winning_score && @computer_score < winning_score
+      puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
+           ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}."].colorize(:blue) 
       player = PrivateMethods.player_choice 
-      computer = Constants::COMPUTER_CHOICES.sample # .sample = pick a random choice
-      puts "\nPlayer chooses #{player.to_s.downcase}" 
-      puts "Computer chooses #{computer.to_s.downcase}"
-      case PrivateMethods.player_outcome [player, computer]
+      computer = Constants::COMPUTER_CHOICES.sample # chooses a "random" option
+      puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}."].colorize(:blue) 
+      puts ColorizedString["Computer chooses #{computer.to_s.downcase}."].colorize(:blue)
+      case PrivateMethods.player_outcome [player, computer] 
       when :WIN
-        puts "#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round" 
-        @player_score += 1
+        puts ColorizedString["#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round."].colorize(:red) 
+        @player_score += 1 # @player_score = @player_score + 1
       when :LOSE
-        puts "#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round"
+        puts ColorizedString["#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round."].colorize(:red)
         @computer_score += 1 
-      else
-        puts "Tie, choose again" 
+      else 
+        puts ColorizedString["Tie, choose again"].colorize(:red) 
         @ties += 1
       end
     end
-    puts "\nFinal score: player: #{@player_score}, " +
-         "computer: #{@computer_score} (ties: #{@ties})"
+    puts ColorizedString["\nFinal score: player: #{@player_score}, "].colorize(:blue) +
+         ColorizedString["computer: #{@computer_score} (ties: #{@ties})."].colorize(:blue)
     case PrivateMethods.final_outcome(@player_score, @computer_score)
     when :WIN 
-      puts "Player wins!" 
+      puts ColorizedString["Player wins!"].colorize(:red) 
     when :LOSE
-      puts "Computer wins!"
+      puts ColorizedString["Computer wins!"].colorize(:red)
     else 
-      puts "It's a tie!" 
+      puts ColorizedString["It's a tie!"].colorize(:red) 
     end 
     gets
   end 
@@ -202,27 +221,29 @@ class PlayRockPaperScissorsGame
     class << self 
       def player_choice
         loop do 
-          print "Choose rock (r), paper (p) or scissors (s): "
+          print ColorizedString["Choose: Rock (r), Paper (p), or Scissors (s): "].colorize(:green)
           choice = gets.chomp.downcase 
-          if Constants::NTRY_TO_SYM.key?(choice) 
+          if Constants::NTRY_TO_SYM.key?(choice)
             return Constants::NTRY_TO_SYM[choice] 
-          elsif choice != Constants::VALID_ENTRIES 
-            puts "That entry is invalid. Please re-enter." entry message
+          elsif choice != Constants::VALID_ENTRIES
+            puts ColorizedString["That entry is invalid. Please re-enter."].colorize(:red) 
           else
             return nil
           end
         end 
       end 
+
       def player_outcome(plays)
         # plays = [player_choice, computer_choice]
         return :WIN  if Constants::WINNERS.include?(plays) 
         return :LOSE if Constants::LOSERS.include?(plays)
-        return :TIE  if !:WIN | !:LOSE
-      end 
+        return :TIE  if !:WIN | !:LOSE 
+      end
+
       def final_outcome(pl,co)
         return :WIN  if pl > co 
         return :LOSE if pl < co
-        # there will never be a tie for the final outcome because of the play() method
+        # there will never be a tie fore the final outcome due to the code in the play() method
       end 
     end
   end
@@ -231,5 +252,5 @@ class PlayRockPaperScissorsGame
 
 end 
 
-PlayRockPaperScissorsGame.new.play(2) 
+PlayRockPaperScissorsGame.new.play(2) # call the play method and pass in 3 (0, 1, 2) for the winning score
 ```

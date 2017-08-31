@@ -38,25 +38,25 @@ class PlayRockPaperScissorsGame
   def play(winning_score) 
     while @player_score < winning_score && @computer_score < winning_score # both the player's and the computer's score have to be less than 3
       puts ColorizedString["Player score: #{@player_score}, "].colorize(:blue) + 
-           ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}"].colorize(:blue) 
+           ColorizedString["Computer score: #{@computer_score}, Ties: #{@ties}."].colorize(:blue) 
       player = PrivateMethods.player_choice 
       computer = Constants::COMPUTER_CHOICES.sample # chooses a random option for the computer
-      puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}"].colorize(:blue) 
-      puts ColorizedString["Computer chooses #{computer.to_s.downcase}"].colorize(:blue)
+      puts ColorizedString["\nPlayer chooses #{player.to_s.downcase}."].colorize(:blue) 
+      puts ColorizedString["Computer chooses #{computer.to_s.downcase}."].colorize(:blue)
       case PrivateMethods.player_outcome [player, computer] # pass in player and computer for the contants arrays
       when :WIN
-        puts ColorizedString["#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round"].colorize(:red) 
+        puts ColorizedString["#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round."].colorize(:red) 
         @player_score += 1
       when :LOSE
-        puts ColorizedString["#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round"].colorize(:red)
+        puts ColorizedString["#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round."].colorize(:red)
         @computer_score += 1 
       else 
-        puts ColorizedString["Tie, choose again"].colorize(:red) 
+        puts ColorizedString["Tie, choose again."].colorize(:red) 
         @ties += 1
       end
     end
     puts ColorizedString["\nFinal score: player: #{@player_score}, "].colorize(:blue) +
-         ColorizedString["computer: #{@computer_score} (ties: #{@ties})"].colorize(:blue) 
+         ColorizedString["computer: #{@computer_score} (ties: #{@ties})."].colorize(:blue) 
     case PrivateMethods.final_outcome(@player_score, @computer_score)
     when :WIN 
       puts ColorizedString["Player wins!"].colorize(:red) 
