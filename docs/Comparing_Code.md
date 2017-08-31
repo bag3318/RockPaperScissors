@@ -137,7 +137,7 @@ Subtlety is usually painted all over advanced ruby code. While this does make th
 class PlayRockPaperScissorsGame 
 
   module RockPaperScissors
-    VERSION = "2.8.9" 
+    VERSION = "2.9.0" 
   end
   
   # import the colorize gem
@@ -243,7 +243,7 @@ class PlayRockPaperScissorsGame
       def final_outcome(pl,co)
         return :WIN  if pl > co 
         return :LOSE if pl < co
-        # there will never be a tie fore the final outcome due to the code in the play() method
+        # there will never be a tie for the final outcome due to the code in the play() method
       end 
     end
   end
