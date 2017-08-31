@@ -2,10 +2,10 @@ require "colorized_string"
 ColorizedString.colors   
 ColorizedString.modes  
 module Constants 
-  NTRY_TO_SYM = { 
-    'p' => :PAPER, 
-    'r' => :ROCK, 
-    's' => :SCISSORS 
+  NTRY_TO_SYM = { # define entry to symbol (key to value)
+    'p' => :PAPER   , 'paper'    => :PAPER   ,
+    'r' => :ROCK    , 'rock'     => :ROCK    ,
+    's' => :SCISSORS, 'scissors' => :SCISSORS
   } 
   VALID_ENTRIES = NTRY_TO_SYM.keys # create valid entries
   COMPUTER_CHOICES = NTRY_TO_SYM.values # define computer choices
