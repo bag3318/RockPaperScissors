@@ -6,6 +6,8 @@ Rock Paper Scissors
 How to Run and Install
 ----------------------
 
+[//]: (comment)
+
 ### Install and Run on Mac
 
 1. Run the `rps.bash` file (located in the `exec` folder) with the `Terminal` 
